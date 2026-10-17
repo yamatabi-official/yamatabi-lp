@@ -7,7 +7,8 @@
   <meta name="description" content="YAMATABIのショートドラマ『秋の上高地』。映像の余韻から、河童橋や梓川の景色、散策のヒント、アクセスと旅の準備へ。次の一歩を見つける作品ページです。">
   <title>秋の上高地｜作品と旅のガイド | YAMATABI</title>
   <link rel="stylesheet" href="style.css?v=20261017-kamikochi-guide">
-  <link rel="stylesheet" href="experience.css?v=20261017-azusa-autumn-hotaka">
+  <link rel="stylesheet" href="experience.css?v=20261017-story-map">
+  <script src="story-map.js" defer></script>
 </head>
 <body class="experience-page">
   <header class="nav">
@@ -36,6 +37,7 @@
       <a href="#scene">作品を観る</a>
       <a href="#about-kamikochi">上高地を知る</a>
       <a href="#places">景色を見つける</a>
+      <a href="#story-map">物語のマップ</a>
       <a href="#walk">散策する</a>
       <a href="#access">行き方・準備</a>
     </nav>
@@ -113,6 +115,79 @@
           <p>焼岳や穂高連峰を望む池。風や光の変化で表情が変わります。河童橋周辺とは別の散策先として、時間に余裕がある旅の候補に。</p>
           <span class="trip-label">立ち寄るなら移動時間も計画に</span>
         </article>
+      </div>
+    </section>
+
+    <section class="trip-section story-map-section" id="story-map" aria-labelledby="story-map-title">
+      <div class="eyebrow">STORY MAP / KAMIKOCHI</div>
+      <h2 id="story-map-title"><span>物語のそばを、</span><span>歩いてみる。</span></h2>
+      <p class="trip-lead">川の音、橋からの景色、隣を歩く時間。<br>上高地の風景と、作品の余韻を一枚に。</p>
+      <div class="story-map-legend" aria-label="マップの凡例">
+        <span><i class="map-place-key" aria-hidden="true"></i>実在する場所</span>
+        <span><i class="map-mood-key" aria-hidden="true"></i>作品から想像する時間</span>
+      </div>
+      <div class="story-map-layout">
+        <div>
+          <div class="story-map-board" role="group" aria-label="河童橋周辺と作品の世界を描いた概念図">
+            <svg viewBox="0 0 720 600" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <defs>
+                <pattern id="map-paper" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".7" fill="#49666a" opacity=".09"/></pattern>
+                <linearGradient id="map-water" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#90c9c5"/><stop offset="1" stop-color="#c9e5dc"/></linearGradient>
+              </defs>
+              <rect width="720" height="600" fill="#e8f0e8"/>
+              <rect width="720" height="600" fill="url(#map-paper)"/>
+              <g fill="none" stroke="#536570" stroke-width="1.3" opacity=".18">
+                <path d="M-40 210 Q90 110 220 150 T480 135 T760 170"/>
+                <path d="M-40 225 Q90 125 220 165 T480 150 T760 185"/>
+                <path d="M-40 240 Q90 140 220 180 T480 165 T760 200"/>
+              </g>
+              <path d="M100 138 163 65 194 104 241 40 280 96 325 55 383 130 418 84 480 143 530 101 600 155" fill="#a2b1b2" opacity=".48"/>
+              <path d="m140 147 54-43 47-64 39 56 45-41 58 75 35-46 62 59" fill="none" stroke="#566b75" stroke-width="2"/>
+              <path d="m223 64 18-24 17 25-17-8Z M311 73 325 55 344 79 326 69Z" fill="#f4f5ee"/>
+              <path d="M765 240 C570 235 555 320 430 350 S260 375 210 430 S70 510-45 505" fill="none" stroke="#6fa4a4" stroke-width="68" opacity=".2"/>
+              <path d="M765 240 C570 235 555 320 430 350 S260 375 210 430 S70 510-45 505" fill="none" stroke="url(#map-water)" stroke-width="56"/>
+              <path d="M765 240 C570 235 555 320 430 350 S260 375 210 430 S70 510-45 505" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="30 20" opacity=".55"/>
+              <g transform="translate(405 356) rotate(-18)" stroke="#765740" fill="#d6bc91">
+                <rect x="-12" y="-55" width="24" height="110" stroke-width="2"/>
+                <path d="M-12-40H12 M-12-24H12 M-12-8H12 M-12 8H12 M-12 24H12 M-12 40H12" opacity=".6"/>
+                <path d="M-18-61V61 M18-61V61" stroke-width="2"/>
+              </g>
+              <g stroke="#8c6a3e" stroke-width="2" fill="#c89a4f">
+                <path d="M100 300v28 M83 298q17-50 34 0Z M156 252v26 M140 250q16-48 32 0Z M584 422v28 M567 420q17-50 34 0Z M628 380v28 M611 378q17-50 34 0Z"/>
+              </g>
+              <g fill="#a65d39" opacity=".7"><circle cx="78" cy="366" r="4"/><circle cx="618" cy="463" r="4"/><circle cx="552" cy="179" r="4"/></g>
+              <g transform="translate(516 495)" fill="#859394" stroke="#536570" stroke-width="1.5"><rect x="-17" y="-9" width="34" height="22" rx="3"/><rect x="-12" y="-5" width="24" height="9" fill="#edf3ef"/><circle cx="-10" cy="15" r="3"/><circle cx="10" cy="15" r="3"/></g>
+            </svg>
+            <span class="story-map-mountains">穂高連峰のイメージ</span>
+            <a class="story-map-pin map-pin-bridge" href="#map-bridge"><span>01</span> 河童橋</a>
+            <a class="story-map-pin map-pin-river" href="#map-river"><span>02</span> 梓川</a>
+            <a class="story-map-pin map-pin-terminal" href="#map-terminal"><span>03</span> バスターミナル</a>
+            <span class="story-map-mood map-mood-light">秋の光</span>
+            <span class="story-map-mood map-mood-walk">隣を歩く時間</span>
+            <span class="story-map-signature">YAMATABI / A STORY LANDSCAPE</span>
+          </div>
+          <p class="story-map-caption">場所の名前をタップすると紹介が開きます。位置・方角・距離・道のつながりを正確に示す地図ではありません。撮影地点や実際の散策経路を示すものではなく、移動には公式地図・現地の案内をご利用ください。</p>
+        </div>
+        <div class="story-map-notes">
+          <p class="story-map-notes-title">PLACES &amp; LITTLE MOMENTS</p>
+          <details class="story-map-detail" id="map-bridge" open>
+            <summary><span>01 / PLACE</span>河童橋</summary>
+            <div><p>梓川と山々を眺める、上高地を代表する場所。まずは景色に目を向けて、立ち止まる時間を。</p><a class="source" href="https://www.google.com/maps/search/?api=1&amp;query=上高地+河童橋" target="_blank" rel="noopener noreferrer">地図アプリで場所を見る ↗</a></div>
+          </details>
+          <details class="story-map-detail" id="map-river">
+            <summary><span>02 / PLACE</span>梓川</summary>
+            <div><p>上高地を流れる川。開放されている遊歩道から、水の色や川の音を楽しんでみてください。河川への立ち入りを案内するピンではありません。</p><a class="source" href="#walk">散策のヒントを読む ↓</a></div>
+          </details>
+          <details class="story-map-detail" id="map-terminal">
+            <summary><span>03 / PLACE</span>上高地バスターミナル</summary>
+            <div><p>旅のはじまりと帰りの目印に。散策前に帰りの乗り場・便を確認し、余裕を持って戻りましょう。</p><a class="source" href="https://www.google.com/maps/search/?api=1&amp;query=上高地バスターミナル" target="_blank" rel="noopener noreferrer">地図アプリで場所を見る ↗</a></div>
+          </details>
+          <details class="story-map-detail story-map-imagination" id="map-moments">
+            <summary><span>STORY / 作品のイメージ</span>隣を歩く時間</summary>
+            <div><img src="assets/kamikochi-film-still.webp" alt="上高地の作品で、川沿いを歩く人物の一場面" width="512" height="910" loading="lazy"><p>秋の光や、誰かと歩く時間。あなたならどんな一日を過ごしたいですか。</p><p class="story-map-caption">作品から旅を想像するための表現です。出来事が起きた地点や、確認済みの撮影地を示しません。</p><a class="source" href="#scene">もう一度、作品を観る ↑</a></div>
+          </details>
+          <a class="link" href="https://www.kamikochi.or.jp/" target="_blank" rel="noopener noreferrer">実際に歩く前に、公式案内へ ↗</a>
+        </div>
       </div>
     </section>
 
