@@ -153,3 +153,63 @@
   .brand-home .home-text-link>span{transition:transform .2s}
   .brand-home .home-text-link:hover>span{transform:translate(3px,-3px)}
 }
+
+/* Dawn passage: a quiet night opens into pearl mist and a warmer next morning. */
+.brand-home .about-section{background:radial-gradient(ellipse at 90% 42%,#8d81983d,transparent 64%),radial-gradient(ellipse at 8% 72%,#bc8e6330,transparent 58%),linear-gradient(#091112,#182430)}
+.brand-home .home-world{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.045em;line-height:1.05;color:#f0d8bd}
+.brand-home .home-world>span{color:#d6d0e4;-webkit-text-stroke:0;font-style:italic;letter-spacing:-.06em}
+.brand-home .home-statement,.brand-home .home-philosophy-subtitle,.brand-home #stories-title,.brand-home #beyond-title,.brand-home .home-crossing-copy h3,.brand-home #ending-title{font-family:"Yu Mincho","Hiragino Mincho ProN","Noto Serif CJK JP",serif;font-weight:400;letter-spacing:.025em}
+.brand-home .home-emotion{color:#e1d8e7}
+.brand-home .home-philosophy-grid{position:relative}
+.brand-home .home-philosophy-grid:before{content:"";position:absolute;left:-3%;top:-20%;width:65%;height:120%;background:radial-gradient(ellipse,#b39ab619,transparent 70%);pointer-events:none}
+.brand-home .journey-steps{border-color:#e6d8ed33}
+.brand-home .home-text-link{border-radius:0 0 14px 0}
+.brand-home .reel-section{position:relative;padding-bottom:190px;background:radial-gradient(ellipse at 12% 44%,#cda2a32b,transparent 60%),radial-gradient(ellipse at 94% 65%,#8aafc52e,transparent 58%),linear-gradient(#182430,#253340)}
+.brand-home .reel-section:after{content:"";position:absolute;bottom:0;left:0;right:0;height:135px;background:linear-gradient(transparent,#e7ece8);pointer-events:none}
+.brand-home .reel-track{border:0;padding:12px 0 24px}
+.brand-home .reel-card{background:linear-gradient(135deg,#f4eee7,#e6edef);color:#35444d;border:1px solid #ffffff80;border-radius:28px;padding:32px;box-shadow:0 30px 80px #0b111228;column-gap:clamp(24px,5vw,68px)}
+.brand-home .reel-player{border-radius:18px;border-color:#81969a66;box-shadow:0 14px 32px #364b5126;overflow:hidden}
+.brand-home .reel-meta .eyebrow,.brand-home .reel-meta .reel-location{color:#80533d}
+.brand-home .reel-meta h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;color:#314953}
+.brand-home .reel-meta p{color:#53616a}
+.brand-home .reel-meta .link{color:#314953;border-color:#78909388}
+.brand-home .reel-toggle{color:#355762;border-color:#779ba077;border-radius:24px;background:#f5f6ef}
+.brand-home .reel-status{color:#53616a}
+.brand-home .home-beyond{background:radial-gradient(ellipse at 8% 30%,#f8e1d27a,transparent 55%),radial-gradient(ellipse at 95% 65%,#d4d0e473,transparent 55%),linear-gradient(#e7ece8,#e6eeeb);color:#334b53}
+.brand-home .home-beyond .home-chapter{color:#52676d;border-color:#49677033}
+.brand-home .home-beyond .home-chapter>span:first-child,.brand-home .home-beyond .eyebrow{color:#785542}
+.brand-home .home-beyond-heading>p,.brand-home .home-crossing-copy>p,.brand-home .home-secondary-link{color:#52656b}
+.brand-home .home-landscape{border-radius:100px 100px 24px 24px;box-shadow:0 20px 55px #39566524}
+.brand-home .home-film-memory{border-radius:5px;border-color:#fff7eb;background:#fff7eb;box-shadow:0 14px 40px #374b5433}
+.brand-home .home-crossing-copy .home-text-link{color:#314e58;border-color:#7c9b9c}
+.brand-home .home-beyond .home-text-link>span{color:#986442}
+.brand-home .home-ending{background:radial-gradient(ellipse at 50% 57%,#f7d9b8b3,transparent 68%),radial-gradient(ellipse at 4% 55%,#d1cbe673,transparent 62%),linear-gradient(#e6eeeb,#f1e7dd);color:#3c4a52}
+.brand-home .home-ending .home-chapter{color:#57646c;border-color:#68797833}
+.brand-home .home-ending .home-chapter>span:first-child,.brand-home .home-ending .eyebrow{color:#79533d}
+.brand-home .home-ending-content>p:not(.eyebrow){color:#58636c}
+.brand-home .home-ending-content:before{content:"";display:block;width:72px;height:72px;border-radius:50%;margin:0 auto 36px;background:radial-gradient(circle at 35% 30%,#fff9e8,#f4c596 70%);box-shadow:0 0 55px 18px #f8d5b253}
+.brand-home .home-action{border-radius:30px;background:#375765;border-color:#375765;color:#fff7e9;box-shadow:0 8px 24px #3757651c}
+.brand-home .home-ending-actions .link{color:#3e5660;border-color:#7f8e9088}
+.brand-home .home-wordmark{font-family:Georgia,"Times New Roman",serif;font-weight:400;color:#536b731f;letter-spacing:-.065em}
+.brand-home .footer{background:#f1e7dd;color:#596870;border-color:#9f9c8b33}
+.brand-home .footer .brand{color:#405660}
+.brand-home .home-beyond a:focus-visible,.brand-home .home-ending a:focus-visible,.brand-home .footer a:focus-visible,.brand-home .reel-card a:focus-visible,.brand-home .reel-card button:focus-visible{outline-color:#83553c}
+@media(max-width:680px){
+  .brand-home .home-world{font-size:clamp(40px,12vw,76px)}
+  .brand-home .home-statement{font-size:clamp(35px,10vw,54px)}
+  .brand-home #stories-title{font-size:clamp(28px,7.6vw,42px)}
+  .brand-home .reel-section{padding-bottom:150px}
+  .brand-home .reel-section:after{height:105px}
+  .brand-home .reel-card{padding:20px 16px;border-radius:22px}
+  .brand-home .reel-player{width:min(100%,40.5svh);border-radius:14px}
+  .brand-home .reel-meta h3{font-size:27px}
+  .brand-home #beyond-title{font-size:clamp(26px,7.3vw,40px)}
+  .brand-home .home-landscape{border-radius:65px 65px 18px 18px}
+  .brand-home .home-crossing-copy h3{font-size:28px}
+  .brand-home #ending-title{font-size:clamp(23px,6.5vw,38px);letter-spacing:0}
+  .brand-home .home-ending-content:before{width:56px;height:56px;margin-bottom:28px}
+  .brand-home .home-wordmark{font-size:15.5vw}
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  .brand-home .home-action:hover{background:#496d7c;color:#fff7e9}
+}
