@@ -1,0 +1,155 @@
+/* The key visual lives in style.css. Do not override .hero background, dimensions,
+   positioning, image treatment, or transforms here. All new design is home-only. */
+.brand-home{--home-night:#0b1112;--home-dawn:#edb582;--home-text:#f4f0e7;--home-muted:#b9bfb9;--home-line:#d6c9b52e;color:var(--home-text)}
+.brand-home .home-skip{position:fixed;left:16px;top:16px;z-index:30;padding:14px;background:#f4f0e7;color:#0b1112;clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}
+.brand-home .home-skip:focus{clip-path:none;width:auto;height:auto;overflow:visible}
+.brand-home .home-nav{display:flex;align-items:center;gap:28px;font-size:11px}
+.brand-home .nav a{min-height:44px;display:inline-flex;align-items:center}
+.brand-home .home-hero-note{position:absolute;bottom:10vh;right:5vw;display:flex;align-items:center;gap:18px;font-size:8px;letter-spacing:.18em;writing-mode:vertical-rl;color:#e0d6c7;pointer-events:none}
+.brand-home .home-scroll-line{height:64px;width:1px;background:linear-gradient(#e8c39b,transparent)}
+.brand-home .eyebrow{color:var(--home-dawn);font-size:10px;line-height:1.8;letter-spacing:.2em}
+.brand-home .home-section-inner,.brand-home .about-inner{max-width:1280px;margin:auto}
+.brand-home .home-chapter{display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:10px;letter-spacing:.14em;line-height:1.8;color:var(--home-muted);padding-bottom:22px;border-bottom:1px solid var(--home-line)}
+.brand-home .home-chapter>span:first-child{color:var(--home-dawn)}
+.brand-home .home-chapter>span:last-child{font-size:11px;letter-spacing:.06em}
+.brand-home .about-section{position:relative;padding:65px clamp(24px,7vw,110px) 110px;background:radial-gradient(ellipse at 95% 40%,#3f302526,transparent 60%),linear-gradient(#091112,#111a1b);border:0}
+.brand-home .home-world{font-size:clamp(44px,8.8vw,134px);font-weight:700;line-height:.96;letter-spacing:-.065em;margin:74px 0 95px;color:#dfc3a3}
+.brand-home .home-world>span{color:transparent;-webkit-text-stroke:1px #9a9280}
+.brand-home .home-philosophy-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,8vw,120px);margin-bottom:70px;align-items:start}
+.brand-home .home-statement{font-size:clamp(38px,5.6vw,78px);line-height:1.5;letter-spacing:-.045em;font-weight:500;margin:25px 0 30px}
+.brand-home .home-statement>span,.brand-home .home-emotion>span,.brand-home .home-philosophy-subtitle>span,.brand-home #stories-title>span,.brand-home #beyond-title>span,.brand-home .home-crossing-copy h3>span,.brand-home #ending-title>span{display:block}
+.brand-home .home-emotion{font-size:clamp(13px,1.25vw,17px);line-height:2.3;letter-spacing:.015em;color:#ded8cb}
+.brand-home .about-description{max-width:540px;padding-top:18px}
+.brand-home .home-philosophy-subtitle{font-size:clamp(22px,2.5vw,34px);font-weight:500;line-height:1.7;letter-spacing:.01em;margin:0 0 28px}
+.brand-home .about-description p{font-size:14px;color:var(--home-muted);line-height:2.3;letter-spacing:.015em}
+.brand-home .journey-steps{border-color:var(--home-line);gap:40px;margin:0 0 26px}
+.brand-home .journey-steps>div{padding-top:28px}
+.brand-home .journey-steps span{font-size:9px;color:var(--home-dawn);letter-spacing:.2em}
+.brand-home .journey-steps h3{font-size:27px;font-weight:500;margin:18px 0 12px}
+.brand-home .journey-steps p{color:var(--home-muted);font-size:13px;line-height:2}
+.brand-home .home-text-link{display:inline-flex;justify-content:space-between;gap:40px;align-items:center;border-color:#af8c6977;font-size:13px;min-height:44px;letter-spacing:.04em}
+.brand-home .home-text-link>span{color:var(--home-dawn);font-size:20px}
+.brand-home .reel-section{padding:65px clamp(24px,7vw,110px) 100px;background:radial-gradient(ellipse at 20% 65%,#53433420,transparent 60%),linear-gradient(#111a1b,#101517)}
+.brand-home .reel-heading{margin:52px 0 36px}
+.brand-home #stories-title{font-size:clamp(34px,4.8vw,66px);font-weight:500;line-height:1.5;letter-spacing:-.045em;margin:18px 0 24px}
+.brand-home .reel-heading p{font-size:13px;line-height:2;color:var(--home-muted)}
+.brand-home .reel-count{font-size:10px;color:var(--home-dawn);padding:10px 16px;border:1px solid var(--home-line)}
+.brand-home .reel-track{gap:24px;padding:22px 0;border-top:1px solid var(--home-line);border-bottom:1px solid var(--home-line)}
+.brand-home .reel-card{display:grid;grid-template-columns:min(320px,36svh) minmax(0,1fr);grid-template-rows:auto auto 1fr;column-gap:clamp(28px,6vw,84px);flex:0 0 100%;padding:20px 0;align-items:start}
+.brand-home .reel-player{grid-column:1;grid-row:1 / 4;aspect-ratio:9/16;border-radius:0;border:1px solid #d8bd9e55;box-shadow:0 20px 50px #0003}
+.brand-home .reel-meta{grid-column:2;grid-row:1;padding:36px 12px 20px 0}
+.brand-home .reel-meta h3{font-size:clamp(30px,4vw,50px);line-height:1.5;font-weight:500;letter-spacing:.025em;margin:26px 0 14px}
+.brand-home .reel-meta .reel-location{font-size:11px;letter-spacing:.1em;color:var(--home-dawn);margin:0 0 24px}
+.brand-home .reel-meta p{font-size:15px;line-height:2;color:#d1d1c6}
+.brand-home .reel-meta .link{font-size:12px;margin-top:30px;line-height:1.8;min-height:44px}
+.brand-home .reel-toggle{grid-column:2;grid-row:2;justify-self:start;background:none;border-color:#b5a28c77;border-radius:0;padding:10px 24px;margin:0;color:#eac8a3;font-size:12px}
+.brand-home .reel-status{grid-column:2;grid-row:3;font-size:12px;line-height:1.8}
+.brand-home .reel-notice{font-size:11px;line-height:2;color:#b0b8b3;margin-top:22px}
+.brand-home .reel-arrows button{border-radius:0;background:none}
+.brand-home .home-beyond{position:relative;background:radial-gradient(ellipse at 80% 40%,#6b4a3026,transparent 55%),linear-gradient(#101517,#192122);text-align:left;border:0;padding:65px clamp(24px,7vw,110px) 110px}
+.brand-home .home-beyond-heading{max-width:900px;margin:64px 0 58px}
+.brand-home #beyond-title{font-size:clamp(32px,5.1vw,72px);font-weight:500;line-height:1.6;letter-spacing:-.035em;margin:24px 0}
+.brand-home .home-beyond-heading>p{font-size:14px;line-height:2.2;color:var(--home-muted)}
+.brand-home .home-crossing{display:grid;grid-template-columns:1.35fr 1fr;gap:36px 8%;align-items:start;position:relative}
+.brand-home .home-landscape{grid-column:1;grid-row:1 / 3;margin:0;position:relative;overflow:hidden;min-width:0}
+.brand-home .home-landscape img{display:block;width:100%;height:620px;object-fit:cover;object-position:center 65%}
+.brand-home .home-landscape:after{content:"";position:absolute;inset:50% 0 0;background:linear-gradient(transparent,#091315b3);pointer-events:none}
+.brand-home .home-landscape figcaption{position:absolute;bottom:24px;left:24px;right:24px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:9px;letter-spacing:.12em;color:#f4f0e7;z-index:1;line-height:1.8}
+.brand-home .home-film-memory{grid-column:2;grid-row:1;position:relative;margin:35px 0 0 -24%;width:150px;transform:rotate(4deg);box-shadow:0 15px 40px #0004;border:5px solid #d6c1a3;background:#d6c1a3}
+.brand-home .home-film-memory img{display:block;width:100%;height:215px;object-fit:cover}
+.brand-home .home-film-memory>span{display:block;font-size:7px;line-height:1.8;letter-spacing:.06em;color:#302a23;padding:9px 2px 4px}
+.brand-home .home-crossing-copy{grid-column:2;grid-row:2;padding-top:20px;min-width:0}
+.brand-home .home-crossing-copy h3{font-size:clamp(26px,3.1vw,42px);font-weight:500;line-height:1.7;letter-spacing:.01em;margin:22px 0}
+.brand-home .home-crossing-copy>p{font-size:13px;line-height:2.2;color:var(--home-muted)}
+.brand-home .home-crossing-copy .home-text-link{font-size:12px;line-height:1.8;gap:20px}
+.brand-home .home-secondary-link{display:table;font-size:11px;line-height:2;min-height:44px;padding-top:18px;color:var(--home-muted)}
+.brand-home .home-ending{position:relative;padding:65px clamp(24px,7vw,110px) 0;overflow:hidden;background:radial-gradient(ellipse at 50% 68%,#a66a433b,transparent 65%),linear-gradient(#192122,#242322)}
+.brand-home .home-ending-content{text-align:center;margin:100px auto 90px;max-width:950px}
+.brand-home #ending-title{font-size:clamp(29px,4.4vw,62px);font-weight:500;line-height:1.8;letter-spacing:.015em;margin:25px 0}
+.brand-home .home-ending-content>p:not(.eyebrow){font-size:13px;line-height:2;color:#c3c3b7}
+.brand-home .home-ending-actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px 32px;margin-top:36px}
+.brand-home .home-action{display:inline-flex;align-items:center;justify-content:space-between;gap:48px;background:#e9bb8d;color:#1a201e;font-size:13px;min-height:52px;padding:16px 24px;border:1px solid #e9bb8d}
+.brand-home .home-action>span{font-size:20px;line-height:1}
+.brand-home .home-ending-actions .link{margin:0;font-size:12px;color:#e5d7c2;border-color:#af8c6977;min-height:44px;display:flex;align-items:center;padding:10px 0}
+.brand-home .home-wordmark{font-size:clamp(52px,16vw,230px);font-weight:700;line-height:.85;letter-spacing:-.075em;text-align:center;margin:0;color:#bbae9826;user-select:none}
+.brand-home .footer{align-items:center;border-color:#d6c9b526;background:#242322;padding:30px 7vw;color:#c3c3b7;gap:20px;font-size:10px}
+.brand-home .footer .brand{font-size:14px;color:#ece2d2}
+.brand-home .footer a{display:inline-flex;align-items:center;min-height:44px}
+.brand-home :is(h2,h3,p){line-break:strict}
+.brand-home a:focus-visible,.brand-home button:focus-visible,.brand-home .reel-track:focus-visible{outline:2px solid #edb582;outline-offset:5px}
+.brand-home [data-reveal].reveal-ready{opacity:0;transform:translateY(16px)}
+.brand-home [data-reveal].reveal-ready.reveal-visible{opacity:1;transform:none;transition:opacity .65s ease,transform .65s cubic-bezier(.2,.65,.3,1)}
+/* The film memory's intentional tilt is restored after its one-time entrance. */
+.brand-home .home-film-memory.reveal-ready.reveal-visible{transform:rotate(4deg)}
+@media(max-width:900px){
+  .brand-home .home-philosophy-grid{gap:32px}
+  .brand-home .reel-card{column-gap:28px}
+  .brand-home .home-crossing{column-gap:7%}
+  .brand-home .home-landscape img{height:580px}
+  .brand-home .home-film-memory{width:130px}
+  .brand-home .home-film-memory img{height:180px}
+}
+@media(max-width:680px){
+  .brand-home .home-nav{gap:16px;font-size:9px}
+  .brand-home .home-hero-note{right:22px;font-size:7px;gap:12px}
+  .brand-home .home-hero-note>span:first-child{display:none}
+  .brand-home .about-section{padding:38px 24px 65px}
+  .brand-home .home-chapter{gap:12px;font-size:8px;padding-bottom:18px}
+  .brand-home .home-chapter>span:last-child{font-size:9px}
+  .brand-home .home-world{font-size:clamp(42px,12.2vw,78px);margin:52px 0 56px}
+  .brand-home .home-philosophy-grid{grid-template-columns:1fr;gap:20px;margin-bottom:36px}
+  .brand-home .home-statement{font-size:clamp(37px,10.5vw,56px);margin:20px 0}
+  .brand-home .home-emotion{font-size:12px;line-height:2.4}
+  .brand-home .about-description{padding:0}
+  .brand-home .home-philosophy-subtitle{font-size:23px;margin-bottom:20px}
+  .brand-home .about-description p{font-size:13px}
+  .brand-home .journey-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0 0 20px}
+  .brand-home .journey-steps>div{padding:22px 0 0;border-bottom:0;min-width:0}
+  .brand-home .journey-steps span{font-size:7px;letter-spacing:.08em}
+  .brand-home .journey-steps h3{font-size:21px;margin:14px 0 10px}
+  .brand-home .journey-steps p{font-size:11px;line-height:2}
+  .brand-home .reel-section{padding:38px 24px 65px}
+  .brand-home .reel-heading{display:block;margin:38px 0 24px}
+  .brand-home #stories-title{font-size:clamp(29px,8vw,44px);margin:18px 0}
+  .brand-home .reel-heading p{font-size:12px}
+  .brand-home .reel-count{display:inline-block;font-size:9px;padding:8px 10px;white-space:nowrap;margin-top:6px}
+  .brand-home .reel-track{padding:16px 0}
+  .brand-home .reel-card{display:flex;flex-direction:column;flex-basis:min(100%,390px);gap:0;padding:8px 0}
+  .brand-home .reel-player{width:min(100%,40.5svh);align-self:center;flex:none}
+  .brand-home .reel-meta{order:2;padding:22px 0 0}
+  .brand-home .reel-meta h3{font-size:29px;margin:14px 0 10px}
+  .brand-home .reel-meta .reel-location{margin-bottom:14px}
+  .brand-home .reel-meta p{font-size:13px}
+  .brand-home .reel-meta .link{margin-top:18px}
+  .brand-home .reel-toggle{order:1;align-self:center;margin-top:12px}
+  .brand-home .reel-status{order:3}
+  .brand-home .home-beyond{padding:38px 24px 65px}
+  .brand-home .home-beyond-heading{margin:40px 0 28px}
+  .brand-home #beyond-title{font-size:clamp(27px,7.8vw,44px);line-height:1.7;margin:20px 0}
+  .brand-home .home-beyond-heading>p{font-size:12px}
+  .brand-home .home-crossing{grid-template-columns:1fr;gap:0}
+  .brand-home .home-landscape{grid-column:1;grid-row:1}
+  .brand-home .home-landscape img{height:430px}
+  .brand-home .home-landscape figcaption{left:18px;right:18px;bottom:20px;font-size:8px}
+  .brand-home .home-film-memory{grid-column:1;grid-row:2;justify-self:end;margin:-90px 14px 20px 0;width:115px}
+  .brand-home .home-film-memory img{height:170px}
+  .brand-home .home-crossing-copy{grid-column:1;grid-row:3;padding-top:12px}
+  .brand-home .home-crossing-copy h3{font-size:30px;margin:20px 0}
+  .brand-home .home-ending{padding:38px 24px 0}
+  .brand-home .home-ending-content{margin:65px auto 66px}
+  .brand-home #ending-title{font-size:clamp(24px,6.9vw,40px);letter-spacing:0;line-height:1.9;margin:24px 0}
+  .brand-home .home-ending-content>p:not(.eyebrow){font-size:11px}
+  .brand-home .home-ending-actions{gap:18px;flex-direction:column;margin-top:30px}
+  .brand-home .home-wordmark{font-size:16vw}
+  .brand-home .footer{padding:24px;align-items:flex-start;gap:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  .brand-home [data-reveal].reveal-ready{opacity:1;transform:none;transition:none}
+  .brand-home .home-film-memory,.brand-home .home-film-memory.reveal-ready.reveal-visible{transform:none}
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  .brand-home .home-action{transition:background-color .2s,color .2s}
+  .brand-home .home-action:hover{background:#f4d6b3}
+  .brand-home .home-text-link>span{transition:transform .2s}
+  .brand-home .home-text-link:hover>span{transform:translate(3px,-3px)}
+}

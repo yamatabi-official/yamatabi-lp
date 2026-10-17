@@ -1,82 +1,135 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b1112">
-<meta name="description" content="YAMATABI — 山と旅をテーマにしたストーリーメディア。映像と物語を通じて、まだ知らない景色へ。">
-<title>YAMATABI | まだ知らない景色へ。</title>
-<link rel="stylesheet" href="style.css?v=20261017-copy-wrap">
-<script src="gallery.js" defer>
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1112">
+  <meta name="description" content="YAMATABI — 物語は、続いていく。山と旅を舞台にした映像から、あなた自身の冒険へ。今日、誰かの物語に夢中になった。次の週末は、自分が主人公になる。">
+  <title>YAMATABI | 物語は、続いていく。</title>
+  <link rel="stylesheet" href="style.css?v=20261017-copy-wrap">
+  <link rel="stylesheet" href="homepage.css?v=20261017-world-waiting">
+  <script src="gallery.js" defer></script>
+  <script src="homepage.js" defer></script>
 </head>
-<body>
-<header class="nav"><a class="brand" href="index.html">YAMATABI</a><a href="https://www.instagram.com/yamabase2026/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
-</header>
-<main>
-<section class="hero">
-<div class="hero-copy">
-<div class="eyebrow">YAMATABI</div>
-<h1>まだ知らない<br>景色へ。</h1>
-<p>観る時間を、次の一歩へ。</p><a class="link" href="#about">YAMATABIについて ↘</a>
-</div>
-</section>
-<section class="about-section" id="about">
-<div class="about-inner">
-<div class="eyebrow">WHAT IS YAMATABI?</div>
-<div class="about-grid">
-<h2><span>物語が、</span><span>旅のはじまりになる。</span></h2>
-<div class="about-description">
-<p>YAMATABIは、山と旅をテーマにしたストーリーメディア。</p>
-<p>映像と物語を通じて、まだ知らない景色や感情に出会うきっかけをつくります。観て終わるのではなく、その先の一歩へ。</p>
-</div>
-</div>
-<div class="journey-steps">
-<div><span>01 / WATCH</span>
-<h3>観る</h3>
-<p>山と旅を舞台にした物語に出会う。</p>
-</div>
-<div><span>02 / DISCOVER</span>
-<h3>知る</h3>
-<p>舞台となった場所と、その魅力を発見する。</p>
-</div>
-<div><span>03 / EXPLORE</span>
-<h3>旅に出る</h3>
-<p>心が動いた景色を、自分の体験に変える。</p>
-</div>
-</div><a class="link" href="#stories">作品を観る ↗</a>
-</div>
-</section>
-<section class="reel-section" id="stories" aria-labelledby="stories-title">
-  <div class="reel-heading">
-    <div>
-      <div class="eyebrow">YAMATABI ORIGINALS / NOW PLAYING</div>
-      <h2 class="section-title" id="stories-title">物語を、再生する。</h2>
-      <p>山と旅のショートドラマを、ここから。</p>
-    </div>
-    <span class="reel-count" id="reel-count"></span>
-  </div>
-  <div class="reel-navigation" id="reel-navigation" hidden>
-    <p id="reel-hint">横にスワイプして、次の物語へ。</p>
-    <div class="reel-arrows">
-      <button type="button" id="reel-prev" aria-label="前の作品へ" aria-controls="reel-track">←</button>
-      <button type="button" id="reel-next" aria-label="次の作品へ" aria-controls="reel-track">→</button>
-    </div>
-  </div>
-  <div class="reel-track" id="reel-track" role="region" aria-label="映像作品ギャラリー" tabindex="0">
-</div>
-  <p class="reel-notice" id="reel-notice">作品ページからも動画をご覧いただけます。</p>
-  <a class="link" id="reel-fallback" href="experience.html">秋の上高地の作品ページへ ↗</a>
-  <noscript>
-<p class="reel-notice">作品ページで動画をご覧いただけます。</p></noscript>
-</section>
-<section class="manifesto">
-<div class="eyebrow">BEYOND THE SCREEN</div>
-<h2>画面を閉じたあと、<br>世界が少し面白くなる。</h2>
-<p>観る。発見する。次の景色へ。</p>
-</section>
-</main>
-<footer class="footer"><b>YAMATABI</b><span>まだ知らない景色へ。 © 2026 YAMATABI</span>
-</footer>
+<body class="brand-home">
+  <a class="home-skip" href="#about">ブランド紹介へ進む</a>
+  <header class="nav">
+    <a class="brand" href="index.html">YAMATABI</a>
+    <nav class="home-nav" aria-label="メインメニュー">
+      <a href="#stories">作品を観る</a>
+      <a href="https://www.instagram.com/yamabase2026/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
+    </nav>
+  </header>
+  <main>
+    <!-- Protected key visual: keep the existing hero geometry and background rules in style.css. -->
+    <section class="hero" aria-label="世界への入口">
+      <div class="hero-copy">
+        <div class="eyebrow">YAMATABI</div>
+        <h1>まだ知らない<br>景色へ。</h1>
+        <p>観る時間を、次の一歩へ。</p><a class="link" href="#about">YAMATABIについて ↘</a>
+      </div>
+      <div class="home-hero-note" aria-hidden="true"><span>THE WORLD IS WAITING.</span><span class="home-scroll-line"></span><span>SCROLL TO EXPLORE</span></div>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="philosophy-title">
+      <div class="about-inner">
+        <div class="home-chapter"><span>01 / PHILOSOPHY</span><span>物語の、その先へ。</span></div>
+        <p class="home-world" aria-hidden="true" data-reveal>THE WORLD<br><span>IS WAITING.</span></p>
+        <div class="home-philosophy-grid">
+          <div data-reveal>
+            <div class="eyebrow">WHAT IS YAMATABI?</div>
+            <h2 class="home-statement" id="philosophy-title"><span>物語は、</span><span>続いていく。</span></h2>
+            <p class="home-emotion"><span>今日、誰かの物語に夢中になった。</span><span>次の週末は、自分が主人公になる。</span></p>
+          </div>
+          <div class="about-description" data-reveal>
+            <h3 class="home-philosophy-subtitle"><span>物語が、</span><span>旅のはじまりになる。</span></h3>
+            <p>YAMATABIは、山と旅をテーマにしたストーリーメディア。</p>
+            <p>映像と物語を通じて、まだ知らない景色や感情に出会うきっかけをつくります。観て終わるのではなく、その先の一歩へ。</p>
+            <p>画面の中で動いた心を、現実の世界へ。自分の足で歩き、自分の目で出会う。そのとき、物語はあなたのものになる。</p>
+          </div>
+        </div>
+        <div class="journey-steps" data-reveal>
+          <div><span>01 / WATCH</span><h3>観る</h3><p>山と旅を舞台にした物語に出会う。</p></div>
+          <div><span>02 / DISCOVER</span><h3>知る</h3><p>舞台となった場所と、その魅力を発見する。</p></div>
+          <div><span>03 / EXPLORE</span><h3>旅に出る</h3><p>心が動いた景色を、自分の体験に変える。</p></div>
+        </div>
+        <a class="link home-text-link" href="#stories">作品を観る <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="reel-section" id="stories" aria-labelledby="stories-title">
+      <div class="home-section-inner">
+        <div class="home-chapter"><span>02 / STORIES</span><span>まずは、ひとつの物語から。</span></div>
+        <div class="reel-heading" data-reveal>
+          <div>
+            <div class="eyebrow">YAMATABI ORIGINALS / NOW PLAYING</div>
+            <h2 class="section-title" id="stories-title"><span>まだ知らない</span><span>物語に出会う。</span></h2>
+            <p>物語を、再生する。<br>山と旅のショートドラマを、ここから。</p>
+          </div>
+          <span class="reel-count" id="reel-count"></span>
+        </div>
+        <div class="reel-navigation" id="reel-navigation" hidden>
+          <p id="reel-hint">横にスワイプして、次の物語へ。</p>
+          <div class="reel-arrows">
+            <button type="button" id="reel-prev" aria-label="前の作品へ" aria-controls="reel-track">←</button>
+            <button type="button" id="reel-next" aria-label="次の作品へ" aria-controls="reel-track">→</button>
+          </div>
+        </div>
+        <div class="reel-track" id="reel-track" role="region" aria-label="映像作品ギャラリー" tabindex="0"></div>
+        <p class="reel-notice" id="reel-notice">作品ページからも動画をご覧いただけます。</p>
+        <a class="link" id="reel-fallback" href="experience.html">秋の上高地の作品ページへ ↗</a>
+        <noscript><p class="reel-notice">作品ページで動画をご覧いただけます。</p></noscript>
+      </div>
+    </section>
+
+    <section class="manifesto home-beyond" id="beyond" aria-labelledby="beyond-title">
+      <div class="home-section-inner">
+        <div class="home-chapter"><span>03 / BEYOND THE SCREEN</span><span>観た景色を、自分の記憶に。</span></div>
+        <div class="home-beyond-heading" data-reveal>
+          <div class="eyebrow">BEYOND THE SCREEN</div>
+          <h2 id="beyond-title"><span>コンテンツの先に、</span><span>人生がある。</span></h2>
+          <p>画面を閉じたあと、世界が少し面白くなる。<br>観る。発見する。次の景色へ。</p>
+        </div>
+        <div class="home-crossing">
+          <figure class="home-landscape" data-reveal>
+            <img src="kamikochi.webp" width="1152" height="1536" alt="上高地の河童橋と梓川、その向こうに広がる山々" loading="lazy" decoding="async">
+            <figcaption><span>INTO THE REAL WORLD</span><span>上高地 / KAMIKOCHI</span></figcaption>
+          </figure>
+          <div class="home-film-memory" data-reveal>
+            <img src="assets/kamikochi-film-still.webp" width="512" height="910" alt="作品『秋の上高地』の一場面" loading="lazy" decoding="async">
+            <span>IT STARTED WITH A STORY.</span>
+          </div>
+          <div class="home-crossing-copy" data-reveal>
+            <span class="eyebrow">YOUR NEXT WEEKEND</span>
+            <h3><span>今度は、</span><span>自分が歩く番だ。</span></h3>
+            <p>映像で出会った川の色も、山の空気も。<br>次は、あなた自身の思い出に。</p>
+            <a class="link home-text-link" href="experience.html#story-map">上高地の物語マップをひらく <span aria-hidden="true">↗</span></a>
+            <a class="home-secondary-link" href="experience.html#walk">散策のヒントを見つける ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-ending" id="next" aria-labelledby="ending-title">
+      <div class="home-section-inner">
+        <div class="home-chapter"><span>04 / YOUR STORY</span><span>ここからが、はじまり。</span></div>
+        <div class="home-ending-content" data-reveal>
+          <p class="eyebrow">THE WORLD IS WAITING.</p>
+          <h2 id="ending-title"><span>物語の続きは、</span><span>あなたの人生の中に。</span></h2>
+          <p>まだ知らない世界が、あなたを待っている。</p>
+          <div class="home-ending-actions">
+            <a class="home-action" href="#stories">次の物語を観る <span aria-hidden="true">↗</span></a>
+            <a class="link" href="experience.html#walk">次の週末を考える ↗</a>
+          </div>
+        </div>
+        <p class="home-wordmark" aria-hidden="true">YAMATABI</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <a class="brand" href="index.html">YAMATABI</a>
+    <span>まだ知らない景色へ。 © 2026 YAMATABI</span>
+    <a href="https://www.instagram.com/yamabase2026/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
+  </footer>
 </body>
 </html>
