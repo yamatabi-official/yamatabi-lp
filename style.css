@@ -26,3 +26,8 @@
 .reel-player{max-height:none}
 @media(max-width:680px){.reel-card{flex-basis:min(80vw,390px,40.5svh)}.reel-player{max-height:none}.reel-navigation p{max-width:210px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reel-track{scroll-behavior:auto}}
+
+/* Keep the brand heading in two complete phrases, sized to its actual column. */
+.about-grid h2{container-type:inline-size}
+.about-grid h2 span{display:block;white-space:nowrap;font-size:min(1em,9.5cqw)}
+.about-description p{line-break:strict;overflow-wrap:break-word;text-wrap:pretty}
