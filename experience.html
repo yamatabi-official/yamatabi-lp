@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0b1112">
+  <meta name="theme-color" content="#f3f0e8">
   <meta name="description" content="YAMATABIのショートドラマ『秋の上高地』。映像の余韻から、河童橋や梓川の景色、散策のヒント、アクセスと旅の準備へ。次の一歩を見つける作品ページです。">
   <title>秋の上高地｜作品と旅のガイド | YAMATABI</title>
   <link rel="stylesheet" href="style.css?v=20261017-kamikochi-guide">
+  <link rel="stylesheet" href="experience.css?v=20261017-autumn-film">
 </head>
 <body class="experience-page">
   <header class="nav">
@@ -16,13 +17,19 @@
   <main>
     <section class="detail-hero">
       <div class="detail-copy">
-        <div class="eyebrow">FILM 001 / KAMIKOCHI</div>
+        <div class="eyebrow">YAMATABI ORIGINAL FILM — 001</div>
+        <p class="film-kicker">ある秋の、忘れたくない時間。</p>
         <h1>秋の上高地</h1>
         <p class="subtitle">まだ名前のない、二人の旅。</p>
         <div class="tags"><span>青春・旅</span><span>ショートドラマ</span><span>長野・上高地</span></div>
         <p>あの日の景色を、誰と見たいだろう。</p>
-        <a class="link" href="#scene">作品を再生する ▶</a>
+        <a class="film-play-link" href="#scene"><span aria-hidden="true">▶</span> 作品を観る <small>00:21</small></a>
+        <p class="film-edition">AUTUMN IN KAMIKOCHI <span>山には、まだ知らない物語がある。</span></p>
       </div>
+      <figure class="film-hero-image">
+        <img src="kamikochi.webp" width="1152" height="1536" alt="梓川と河童橋、その向こうに広がる上高地の山々" fetchpriority="high">
+        <figcaption>KAMIKOCHI, NAGANO / JAPAN</figcaption>
+      </figure>
     </section>
 
     <nav class="trip-menu" aria-label="作品と上高地ガイド">
@@ -34,23 +41,35 @@
     </nav>
 
     <section class="video-stage" id="scene" aria-labelledby="film-title">
-      <div class="video-heading">
-        <div class="eyebrow">WATCH THE STORY</div>
-        <h2 id="film-title">まだ名前のない、二人の旅。</h2>
-        <p class="trip-lead">観終わったあと、あなたなら誰と歩きたいですか。</p>
+      <div class="film-screening">
+        <div class="video-heading">
+          <div class="eyebrow">01 / THE FILM</div>
+          <h2 id="film-title"><span>まだ名前のない、</span><span>二人の旅。</span></h2>
+          <div class="film-rule" aria-hidden="true"></div>
+          <p class="trip-lead">あの日の景色を、<br>誰と見たいだろう。</p>
+          <p class="film-screening-note">川の音。秋の光。隣を歩く時間。<br>観終わったあと、あなたなら誰と歩きたいですか。</p>
+          <p class="film-runtime">SHORT DRAMA / 21 SEC.</p>
+        </div>
+        <div class="film-screen">
+          <div class="video-frame">
+            <video controls playsinline preload="none" poster="assets/kamikochi-film-still.webp" aria-label="秋の上高地 ショートドラマ">
+              <source src="kamikochi-film.mp4" type="video/mp4">
+              お使いのブラウザは動画再生に対応していません。
+            </video>
+          </div>
+          <p class="video-fallback">再生できない場合は、<a href="https://www.instagram.com/reel/DecApgPM4Ov/" target="_blank" rel="noopener noreferrer">Instagramで作品を見る ↗</a></p>
+        </div>
       </div>
-      <div class="video-frame">
-        <video controls playsinline preload="none" poster="kamikochi.webp" aria-label="秋の上高地 ショートドラマ">
-          <source src="kamikochi-film.mp4" type="video/mp4">
-          お使いのブラウザは動画再生に対応していません。
-        </video>
-      </div>
-      <p class="video-fallback">再生できない場合は、<a href="https://www.instagram.com/reel/DecApgPM4Ov/" target="_blank" rel="noopener noreferrer">Instagramで作品を見る ↗</a></p>
-      <a class="link" href="#about-kamikochi">映像の余韻を、次の旅へ ↓</a>
+      <a class="link film-after-link" href="#about-kamikochi">映像の余韻を、次の旅へ ↓</a>
     </section>
 
+    <div class="film-interlude">
+      <p>観る時間が、<br>いつかの思い出に変わる。</p>
+      <span>FROM A STORY TO YOUR JOURNEY</span>
+    </div>
+
     <section class="trip-section" id="about-kamikochi" aria-labelledby="about-title">
-      <div class="eyebrow">BEYOND THE STORY</div>
+      <div class="eyebrow">02 / BEYOND THE STORY</div>
       <div class="trip-intro">
         <h2 id="about-title"><span>この景色に、</span><span>会いに行くなら。</span></h2>
         <div>
@@ -69,7 +88,7 @@
 
     <section class="trip-section trip-places" id="places" aria-labelledby="places-title">
       <div class="trip-section-heading">
-        <div><div class="eyebrow">FIND YOUR SCENE</div><h2 id="places-title">心に残る、三つの景色。</h2></div>
+        <div><div class="eyebrow">03 / FIND YOUR SCENE</div><h2 id="places-title">心に残る、三つの景色。</h2></div>
         <p>上高地を訪れるときの、散策のヒントに。<br>作品の撮影地を示す一覧ではありません。</p>
       </div>
       <div class="trip-place-grid">
@@ -98,7 +117,7 @@
     </section>
 
     <section class="trip-section" id="walk" aria-labelledby="walk-title">
-      <div class="eyebrow">A LITTLE WALK</div>
+      <div class="eyebrow">04 / A LITTLE WALK</div>
       <h2 id="walk-title">はじめてなら、<wbr>歩く範囲を小さく。</h2>
       <p class="trip-lead">バスターミナルから河童橋へ。<br>予定を詰めるより、立ち止まる時間を残して。</p>
       <div class="trip-walk">
@@ -123,7 +142,7 @@
 
     <section class="trip-season-band" id="season" aria-labelledby="season-title">
       <div class="trip-section">
-        <div class="eyebrow">AUTUMN / PACK YOUR CURIOSITY</div>
+        <div class="eyebrow">05 / AUTUMN NOTES</div>
         <h2 id="season-title">秋の空気まで、<wbr>楽しむために。</h2>
         <p class="trip-lead">木々の色づきも、山の天気も、日ごとに変わる。<br>映像の景色を、当日の景色と重ねてみる。</p>
         <div class="trip-season-grid">
@@ -135,7 +154,7 @@
     </section>
 
     <section class="trip-section" id="access" aria-labelledby="access-title">
-      <div class="eyebrow">GETTING THERE</div>
+      <div class="eyebrow">06 / GETTING THERE</div>
       <h2 id="access-title">上高地への、<wbr>行き方。</h2>
       <p class="trip-lead">上高地はマイカー規制のあるエリア。<br>車で向かう場合も、途中でバスやタクシーに乗り換えます。</p>
       <div class="trip-access-grid">
@@ -158,7 +177,7 @@
     </section>
 
     <section class="trip-section trip-check-section" id="before-you-go" aria-labelledby="check-title">
-      <div class="eyebrow">BEFORE YOU GO</div>
+      <div class="eyebrow">07 / BEFORE YOU GO</div>
       <h2 id="check-title">出発前の、<wbr>小さなチェック。</h2>
       <ul class="trip-checklist">
         <li><span>01</span><div><h3>訪問できる時期と交通</h3><p>道路・施設の利用期間、往復の運行、予約の要否を確認。冬季は通常の観光シーズンと条件が大きく異なります。</p></div></li>

@@ -11,11 +11,14 @@
 - 静的 HTML / CSS / 素の JavaScript。ビルド・外部パッケージ・DB・認証は不要。
 - `index.html`：ブランドLPと動画ギャラリー。
 - `experience.html`：「秋の上高地」の詳細ページ。
-- `style.css`：共通スタイル。
+- `style.css`：トップページと共通のスタイル。
+- `experience.css`：上高地の作品詳細ページ専用。生成り・深緑・茶色と明朝体で、作品の秋と青春の雰囲気を表現する。
+- `assets/kamikochi-film-still.webp`：既存作品の6秒地点から切り出した動画ポスター。観光スポットの記録写真とは区別する。
 - `gallery.js`：作品データの読み込み、横スクロール、動画の再生制御。
 - `works.json`：ギャラリー用の作品一覧。現在の公開素材は上高地の1作品のみ。
 - WebP画像とMP4は同一サイト配信。ZIPは既存の配布用アーカイブで、実行時には不要。
-- 現在の公開サービスと自動公開の有無は未確認。変更のpushが公開を誘発する可能性も確認してから操作する。
+- 公開は GitHub Pages。`main` へのpushで「pages build and deployment」が自動実行される。公開を依頼された場合のみpushし、対象コミットの公開処理成功を確認する。
+- 公開URL：https://yamatabi-official.github.io/yamatabi-lp/。環境の接続制限で直接アクセスできない場合は、公開処理成功と公開URLでの実画面検証を区別する。
 
 ## ローカル起動
 既存の `/workspace/yamatabi-lp` を使用する。クラウドタスクは隔離済みのため、明示的な依頼なしに Git worktree を作らない。
