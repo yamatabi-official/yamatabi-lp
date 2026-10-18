@@ -230,30 +230,18 @@
 }
 .brand-home .hero-copy>.eyebrow{text-shadow:0 1px 3px #071012b3,0 2px 16px #07101280}
 
-/* Explain the experience before the philosophy: a short promise and two clear benefits. */
+/* One concise introduction before the works; philosophy lives in the ending. */
 .brand-home .home-media-overview{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,6vw,88px);align-items:center;padding:58px 0 44px}
 .brand-home #media-title{font-family:"Yu Mincho","Hiragino Mincho ProN","Noto Serif CJK JP",serif;font-size:clamp(27px,4vw,56px);font-weight:400;line-height:1.7;letter-spacing:0;margin:18px 0 24px}
 .brand-home #media-title span{display:block;white-space:nowrap}
 .brand-home .home-media-summary{font-size:14px;line-height:2.2;color:#d4d8d8;max-width:510px;margin:0}
 .brand-home .home-media-summary strong{font-weight:500;color:#f4f0e7}
 .brand-home .home-media-overview .home-text-link{font-size:12px;margin-top:20px}
-.brand-home .home-media-values{display:grid;gap:24px}
-.brand-home .home-media-values>div{border-left:2px solid #d3b6c477;padding:4px 0 4px 22px}
-.brand-home .home-media-values>div:nth-child(2){border-color:#e7bb8b88}
-.brand-home .home-media-values span{font-size:8px;letter-spacing:.16em;color:#d7c5df}
-.brand-home .home-media-values h3{font-size:17px;line-height:1.8;font-weight:500;margin:10px 0;color:#f1e5d6}
-.brand-home .home-media-values p{font-size:13px;line-height:2;color:#bdc5c8;margin:0;max-width:390px}
-.brand-home .home-world{font-family:inherit;font-size:10px;font-weight:400;letter-spacing:.2em;line-height:1.8;color:#c4bccd;margin:4px 0 52px;padding-bottom:26px;border-bottom:1px solid var(--home-line)}
-@media(max-width:900px){.brand-home .home-media-overview{grid-template-columns:1fr;gap:32px}.brand-home .home-media-summary{max-width:600px}.brand-home .home-media-values{grid-template-columns:1fr 1fr;gap:24px}}
+@media(max-width:900px){.brand-home .home-media-overview{grid-template-columns:1fr;gap:12px}.brand-home .home-media-summary{max-width:600px}}
 @media(max-width:680px){
-  .brand-home .home-media-overview{padding:34px 0 30px;gap:30px}
+  .brand-home .home-media-overview{padding:28px 0 0;gap:8px}
   .brand-home #media-title{font-size:clamp(25px,6.7vw,38px);margin:14px 0 20px}
   .brand-home .home-media-summary{font-size:13px}
-  .brand-home .home-media-values{grid-template-columns:1fr;gap:22px}
-  .brand-home .home-media-values>div{padding-left:16px}
-  .brand-home .home-media-values h3{font-size:16px}
-  .brand-home .home-media-values p{font-size:12px}
-  .brand-home .home-world{font-size:8px;margin:0 0 38px;letter-spacing:.15em}
 }
 
 /* Finite, compositor-friendly text entrances; images and hero framing stay fixed. */
@@ -322,3 +310,11 @@
   .brand-home .finder-result-card{grid-template-columns:1fr;gap:16px}
   .brand-home .finder-result-card img{max-width:160px;height:190px}
 }
+
+/* Let visitors watch first, then optionally find a story by mood. */
+.brand-home .about-section{padding-bottom:48px}
+.brand-home .story-finder{margin:56px 0 0}
+.brand-home .home-ending-content>.home-ending-emotion{font-size:clamp(15px,1.6vw,21px);line-height:2.1;color:#42545b;margin:32px 0 22px}
+.brand-home .home-ending-emotion>span{display:block}
+.brand-home .home-ending-belief{max-width:620px;margin:0 auto;text-wrap:pretty}
+@media(max-width:680px){.brand-home .about-section{padding-bottom:36px}.brand-home .story-finder{margin-top:36px}.brand-home .home-ending-belief br{display:none}}

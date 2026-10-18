@@ -7,7 +7,7 @@
   <meta name="description" content="YAMATABI — 物語は、続いていく。山と旅を舞台にした映像から、あなた自身の冒険へ。今日、誰かの物語に夢中になった。次の週末は、自分が主人公になる。">
   <title>YAMATABI | 物語は、続いていく。</title>
   <link rel="stylesheet" href="style.css?v=20261017-copy-wrap">
-  <link rel="stylesheet" href="homepage.css?v=20261018-story-finder">
+  <link rel="stylesheet" href="homepage.css?v=20261018-page-flow">
   <script src="gallery.js" defer></script>
   <script src="story-finder.js?v=20261018" defer></script>
   <script src="homepage.js?v=20261018-motion" defer></script>
@@ -34,39 +34,17 @@
 
     <section class="about-section" id="about" aria-labelledby="media-title">
       <div class="about-inner">
-        <div class="home-chapter"><span>01 / PHILOSOPHY</span><span>物語の、その先へ。</span></div>
+        <div class="home-chapter"><span>01 / ABOUT</span><span>観る楽しさと、旅のきっかけを。</span></div>
         <div class="home-media-overview">
           <div>
             <p class="eyebrow">YAMATABIとは</p>
             <h2 id="media-title" data-motion="lines"><span>観て、ときめく。</span><span>次の旅が、見つかる。</span></h2>
-            <p class="home-media-summary">YAMATABIは、山や自然を舞台にした<strong>ショートドラマ</strong>と、<strong>作品の舞台を旅するヒント</strong>を届けるメディアです。</p>
+          </div>
+          <div>
+            <p class="home-media-summary">YAMATABIは、山や自然を舞台にした<strong>ショートドラマ</strong>と、その場所を楽しむ<strong>旅のヒント</strong>を届けるメディアです。</p>
             <a class="link home-text-link" href="#stories">まずは、作品を観る <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="home-media-values">
-            <div><span>FIND YOUR NEXT TRIP</span><h3>行ってみたい場所が、見つかる。</h3><p>舞台の見どころや散策マップを、映像と一緒に。次の休日の行き先を考えるヒントに。</p></div>
-            <div><span>FEEL YOUR NEXT STORY</span><h3>次の週末が、楽しみになる。</h3><p>心が動く物語から、「自分もこんな旅をしてみたい」へ。日常の先に、小さな冒険を。</p></div>
-          </div>
         </div>
-        <p class="home-world" aria-hidden="true">THE WORLD IS WAITING.</p>
-        <div class="home-philosophy-grid">
-          <div data-reveal>
-            <div class="eyebrow">WHAT IS YAMATABI?</div>
-            <h2 class="home-statement" id="philosophy-title" data-motion="lines"><span>物語は、</span><span>続いていく。</span></h2>
-            <p class="home-emotion"><span>今日、誰かの物語に夢中になった。</span><span>次の週末は、自分が主人公になる。</span></p>
-          </div>
-          <div class="about-description" data-reveal>
-            <h3 class="home-philosophy-subtitle"><span>物語が、</span><span>旅のはじまりになる。</span></h3>
-            <p>YAMATABIは、山と旅をテーマにしたストーリーメディア。</p>
-            <p>映像と物語を通じて、まだ知らない景色や感情に出会うきっかけをつくります。観て終わるのではなく、その先の一歩へ。</p>
-            <p>画面の中で動いた心を、現実の世界へ。自分の足で歩き、自分の目で出会う。そのとき、物語はあなたのものになる。</p>
-          </div>
-        </div>
-        <div class="journey-steps" data-reveal data-stagger>
-          <div><span>01 / WATCH</span><h3>観る</h3><p>山と旅を舞台にした物語に出会う。</p></div>
-          <div><span>02 / DISCOVER</span><h3>知る</h3><p>舞台となった場所と、その魅力を発見する。</p></div>
-          <div><span>03 / EXPLORE</span><h3>旅に出る</h3><p>心が動いた景色を、自分の体験に変える。</p></div>
-        </div>
-        <a class="link home-text-link" href="#stories">作品を観る <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
@@ -81,6 +59,18 @@
           </div>
           <span class="reel-count" id="reel-count"></span>
         </div>
+
+        <div class="reel-navigation" id="reel-navigation" hidden>
+          <p id="reel-hint">横にスワイプして、次の物語へ。</p>
+          <div class="reel-arrows">
+            <button type="button" id="reel-prev" aria-label="前の作品へ" aria-controls="reel-track">←</button>
+            <button type="button" id="reel-next" aria-label="次の作品へ" aria-controls="reel-track">→</button>
+          </div>
+        </div>
+        <div class="reel-track" id="reel-track" role="region" aria-label="映像作品ギャラリー" tabindex="0"></div>
+        <p class="reel-notice" id="reel-notice">作品ページからも動画をご覧いただけます。</p>
+        <a class="link" id="reel-fallback" href="experience.html">秋の上高地の作品ページへ ↗</a>
+        <noscript><p class="reel-notice">作品ページで動画をご覧いただけます。</p></noscript>
         <section class="story-finder" aria-labelledby="finder-title">
           <div class="finder-intro"><p class="eyebrow">FIND YOUR STORY</p><h3 id="finder-title">今の気分から、物語を探す。</h3><p>気分と、してみたい体験をひとつずつ選んでください。</p></div>
           <form id="story-finder-form" hidden>
@@ -102,27 +92,16 @@
           <div id="finder-results" hidden></div>
           <noscript><p>下の作品一覧から、気になる物語をご覧ください。</p></noscript>
         </section>
-        <div class="reel-navigation" id="reel-navigation" hidden>
-          <p id="reel-hint">横にスワイプして、次の物語へ。</p>
-          <div class="reel-arrows">
-            <button type="button" id="reel-prev" aria-label="前の作品へ" aria-controls="reel-track">←</button>
-            <button type="button" id="reel-next" aria-label="次の作品へ" aria-controls="reel-track">→</button>
-          </div>
-        </div>
-        <div class="reel-track" id="reel-track" role="region" aria-label="映像作品ギャラリー" tabindex="0"></div>
-        <p class="reel-notice" id="reel-notice">作品ページからも動画をご覧いただけます。</p>
-        <a class="link" id="reel-fallback" href="experience.html">秋の上高地の作品ページへ ↗</a>
-        <noscript><p class="reel-notice">作品ページで動画をご覧いただけます。</p></noscript>
       </div>
     </section>
 
     <section class="manifesto home-beyond" id="beyond" aria-labelledby="beyond-title">
       <div class="home-section-inner">
-        <div class="home-chapter"><span>03 / BEYOND THE SCREEN</span><span>観た景色を、自分の記憶に。</span></div>
+        <div class="home-chapter"><span>03 / VISIT THE STORY</span><span>観た景色を、自分の記憶に。</span></div>
         <div class="home-beyond-heading" data-reveal>
           <div class="eyebrow">BEYOND THE SCREEN</div>
-          <h2 id="beyond-title" data-motion="lines"><span>コンテンツの先に、</span><span>人生がある。</span></h2>
-          <p>画面を閉じたあと、世界が少し面白くなる。<br>観る。発見する。次の景色へ。</p>
+          <h2 id="beyond-title" data-motion="lines"><span>物語で出会った、</span><span>あの場所へ。</span></h2>
+          <p>「秋の上高地」の舞台を、もっと身近に。<br>河童橋周辺の見どころや、散策のヒントをご紹介します。</p>
         </div>
         <div class="home-crossing">
           <figure class="home-landscape" data-reveal>
@@ -146,11 +125,12 @@
 
     <section class="home-ending" id="next" aria-labelledby="ending-title">
       <div class="home-section-inner">
-        <div class="home-chapter"><span>04 / YOUR STORY</span><span>ここからが、はじまり。</span></div>
+        <div class="home-chapter"><span>04 / OUR PHILOSOPHY</span><span>物語は、続いていく。</span></div>
         <div class="home-ending-content" data-reveal>
           <p class="eyebrow">THE WORLD IS WAITING.</p>
           <h2 id="ending-title" data-motion="lines"><span>物語の続きは、</span><span>あなたの人生の中に。</span></h2>
-          <p>まだ知らない世界が、あなたを待っている。</p>
+          <p class="home-ending-emotion"><span>今日、誰かの物語に夢中になった。</span><span>次の週末は、自分が主人公になる。</span></p>
+          <p class="home-ending-belief">私たちは、物語に心が動いたその先にある、あなた自身の体験を大切にしています。<br>自分の足で歩き、自分の目で出会う。そこから、新しい物語が始まります。</p>
           <div class="home-ending-actions">
             <a class="home-action" href="#stories">次の物語を観る <span aria-hidden="true">↗</span></a>
             <a class="link" href="experience.html#walk">次の週末を考える ↗</a>
