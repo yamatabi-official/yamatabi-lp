@@ -73,6 +73,6 @@
   document.addEventListener('keydown', onKey);
   motion.addEventListener('change', onMotion);
   window.addEventListener('pagehide', () => finish(true), { once: true });
-  video.src = 'assets/kamikochi-river-intro.mp4';
+  video.src = 'assets/kamikochi-river-intro.mp4?v=source-quality';
   video.play()?.catch(() => finish());
 })();
