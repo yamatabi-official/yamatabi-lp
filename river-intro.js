@@ -1,6 +1,6 @@
-(() => {
+function startRiverIntro() {
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  if (motion.matches || navigator.connection?.saveData) return;
+  if (motion.matches || navigator.connection?.saveData || document.querySelector('.river-intro')) return;
   const previous = document.activeElement;
   const intro = document.createElement('div');
   intro.className = 'river-intro';
@@ -75,4 +75,9 @@
   window.addEventListener('pagehide', () => finish(true), { once: true });
   video.src = 'assets/kamikochi-river-intro.mp4?v=source-quality';
   video.play()?.catch(() => finish());
-})();
+}
+
+startRiverIntro();
+window.addEventListener('pageshow', event => {
+  if (event.persisted) startRiverIntro();
+});
