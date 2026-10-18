@@ -6,6 +6,18 @@
     "description": "まだ名前のない、二人の旅。",
     "poster": "kamikochi.webp",
     "video": "kamikochi-film.mp4",
-    "detailUrl": "experience.html"
+    "detailUrl": "experience.html",
+    "recommendation": {
+      "moods": [
+        "calm",
+        "romance"
+      ],
+      "experiences": [
+        "riverside",
+        "scenery"
+      ],
+      "experienceTip": "河童橋や梓川の景色を知り、川沿いの散策を考えてみませんか。",
+      "experienceUrl": "experience.html#walk"
+    }
   }
 ]

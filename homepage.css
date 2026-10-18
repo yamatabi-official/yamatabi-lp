@@ -288,3 +288,37 @@
   .brand-home [data-motion="visual"].motion-play:after{animation:home-visual-shadow 1.4s ease-out both}
 }
 @media print{.brand-home [data-motion="visual"]{animation:none!important;transform:none!important;opacity:1!important}}
+
+/* Mood-to-story finder: native choices, transparent matches, no chat dependency. */
+.brand-home .story-finder{padding:32px;margin:0 0 40px;border:1px solid #d6d4da40;border-radius:24px;background:linear-gradient(135deg,#f4eee7,#e5edf0);color:#344b55}
+.brand-home .finder-intro .eyebrow{color:#80533d}
+.brand-home .finder-intro h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(23px,2.7vw,34px);font-weight:400;line-height:1.8;margin:12px 0}
+.brand-home .finder-intro>p:last-child{font-size:13px;line-height:2;color:#53666d}
+.brand-home .story-finder fieldset{border:0;padding:0;margin:26px 0}
+.brand-home .story-finder legend{font-size:12px;font-weight:600;line-height:2;margin-bottom:12px}
+.brand-home .finder-choices{display:flex;flex-wrap:wrap;gap:10px}
+.brand-home .finder-choices label{position:relative;cursor:pointer}
+.brand-home .finder-choices input{position:absolute;opacity:0;width:1px;height:1px;left:16px;top:50%;margin:0}
+.brand-home .finder-choices span{display:flex;align-items:center;min-height:44px;padding:10px 16px;border:1px solid #69879066;border-radius:24px;font-size:12px;line-height:1.8;background:#ffffff55}
+.brand-home .finder-choices input:checked+span{background:#355c69;border-color:#355c69;color:#fff8ee}
+.brand-home .finder-choices input:focus-visible+span{outline:2px solid #83553c;outline-offset:3px}
+.brand-home .finder-submit{min-height:48px;padding:12px 20px;border:1px solid #355c69;background:#355c69;border-radius:25px;color:#fff8ee;font:inherit;font-size:13px;cursor:pointer}
+.brand-home .finder-submit:disabled{opacity:.6;cursor:wait}
+.brand-home .finder-status,.brand-home .finder-selection,.brand-home .finder-explanation{font-size:12px;line-height:2;color:#52666e}
+.brand-home #finder-results{border-top:1px solid #81969d55;margin-top:24px;padding-top:24px}
+.brand-home .finder-result-heading{font-size:21px;font-weight:500;line-height:1.8;margin:0 0 14px}
+.brand-home .finder-result-card{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;border-top:1px solid #81969d33;padding-top:24px;margin-top:24px}
+.brand-home .finder-result-card img{width:100%;height:200px;object-fit:cover;border-radius:12px}
+.brand-home .finder-match-label{font-size:10px;color:#80533d;letter-spacing:.06em}
+.brand-home .finder-result-body h5{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-weight:400;font-size:27px;line-height:1.7;margin:12px 0}
+.brand-home .finder-result-body p{font-size:13px;line-height:2;color:#52666e}
+.brand-home .finder-result-body .link{color:#355c69;border-color:#789093;font-size:12px;margin-top:8px;min-height:44px;line-height:2}
+.brand-home .finder-trip-link{display:table;color:#355c69;text-decoration:underline;text-underline-offset:4px;font-size:12px;min-height:44px;line-height:2;padding-top:10px}
+.brand-home .story-finder a:focus-visible,.brand-home .story-finder button:focus-visible,.brand-home .finder-result-heading:focus-visible{outline:2px solid #83553c;outline-offset:4px}
+@media(max-width:680px){
+  .brand-home .story-finder{padding:24px 18px;border-radius:20px}
+  .brand-home .finder-choices{gap:8px}
+  .brand-home .finder-choices span{padding:9px 12px;font-size:11px}
+  .brand-home .finder-result-card{grid-template-columns:1fr;gap:16px}
+  .brand-home .finder-result-card img{max-width:160px;height:190px}
+}
