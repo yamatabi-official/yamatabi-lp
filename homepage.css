@@ -235,6 +235,7 @@
 .brand-home #media-title{font-family:"Yu Mincho","Hiragino Mincho ProN","Noto Serif CJK JP",serif;font-size:clamp(27px,4vw,56px);font-weight:400;line-height:1.7;letter-spacing:0;margin:18px 0 24px}
 .brand-home #media-title span{display:block;white-space:nowrap}
 .brand-home .home-media-summary{font-size:14px;line-height:2.2;color:#d4d8d8;max-width:510px;margin:0}
+.brand-home .home-media-summary+.home-media-summary{margin-top:16px}
 .brand-home .home-media-summary strong{font-weight:500;color:#f4f0e7}
 .brand-home .home-media-overview .home-text-link{font-size:12px;margin-top:20px}
 @media(max-width:900px){.brand-home .home-media-overview{grid-template-columns:1fr;gap:12px}.brand-home .home-media-summary{max-width:600px}}
