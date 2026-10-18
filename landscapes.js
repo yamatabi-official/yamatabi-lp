@@ -78,10 +78,20 @@
   });
   // Finished films and atmosphere clips share a single playback budget.
   document.addEventListener('play', event => {
-    if (!(event.target instanceof HTMLVideoElement)) return;
+    if (!(event.target instanceof HTMLVideoElement) || event.target.paused) return;
+    const heroScene = event.target.closest('[data-hero-scene]');
+    if (heroScene && !heroScene.classList.contains('hero-scene-active')) {
+      event.target.pause();
+      return;
+    }
     document.querySelectorAll('video').forEach(video => {
       if (video !== event.target && !video.paused) video.pause();
     });
+  }, true);
+  document.addEventListener('pause', event => {
+    if (event.target instanceof HTMLVideoElement && !states.some(state => state.video === event.target)) {
+      queueMicrotask(update);
+    }
   }, true);
   document.addEventListener('visibilitychange', update);
   const preferenceChanged = () => {
