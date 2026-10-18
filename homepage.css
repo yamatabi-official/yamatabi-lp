@@ -333,3 +333,4 @@
  .brand-home .about-section:after{background:linear-gradient(180deg,#0b1112c9,#10212b9e 25%,#10212ba8 75%,#171f25d6)}
  .brand-home .home-media-overview{padding-top:32px;padding-bottom:32px}
 }
+.brand-home .home-hero-about{display:block;font-size:11px;line-height:2;color:#e4e8e3;text-decoration:none;margin-top:18px;min-height:44px;width:max-content}

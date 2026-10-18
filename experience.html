@@ -6,10 +6,16 @@
   <meta name="theme-color" content="#eff5f3">
   <meta name="description" content="YAMATABIのショートドラマ『秋の上高地』。映像の余韻から、河童橋や梓川の景色、散策のヒント、アクセスと旅の準備へ。次の一歩を見つける作品ページです。">
   <title>秋の上高地｜作品と旅のガイド | YAMATABI</title>
+  <meta property="og:title" content="秋の上高地｜今度は、あなたの一日に。 | YAMATABI">
+  <meta property="og:description" content="物語で出会った景色へ。上高地での過ごし方を選び、散策・交通・準備を考える、次の休日への入口。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yamatabi-official.github.io/yamatabi-lp/experience.html">
+  <meta property="og:image" content="https://yamatabi-official.github.io/yamatabi-lp/kamikochi.webp">
   <link rel="stylesheet" href="style.css?v=20261017-kamikochi-guide">
-  <link rel="stylesheet" href="experience.css?v=20261018-mobile-river">
+  <link rel="stylesheet" href="experience.css?v=20261018-your-day">
   <script src="story-map.js" defer></script>
-  <script src="river-intro.js?v=20261018-autoplay" defer></script>
+  <script src="journey.js?v=20261018" defer></script>
+  <script src="river-intro.js?v=20261018-your-day" defer></script>
 </head>
 <body class="experience-page">
   <header class="nav">
@@ -20,11 +26,12 @@
     <section class="detail-hero">
       <div class="detail-copy">
         <div class="eyebrow">YAMATABI ORIGINAL FILM — 001</div>
-        <p class="film-kicker">ある秋の、忘れたくない時間。</p>
+        <p class="film-kicker">あの物語の続きを、次の休日に。</p>
         <h1>秋の上高地</h1>
         <p class="subtitle">まだ名前のない、二人の旅。</p>
         <div class="tags"><span>青春・旅</span><span>ショートドラマ</span><span>長野・上高地</span></div>
-        <p>あの日の景色を、誰と見たいだろう。</p>
+        <p>川沿いを歩く。橋で立ち止まる。<br>今度は、あなたの一日に。</p>
+        <a class="journey-primary" href="#your-day">この世界を歩いてみる ↗</a>
         <a class="film-play-link" href="#scene"><span aria-hidden="true">▶</span> 作品を観る <small>00:21</small></a>
         <p class="film-edition">AUTUMN IN KAMIKOCHI <span>山には、まだ知らない物語がある。</span></p>
       </div>
@@ -35,6 +42,7 @@
     </section>
 
     <nav class="trip-menu" aria-label="作品と上高地ガイド">
+      <a href="#your-day">自分の休日を考える</a>
       <a href="#scene">作品を観る</a>
       <a href="#about-kamikochi">上高地を知る</a>
       <a href="#places">景色を見つける</a>
@@ -42,6 +50,48 @@
       <a href="#walk">散策する</a>
       <a href="#access">行き方・準備</a>
     </nav>
+
+    <section class="trip-section your-day" id="your-day" aria-labelledby="your-day-title">
+      <div class="eyebrow">MAKE IT YOUR STORY</div>
+      <h2 id="your-day-title">今度は、あなたの一日に。</h2>
+      <p class="trip-lead">同じ景色でも、誰と過ごすかで違う物語になる。<br>上高地で、どんな休日を過ごしたいですか。</p>
+      <fieldset class="day-choices" id="day-choices" hidden>
+        <legend>過ごし方を選ぶ</legend>
+        <label><input type="radio" name="day" value="solo" checked><span>ひとりで、気持ちを整える</span></label>
+        <label><input type="radio" name="day" value="together"><span>大切な人と、ゆっくり話す</span></label>
+        <label><input type="radio" name="day" value="friends"><span>友達と、景色を楽しむ</span></label>
+      </fieldset>
+      <article class="day-plan" aria-labelledby="day-plan-title">
+        <p class="eyebrow">YOUR DAY / KAMIKOCHI</p>
+        <h3 id="day-plan-title">川の音に、耳を澄ます休日。</h3>
+        <p id="day-plan-copy">河童橋で景色を眺めたら、開放されている梓川沿いの遊歩道へ。写真を撮る手を少し休めて、水の色や風に目を向けてみる。</p>
+        <p id="day-plan-hint" class="day-plan-hint">予定を詰めず、ひと休みの時間も旅の一部に。</p>
+        <p class="trip-small">作品の世界から着想した過ごし方の提案です。歩く範囲は、当日の天候や遊歩道の開放状況に合わせて選びましょう。</p>
+        <div class="day-actions"><a class="journey-primary" href="#walk">散策の流れを見る ↓</a><a class="source" href="#story-map">物語の概念マップを見る ↓</a></div>
+      </article>
+      <div class="day-preparation">
+        <div>
+          <h3>「行ってみたい」を、一歩先へ。</h3>
+          <p>まずは出発地からの往復と、現地で歩ける範囲を確認。日帰りか宿泊かは、移動と帰りの時間から考えましょう。</p>
+          <div class="day-actions"><a class="source" href="#access">交通・乗り換えを確認 ↓</a><a class="source" href="#season">服装・持ち物を確認 ↓</a></div>
+          <p class="trip-small">所要時間・費用・運行日・通行状況は条件によって変わります。出発前に公式の最新案内をご確認ください。</p>
+        </div>
+        <div>
+          <h3>旅の準備リスト</h3>
+          <div class="day-checks">
+            <label><input type="checkbox" value="transport">往復の交通・乗り換え・予約を確認</label>
+            <label><input type="checkbox" value="return">帰りの便と、余裕のある戻り時間を決める</label>
+            <label><input type="checkbox" value="weather">開放状況・天気・歩く道を確認</label>
+            <label><input type="checkbox" value="kit">歩きやすい靴・上着・雨具・飲み物を準備</label>
+          </div>
+          <p class="trip-small" id="day-storage-note">チェックしながら、準備を進めましょう。</p>
+          <div class="day-actions" id="day-tools" hidden><button type="button" class="journey-button" id="day-download">準備リストを保存 ↓</button><button type="button" class="journey-button" id="day-share">この休日プランを共有 ↗</button></div>
+          <p id="day-status" role="status" class="trip-small"></p>
+          <label id="day-copy-fallback" hidden>このリンクをコピーして共有<input id="day-copy-url" type="text" readonly></label>
+          <noscript><p class="trip-small">このページのURLをコピーすると、旅の候補として共有できます。</p></noscript>
+        </div>
+      </div>
+    </section>
 
     <section class="video-stage" id="scene" aria-labelledby="film-title">
       <div class="film-screening">
@@ -294,6 +344,7 @@
       </div>
     </section>
   </main>
+  <nav class="mobile-journey-bar" aria-label="休日の準備"><a href="#your-day">自分の休日を考える</a><a href="#access">行き方を確認 ↗</a></nav>
   <footer class="footer"><b>YAMATABI</b><a href="index.html">トップに戻る ↗</a></footer>
 </body>
 </html>

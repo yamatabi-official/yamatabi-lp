@@ -275,3 +275,47 @@
 .river-intro .river-intro-play{bottom:140px;right:50%;transform:translateX(50%);width:max-content;max-width:calc(100% - 40px);background:#082a35ed}
 .river-intro [hidden]{display:none!important}
 .river-intro-status{position:absolute;z-index:2;bottom:85px;left:20px;right:20px;text-align:center;color:#fff;font-size:12px;text-shadow:0 1px 6px #082a35}
+
+/* From the film to a personal day, with large mobile touch targets. */
+.experience-page .journey-primary,.experience-page .journey-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border:1px solid #245e64;border-radius:28px;font:inherit;font-size:13px;line-height:1.7;text-decoration:none;cursor:pointer}
+.experience-page .journey-primary{background:#245e64;color:#fff}
+.experience-page .journey-button{background:transparent;color:#245e64}
+.experience-page .day-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:20px}
+.experience-page .your-day{scroll-margin-top:24px}
+.experience-page .day-choices{border:0;padding:0;margin:30px 0 24px;display:flex;flex-wrap:wrap;gap:10px}
+.experience-page .day-choices legend{font-size:12px;margin-bottom:14px}
+.experience-page .day-choices label{position:relative;cursor:pointer}
+.experience-page .day-choices input{position:absolute;opacity:0;width:1px;height:1px}
+.experience-page .day-choices span{display:flex;align-items:center;min-height:48px;padding:10px 18px;border:1px solid #3e6f7066;border-radius:28px;font-size:13px}
+.experience-page .day-choices input:checked+span{background:#245e64;color:#fff;border-color:#245e64}
+.experience-page .day-choices input:focus-visible+span{outline:2px solid #975b35;outline-offset:3px}
+.experience-page .day-plan{padding:clamp(24px,4vw,48px);background:linear-gradient(130deg,#e1eeeb,#f1e9dc);border-radius:4px 36px 4px 4px;border:1px solid #3e6f7026}
+.experience-page .day-plan h3{font-weight:400;text-wrap:balance;font-size:clamp(23px,3vw,34px);line-height:1.7;margin:14px 0 20px}
+.experience-page .day-plan p{max-width:720px;line-height:2.1}
+.experience-page .day-plan-hint{color:#6f503e}
+.experience-page .day-preparation{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:40px}
+.experience-page .day-preparation h3{font-size:20px;line-height:1.8}
+.experience-page .day-preparation p{line-height:2}
+.experience-page .day-checks{display:grid;gap:8px}
+.experience-page .day-checks label{display:flex;gap:12px;align-items:flex-start;min-height:44px;line-height:1.9;font-size:13px;padding:8px 0;cursor:pointer}
+.experience-page .day-checks input{width:20px;height:20px;margin:2px 0 0;flex-shrink:0;accent-color:#245e64}
+.experience-page #day-copy-fallback{display:block;font-size:12px;line-height:2}
+.experience-page #day-copy-url{display:block;width:100%;box-sizing:border-box;padding:12px;font:inherit}
+.experience-page [hidden]{display:none!important}
+.mobile-journey-bar{display:none}
+.river-intro-actions{position:absolute;z-index:3;bottom:105px;left:20px;right:20px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.river-intro-actions a{display:flex;align-items:center;justify-content:center;min-height:48px;padding:10px 22px;border-radius:28px;background:#f5f0e4;color:#16424a;text-decoration:none;font-size:13px;border:1px solid #fff}
+.river-intro-actions a:last-child{background:#123c48cf;color:#fff}
+.river-intro .river-intro-play{bottom:180px}
+.river-intro-status{bottom:230px}
+@media(max-width:760px){
+ .experience-page .day-preparation{grid-template-columns:1fr;gap:24px}
+ .experience-page .day-choices{flex-direction:column}
+ .experience-page .day-choices span{justify-content:center}
+ .experience-page .day-actions{gap:14px}
+ .experience-page #day-tools button{width:100%}
+ .experience-page{padding-bottom:calc(70px + env(safe-area-inset-bottom))}
+ .mobile-journey-bar{position:fixed;z-index:30;bottom:0;left:0;right:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;justify-content:center;gap:10px;background:#f5f4edd9;backdrop-filter:blur(12px);border-top:1px solid #245e6433}
+ .mobile-journey-bar a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:8px 14px;border-radius:26px;text-decoration:none;font-size:12px;color:#245e64}
+ .mobile-journey-bar a:first-child{background:#245e64;color:white}
+}

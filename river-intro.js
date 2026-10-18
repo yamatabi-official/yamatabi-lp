@@ -1,6 +1,6 @@
 function startRiverIntro() {
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  if (motion.matches || navigator.connection?.saveData || document.querySelector('.river-intro')) return;
+  if (location.hash || motion.matches || navigator.connection?.saveData || document.querySelector('.river-intro')) return;
   const previous = document.activeElement;
   const intro = document.createElement('div');
   intro.className = 'river-intro';
@@ -37,8 +37,23 @@ function startRiverIntro() {
   const status = document.createElement('p');
   status.className = 'river-intro-status';
   status.setAttribute('role', 'status');
-  intro.append(video, title, play, status, skip);
-  const content = [...document.body.children].filter(n => ['HEADER', 'MAIN', 'FOOTER'].includes(n.tagName));
+  const actions = document.createElement('div');
+  actions.className = 'river-intro-actions';
+  for (const [hash, text] of [['#your-day', '自分の旅を考える ↗'], ['#scene', '作品を観る ▶']]) {
+    const link = document.createElement('a');
+    link.href = hash; link.textContent = text;
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      finish(true);
+      location.hash = hash;
+      const heading = document.querySelector(hash + ' h2');
+      if (heading) { heading.tabIndex = -1; heading.focus({ preventScroll: true }); }
+      document.querySelector(hash)?.scrollIntoView({ behavior: 'instant' });
+    });
+    actions.append(link);
+  }
+  intro.append(video, title, actions, play, status, skip);
+  const content = [...document.body.children].filter(n => ['HEADER', 'MAIN', 'FOOTER', 'NAV'].includes(n.tagName));
   const priorInert = content.map(n => n.inert);
   document.body.append(intro);
   content.forEach(n => { n.inert = true; });
@@ -77,6 +92,7 @@ function startRiverIntro() {
     intro.setAttribute('aria-hidden', 'true');
     skip.tabIndex = -1;
     play.tabIndex = -1;
+    actions.querySelectorAll('a').forEach(link => { link.tabIndex = -1; });
     video.pause();
     if (restoreFocus) {
       const target = previous && previous !== document.body ? previous : document.querySelector('h1');
@@ -92,7 +108,9 @@ function startRiverIntro() {
     if (e.key === 'Escape') finish();
     if (e.key === 'Tab' && !closed) {
       e.preventDefault();
-      (play.hidden || document.activeElement === play ? skip : play).focus();
+      const controls = [...intro.querySelectorAll('a, button')].filter(n => !n.hidden);
+      const index = controls.indexOf(document.activeElement);
+      controls[(index + (e.shiftKey ? -1 : 1) + controls.length) % controls.length].focus();
     }
   }
   function onVisible() { if (document.visibilityState === 'visible') requestPlay(); }

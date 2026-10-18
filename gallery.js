@@ -107,7 +107,7 @@
       const status = element('p', 'reel-status');
       status.setAttribute('role', 'status');
       const meta = element('div', 'reel-meta');
-      const detail = element('a', 'link', 'ロケ地と物語をもっと知る ↗');
+      const detail = element('a', 'link', '物語の世界を、自分の休日へ ↗');
       detail.href = work.detailUrl;
       meta.append(element('div', 'eyebrow', `FILM ${String(index + 1).padStart(3, '0')}`),
         element('h3', '', work.title), element('p', 'reel-location', `舞台：${work.location}`),
