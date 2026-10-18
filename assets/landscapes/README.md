@@ -1,4 +1,7 @@
-# YAMATABI — selected landscape moments
+# YAMATABI — archived landscape moments
+
+現在は非掲載：2026-10-18、ユーザーの依頼でキービジュアルの動画切替と風景クリップ欄を撤去。
+以下は過去の編集記録。元素材・編集済みファイルは保持するが、ページから読み込まない。
 
 2026-10-18 / 現在トップのキービジュアルは変更しない。
 
