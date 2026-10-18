@@ -323,13 +323,13 @@
 /* User-supplied sky and path photo supports the copy without a separate photo section. */
 .brand-home .about-section{isolation:isolate;background:#14212a;overflow:hidden}
 .brand-home .about-section:before{content:"";position:absolute;inset:0;z-index:-2;background:url("assets/about-journey.webp") center 88%/cover no-repeat}
-.brand-home .about-section:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#0b1112e8 0%,#10212baa 26%,#10212bb8 72%,#171f25f5 100%),linear-gradient(90deg,#10191d77,transparent)}
+.brand-home .about-section:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#0b1112c4 0%,#10212b66 26%,#10212b7a 72%,#171f25c9 100%),linear-gradient(90deg,#10191d40,transparent)}
 .brand-home .about-section .about-inner{position:relative}
 .brand-home .home-media-overview{padding-top:72px;padding-bottom:72px}
-.brand-home .home-media-summary{color:#e2e8e7;text-wrap:pretty}
+.brand-home .home-media-summary{color:#f0f3f1;text-wrap:pretty;text-shadow:0 1px 5px #07131c99}
 .brand-home #media-title{text-shadow:0 2px 24px #07131c66}
 @media(max-width:680px){
  .brand-home .about-section:before{background-position:58% center}
- .brand-home .about-section:after{background:linear-gradient(180deg,#0b1112ed,#10212bd6 25%,#10212bd6 75%,#171f25fa)}
+ .brand-home .about-section:after{background:linear-gradient(180deg,#0b1112c9,#10212b9e 25%,#10212ba8 75%,#171f25d6)}
  .brand-home .home-media-overview{padding-top:32px;padding-bottom:32px}
 }
