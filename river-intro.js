@@ -14,7 +14,9 @@ function startRiverIntro() {
   video.setAttribute('playsinline', '');
   video.setAttribute('webkit-playsinline', '');
   video.playsInline = true;
-  video.preload = 'none';
+  video.autoplay = true;
+  video.setAttribute('autoplay', '');
+  video.preload = 'auto';
   video.poster = 'assets/kamikochi-river-intro.webp';
   video.setAttribute('aria-hidden', 'true');
   const title = document.createElement('p');
@@ -51,10 +53,15 @@ function startRiverIntro() {
     status.textContent = '自動再生できない場合は、タップしてご覧ください。';
   }
   function requestPlay() {
-    if (closed) return;
-    try { video.play()?.catch(showPlay); } catch { showPlay(); }
+    if (closed || !video.paused || video.ended) return;
+    video.muted = true;
+    // A loading/visibility retry may succeed even if the first attempt did not.
+    // Browser policy failures retain the explicit play button after the startup deadline.
+    try { video.play()?.catch(() => {}); } catch { /* Startup timer exposes manual playback. */ }
   }
   function cleanup() {
+    video.autoplay = false;
+    video.removeAttribute('autoplay');
     video.pause();
     video.removeAttribute('src');
     video.load();
@@ -79,6 +86,7 @@ function startRiverIntro() {
     else removalTimer = setTimeout(cleanup, 650);
     document.removeEventListener('keydown', onKey);
     motion.removeEventListener('change', onMotion);
+    document.removeEventListener('visibilitychange', onVisible);
   }
   function onKey(e) {
     if (e.key === 'Escape') finish();
@@ -87,6 +95,7 @@ function startRiverIntro() {
       (play.hidden || document.activeElement === play ? skip : play).focus();
     }
   }
+  function onVisible() { if (document.visibilityState === 'visible') requestPlay(); }
   function onMotion() { if (motion.matches) finish(true); }
   skip.addEventListener('click', () => finish());
   play.addEventListener('click', () => {
@@ -103,12 +112,16 @@ function startRiverIntro() {
     play.hidden = true;
     status.textContent = '';
   });
+  video.addEventListener('loadeddata', requestPlay, { once: true });
+  video.addEventListener('canplay', requestPlay, { once: true });
+  document.addEventListener('visibilitychange', onVisible);
   video.addEventListener('error', () => finish(), { once: true });
   video.addEventListener('ended', () => finish(), { once: true });
   document.addEventListener('keydown', onKey);
   motion.addEventListener('change', onMotion);
   window.addEventListener('pagehide', () => finish(true), { once: true });
   video.src = 'assets/kamikochi-river-intro.mp4?v=full-film';
+  video.load();
   requestPlay();
 }
 
