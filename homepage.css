@@ -1,5 +1,5 @@
-/* The key visual lives in style.css. Do not override .hero background, dimensions,
-   positioning, image treatment, or transforms here. All new design is home-only. */
+/* Key-visual background and dimensions stay in style.css. Never scale or reframe it.
+   The user-approved one-time visual lift is defined below; the final position is unchanged. */
 .brand-home{--home-night:#0b1112;--home-dawn:#edb582;--home-text:#f4f0e7;--home-muted:#b9bfb9;--home-line:#d6c9b52e;color:var(--home-text)}
 .brand-home .home-skip{position:fixed;left:16px;top:16px;z-index:30;padding:14px;background:#f4f0e7;color:#0b1112;clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}
 .brand-home .home-skip:focus{clip-path:none;width:auto;height:auto;overflow:visible}
@@ -255,3 +255,36 @@
   .brand-home .home-media-values p{font-size:12px}
   .brand-home .home-world{font-size:8px;margin:0 0 38px;letter-spacing:.15em}
 }
+
+/* Finite, compositor-friendly text entrances; images and hero framing stay fixed. */
+@keyframes home-line-arrival{from{opacity:.08;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes home-brand-arrival{from{opacity:.2;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes home-brand-light{0%{opacity:0;transform:translateX(-18px) scaleX(.7)}45%{opacity:.55}100%{opacity:0;transform:translateX(25px) scaleX(1.1)}}
+@media(prefers-reduced-motion:no-preference){
+  .brand-home [data-motion="lines"].motion-play>span{animation:home-line-arrival .85s cubic-bezier(.2,.7,.25,1) both}
+  .brand-home [data-motion="lines"].motion-play>span:nth-child(2){animation-delay:.18s}
+  .brand-home [data-motion="brand"].motion-play{animation:home-brand-arrival .9s ease-out both;position:relative;isolation:isolate}
+  .brand-home [data-motion="brand"].motion-play:after{content:"";position:absolute;inset:0 -12px;background:radial-gradient(ellipse,#f5d3a380,transparent 72%);filter:blur(8px);z-index:-1;pointer-events:none;animation:home-brand-light 2s .2s ease-in-out both}
+  .brand-home [data-stagger].reveal-visible>div{animation:home-line-arrival .65s ease-out both}
+  .brand-home [data-stagger].reveal-visible>div:nth-child(2){animation-delay:.12s}
+  .brand-home [data-stagger].reveal-visible>div:nth-child(3){animation-delay:.24s}
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  .brand-home .home-action{transition:background-color .2s,color .2s,transform .2s,box-shadow .2s}
+  .brand-home .home-action:hover{transform:translateY(-3px);box-shadow:0 12px 28px #37576526}
+}
+@media print{
+  .brand-home [data-motion]>span,.brand-home [data-stagger]>div{animation:none!important;transform:none!important;opacity:1!important}
+  .brand-home [data-motion="brand"]:after{display:none}
+}
+
+/* A one-time lift of the visual plane; no image scaling, reframing, or scroll parallax. */
+@keyframes home-visual-lift{from{opacity:.65;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes home-visual-shadow{from{opacity:0}to{opacity:1}}
+.brand-home .hero{z-index:1}
+.brand-home .hero:after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:0 24px 42px #030a1040,0 8px 24px #dbc2a01a;z-index:-1}
+@media(prefers-reduced-motion:no-preference){
+  .brand-home [data-motion="visual"].motion-play{animation:home-visual-lift 1.15s cubic-bezier(.16,.7,.25,1) backwards}
+  .brand-home [data-motion="visual"].motion-play:after{animation:home-visual-shadow 1.4s ease-out both}
+}
+@media print{.brand-home [data-motion="visual"]{animation:none!important;transform:none!important;opacity:1!important}}
