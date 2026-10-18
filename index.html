@@ -7,9 +7,10 @@
   <meta name="description" content="YAMATABI — 物語は、続いていく。山と旅を舞台にした映像から、あなた自身の冒険へ。今日、誰かの物語に夢中になった。次の週末は、自分が主人公になる。">
   <title>YAMATABI | 物語は、続いていく。</title>
   <link rel="stylesheet" href="style.css?v=20261017-copy-wrap">
-  <link rel="stylesheet" href="homepage.css?v=20261018-motion">
+  <link rel="stylesheet" href="homepage.css?v=20261018-landscapes">
   <script src="gallery.js" defer></script>
   <script src="homepage.js?v=20261018-motion" defer></script>
+  <script src="landscapes.js?v=20261018" defer></script>
 </head>
 <body class="brand-home">
   <a class="home-skip" href="#about">ブランド紹介へ進む</a>
@@ -65,6 +66,37 @@
           <div><span>02 / DISCOVER</span><h3>知る</h3><p>舞台となった場所と、その魅力を発見する。</p></div>
           <div><span>03 / EXPLORE</span><h3>旅に出る</h3><p>心が動いた景色を、自分の体験に変える。</p></div>
         </div>
+        <div class="home-glimpses" aria-labelledby="glimpses-title">
+          <div class="home-glimpses-heading"><div><p class="eyebrow">LITTLE MOMENTS / BIG POSSIBILITIES</p><h3 id="glimpses-title"><span>この景色から、</span><span>次の旅が始まる。</span></h3></div><p>旅を想像する、短い風景のスケッチ。</p></div>
+          <p class="landscape-swipe-hint">横にスワイプして、次の景色へ →</p>
+          <div class="home-glimpses-track" role="region" aria-label="3つの風景映像" tabindex="0">
+            <figure class="landscape-card" data-landscape>
+              <div class="landscape-window">
+                <img src="assets/landscapes/open-trail.webp" alt="緑の草原を抜け、丘へ続く道" width="448" height="796" loading="lazy" decoding="async">
+                <video data-src="assets/landscapes/open-trail.mp4" muted loop playsinline preload="none" poster="assets/landscapes/open-trail.webp" aria-hidden="true"></video>
+                <button class="landscape-toggle" type="button" aria-label="風に誘われての映像を再生" aria-pressed="false" hidden>▶ 再生</button>
+              </div>
+              <figcaption><span>01 / THE FIRST STEP</span><h4>風に誘われて</h4><p class="landscape-status" role="status"></p></figcaption>
+            </figure>
+            <figure class="landscape-card" data-landscape>
+              <div class="landscape-window">
+                <img src="assets/landscapes/river-moment.webp" alt="川の流れと、対岸の木々や山々" width="448" height="796" loading="lazy" decoding="async">
+                <video data-src="assets/landscapes/river-moment.mp4" muted loop playsinline preload="none" poster="assets/landscapes/river-moment.webp" aria-hidden="true"></video>
+                <button class="landscape-toggle" type="button" aria-label="川辺で、ひと呼吸。の映像を再生" aria-pressed="false" hidden>▶ 再生</button>
+              </div>
+              <figcaption><span>02 / A QUIET MOMENT</span><h4>川辺で、ひと呼吸。</h4><p class="landscape-status" role="status"></p></figcaption>
+            </figure>
+            <figure class="landscape-card" data-landscape>
+              <div class="landscape-window">
+                <img src="assets/landscapes/evening-ridge.webp" alt="夕方の柔らかな光に照らされた山の稜線" width="448" height="796" loading="lazy" decoding="async">
+                <video data-src="assets/landscapes/evening-ridge.mp4" muted loop playsinline preload="none" poster="assets/landscapes/evening-ridge.webp" aria-hidden="true"></video>
+                <button class="landscape-toggle" type="button" aria-label="光の先へ、もう一歩。の映像を再生" aria-pressed="false" hidden>▶ 再生</button>
+              </div>
+              <figcaption><span>03 / THE OPEN WORLD</span><h4>光の先へ、もう一歩。</h4><p class="landscape-status" role="status"></p></figcaption>
+            </figure>
+          </div>
+          <p class="landscape-provenance">提供映像を編集したイメージクリップです。実写・AI生成の制作区分は確認中で、場所や現地の状況を保証する映像ではありません。</p>
+        </div>
         <a class="link home-text-link" href="#stories">作品を観る <span aria-hidden="true">↗</span></a>
       </div>
     </section>
@@ -89,6 +121,7 @@
         </div>
         <div class="reel-track" id="reel-track" role="region" aria-label="映像作品ギャラリー" tabindex="0"></div>
         <p class="reel-notice" id="reel-notice">作品ページからも動画をご覧いただけます。</p>
+        <p class="home-production-note">YAMATABIは、AI生成映像と現地撮影を組み合わせたコンテンツを制作しています。</p>
         <a class="link" id="reel-fallback" href="experience.html">秋の上高地の作品ページへ ↗</a>
         <noscript><p class="reel-notice">作品ページで動画をご覧いただけます。</p></noscript>
       </div>
