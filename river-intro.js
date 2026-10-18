@@ -42,7 +42,6 @@ function startRiverIntro() {
   content.forEach(n => { n.inert = true; });
   skip.focus({ preventScroll: true });
   let closed = false;
-  let playTimer;
   let removalTimer;
   let readyTimer = setTimeout(showPlay, 4000);
   function showPlay() {
@@ -65,7 +64,6 @@ function startRiverIntro() {
     if (closed) { if (immediate) { clearTimeout(removalTimer); cleanup(); } return; }
     closed = true;
     clearTimeout(readyTimer);
-    clearTimeout(playTimer);
     content.forEach((n, i) => { n.inert = priorInert[i]; });
     const restoreFocus = intro.contains(document.activeElement);
     intro.classList.add('river-intro-leaving');
@@ -104,14 +102,13 @@ function startRiverIntro() {
     if (document.activeElement === play) skip.focus({ preventScroll: true });
     play.hidden = true;
     status.textContent = '';
-    if (!playTimer) playTimer = setTimeout(() => finish(), 4000);
   });
   video.addEventListener('error', () => finish(), { once: true });
   video.addEventListener('ended', () => finish(), { once: true });
   document.addEventListener('keydown', onKey);
   motion.addEventListener('change', onMotion);
   window.addEventListener('pagehide', () => finish(true), { once: true });
-  video.src = 'assets/kamikochi-river-intro.mp4?v=four-seconds';
+  video.src = 'assets/kamikochi-river-intro.mp4?v=full-film';
   requestPlay();
 }
 
