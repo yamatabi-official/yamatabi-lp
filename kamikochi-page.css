@@ -131,3 +131,26 @@
  .k-mobile-route strong{display:block;font-size:16px;font-weight:500;line-height:1.8;color:#245e64}
  .k-mobile-route span{display:block;font-size:12px;line-height:1.9;margin-top:8px;color:#53676a}
 }
+/* The first-view poster becomes an inline player after one explicit tap. */
+.kamikochi-page .hero-has-video{align-items:center}
+.kamikochi-page .hero-has-video .film-hero-image{display:flex;flex-direction:column;max-height:none;background:#10252d}
+.kamikochi-page #hero-film{display:block;width:100%;height:clamp(360px,62svh,600px);object-fit:contain;background:#10252d}
+.kamikochi-page .hero-has-video .film-hero-image:after,.kamikochi-page .hero-has-video .film-hero-image figcaption{display:none}
+.hero-inline-tools{padding:12px;background:#e3eeea;color:#245e64}
+.hero-inline-tools>div{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.hero-inline-tools button{min-height:44px;padding:8px 13px;border:1px solid #245e6488;border-radius:24px;background:transparent;color:#245e64;font:12px/1.7 system-ui,sans-serif;cursor:pointer}
+.hero-inline-tools p{font:11px/1.8 system-ui,sans-serif;margin:10px 0 0;text-align:center}
+.hero-inline-tools .hero-film-status:empty{display:none}
+.hero-film-after{border-top:1px solid #40546133;margin-top:20px;padding-top:12px}
+.kamikochi-page #hero-film:focus-visible{outline:3px solid #9b693e;outline-offset:-3px}
+@media(max-width:760px){
+ .kamikochi-page .detail-hero.hero-has-video{display:flex;flex-direction:column;min-height:0;padding:0;isolation:auto;overflow:visible}
+ .kamikochi-page .hero-has-video .film-hero-image{position:relative;inset:auto;order:-1;z-index:auto;height:auto;width:100%;min-height:0}
+ .kamikochi-page .hero-has-video #hero-film{height:min(68svh,177.73vw);max-height:calc(100svh - 140px)}
+ .kamikochi-page .hero-has-video .detail-copy{width:100%;padding:28px 24px;background:linear-gradient(145deg,#e0efec,#eff5f3)}
+ .kamikochi-page .hero-has-video .detail-copy h1,.kamikochi-page .hero-has-video .detail-copy .subtitle{color:#405461;text-shadow:none}
+ .kamikochi-page .hero-has-video .detail-copy .eyebrow{color:#53676a}
+ .kamikochi-page .hero-has-video .detail-copy .film-edition{color:#53676a;border-color:#40546133}
+ .kamikochi-page .hero-has-video .k-page-secondary{color:#245e64}
+ .kamikochi-page .hero-has-video .detail-copy .journey-primary{background:#245e64;color:#fff;border-color:#245e64}
+}

@@ -1,4 +1,55 @@
 (() => {
+  const hero = document.querySelector('.detail-hero');
+  const heroFilm = document.querySelector('#hero-film');
+  const heroPlay = document.querySelector('[data-hero-play]');
+  if (hero && heroFilm && heroPlay) {
+    const image = hero.querySelector('.film-hero-image img');
+    const tools = hero.querySelector('.hero-inline-tools');
+    const sound = hero.querySelector('[data-hero-sound]');
+    const captions = hero.querySelector('[data-hero-captions]');
+    const status = hero.querySelector('.hero-film-status');
+    function syncSound() {
+      sound.textContent = heroFilm.muted ? '音を聴く' : '音を消す';
+      sound.setAttribute('aria-pressed', String(!heroFilm.muted));
+    }
+    function syncCaptions() {
+      const on = heroFilm.textTracks[0]?.mode === 'showing';
+      captions.textContent = on ? '説明字幕を隠す' : '説明字幕を表示';
+      captions.setAttribute('aria-pressed', String(on));
+    }
+    heroFilm.defaultMuted = true;
+    heroPlay.addEventListener('click', event => {
+      event.preventDefault();
+      document.querySelectorAll('video,audio').forEach(media => { if (media !== heroFilm) media.pause(); });
+      hero.classList.add('hero-has-video'); heroPlay.setAttribute('aria-expanded', 'true'); image.hidden = true; heroFilm.hidden = false; tools.hidden = false;
+      hero.querySelector('.hero-film-after').hidden = true;
+      status.textContent = '';
+      if (heroFilm.ended) heroFilm.currentTime = 0;
+      heroFilm.play()?.catch(() => { status.textContent = '再生できない場合は、動画の再生ボタンをお試しください。下の通常プレーヤーからもご覧いただけます。'; });
+      heroFilm.focus({ preventScroll: true });
+      if (matchMedia('(max-width:760px)').matches) hero.querySelector('.film-hero-image').scrollIntoView({ behavior: 'instant', block: 'start' });
+    });
+    heroFilm.addEventListener('play', () => { document.querySelectorAll('video,audio').forEach(media => { if (media !== heroFilm) media.pause(); }); });
+    heroFilm.addEventListener('volumechange', syncSound);
+    heroFilm.textTracks.addEventListener('change', syncCaptions);
+    sound.addEventListener('click', () => { heroFilm.muted = !heroFilm.muted; syncSound(); });
+    captions.addEventListener('click', () => {
+      const track = heroFilm.textTracks[0];
+      if (track) track.mode = track.mode === 'showing' ? 'disabled' : 'showing';
+      syncCaptions();
+    });
+    hero.querySelector('[data-hero-close]').addEventListener('click', () => {
+      heroFilm.pause(); heroFilm.muted = true; syncSound();
+      heroFilm.hidden = true; image.hidden = false; tools.hidden = true;
+      hero.classList.remove('hero-has-video'); heroPlay.setAttribute('aria-expanded', 'false');
+      heroPlay.focus({ preventScroll: true }); hero.scrollIntoView({ behavior: 'instant', block: 'start' });
+    });
+    heroFilm.addEventListener('ended', () => { hero.querySelector('.hero-film-after').hidden = false; });
+    heroFilm.addEventListener('error', () => { status.textContent = '作品を読み込めませんでした。映像を閉じて、下の通常プレーヤーやInstagramからご覧ください。'; });
+    document.addEventListener('visibilitychange', () => { if (document.hidden) heroFilm.pause(); });
+    window.addEventListener('pagehide', () => heroFilm.pause());
+    if ('IntersectionObserver' in window) new IntersectionObserver(entries => { if (!entries[0].isIntersecting) heroFilm.pause(); }).observe(heroFilm);
+  }
   const video = document.querySelector('[data-replay-video]');
   const play = document.querySelector('[data-river-play]');
   if (video && play) {

@@ -16,8 +16,8 @@
   <link rel="stylesheet" href="quiet-time.css?v=20261019">
   <script src="quiet-time.js?v=20261019" defer></script>
   <script src="story-map.js" defer></script>
-  <link rel="stylesheet" href="kamikochi-page.css?v=20261019">
-  <script src="kamikochi-page.js?v=20261019" defer></script>
+  <link rel="stylesheet" href="kamikochi-page.css?v=20261019-inline">
+  <script src="kamikochi-page.js?v=20261019-inline" defer></script>
 
 </head>
 <body class="experience-page kamikochi-page">
@@ -28,11 +28,14 @@
         <p class="eyebrow">長野県・上高地 / KAMIKOCHI</p>
         <h1 id="film-title">秋の上高地</h1>
         <p class="subtitle">まだ名前のない、二人の旅。</p>
-        <a class="journey-primary" href="#ordinary-film" data-quiet-open="story">ドラマを観る <small>21秒</small></a>
+        <a class="journey-primary" href="#ordinary-film" data-hero-play aria-controls="hero-film" aria-expanded="false">ドラマを観る <small>21秒</small></a>
         <a class="k-page-secondary" href="#quiet-time">過ごし方を知る ↓</a>
         <p class="film-edition">YAMATABI ORIGINAL FILM — 001</p>
+        <div class="hero-film-after" hidden><p>物語のあとも、少しここに。</p><button type="button" class="journey-button" data-quiet-open="rest" hidden>川辺の余韻へ</button><a class="k-page-secondary" href="#quiet-time">自分の目線で過ごしてみる ↓</a></div>
       </div>
-      <figure class="film-hero-image"><img src="assets/kamikochi-film-still.webp" width="512" height="910" alt="作品『秋の上高地』で川辺に立つ人物の一場面" fetchpriority="high"><figcaption>作品『秋の上高地』より</figcaption></figure>
+      <figure class="film-hero-image"><img src="assets/kamikochi-film-still.webp" width="512" height="910" alt="作品『秋の上高地』で川辺に立つ人物の一場面" fetchpriority="high"><video id="hero-film" controls muted playsinline preload="none" poster="assets/kamikochi-film-still.webp" aria-label="秋の上高地をこのページで観る" aria-describedby="hero-caption-note" hidden><source src="kamikochi-film.mp4" type="video/mp4"><track kind="captions" src="assets/captions/kamikochi-scenes-ja.vtt" srclang="ja" label="日本語・画面の文字と情景"></video>
+        <div class="hero-inline-tools" hidden><div><button type="button" data-hero-sound aria-pressed="false">音を聴く</button><button type="button" data-hero-captions aria-pressed="false">説明字幕を表示</button><button type="button" data-hero-close>映像を閉じる ×</button></div><p id="hero-caption-note">字幕は画面の文字と情景の説明です。</p><p class="hero-film-status" role="status"></p></div>
+        <figcaption>作品『秋の上高地』より</figcaption></figure>
     </section>
     <details class="k-ordinary" id="ordinary-film"><summary>このページのプレーヤーで観る</summary>
       <div class="video-frame"><video controls playsinline preload="none" poster="assets/kamikochi-film-still.webp" aria-label="秋の上高地 ショートドラマ"><source src="kamikochi-film.mp4" type="video/mp4"><track kind="captions" src="assets/captions/kamikochi-scenes-ja.vtt" srclang="ja" label="日本語・画面の文字と情景"></video></div>
