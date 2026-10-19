@@ -1,0 +1,55 @@
+/* A wider film, an at-a-glance walking diagram, and compact preparation cards. */
+@media(min-width:761px){
+ .kamikochi-page .detail-hero{grid-template-columns:minmax(280px,.8fr) minmax(0,1.2fr);min-height:calc(100svh - 84px);padding:0}
+ .kamikochi-page .film-hero-image{max-height:none;min-height:680px}
+ .kamikochi-page .detail-copy{padding:clamp(24px,4vw,64px)}
+ .kamikochi-page #hero-film{height:min(85svh,880px)}
+}
+.kamikochi-page .k-expanded-map{display:block;position:relative;min-height:0!important;aspect-ratio:auto!important;padding:24px 18px;background:linear-gradient(100deg,#e9efdf,#d7e9e7 52%,#edf1e7);overflow:hidden}
+.k-map-landscape{position:relative;height:110px;color:#47666a;font:10px/1.8 system-ui;letter-spacing:.15em;text-align:center}
+.k-map-landscape svg{position:absolute!important;inset:0;width:100%;height:100%;opacity:.6}
+.k-map-landscape span{position:relative}
+.k-map-direction,.k-map-note{position:relative;font:12px/1.9 system-ui;color:#426569;margin:16px 0}
+.k-map-stops{position:relative;list-style:none;padding:0 0 0 18px;margin:24px 0;border-left:12px solid #8ec4c5;border-radius:30px}
+.k-map-stops>li{position:relative;padding-left:8px}
+.k-map-stops>li:before{content:"";position:absolute;left:-33px;top:24px;width:12px;height:12px;border:3px solid #f7f9ed;background:#467a7d;border-radius:50%}
+.kamikochi-page .k-expanded-map .story-map-pin{position:relative;left:auto;top:auto;transform:none;display:inline-flex;width:auto;max-width:100%;padding:10px 14px;margin:0;border-radius:4px 18px 4px 4px;gap:10px;box-shadow:0 3px 12px #284d4812;min-height:52px}
+.kamikochi-page .k-expanded-map .story-map-pin>b{width:auto;max-width:none;font:15px/1.6 system-ui}
+.k-map-time{font:13px/1.8 system-ui;color:#285c61;margin:10px 0 12px;padding-left:14px}
+.k-map-time small{display:block;font-size:10px;color:#566e6c}
+.k-map-branch{margin:12px 0 8px 24px;padding:10px 0 4px 12px;border-left:2px dashed #9d7b46}
+.k-map-branch>span{display:block;font:11px/1.8 system-ui;margin-bottom:7px;color:#6e542f}
+.k-map-river{margin-top:10px!important}
+.k-replay-controls{display:flex;justify-content:flex-end;gap:10px;margin-top:22px}
+.k-replay-controls[hidden]{display:none}
+.kamikochi-page .k-replay-grid{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x proximity;scroll-padding:2px;padding:4px 2px 20px;margin-top:18px;align-items:flex-start;overscroll-behavior-x:contain}
+.k-replay-grid .k-replay-card{flex:0 0 clamp(260px,38vw,390px);scroll-snap-align:start}
+.k-replay-grid:focus-visible{outline:3px solid #a46b39;outline-offset:4px}
+.k-weather{padding:24px;margin:24px 0;background:linear-gradient(135deg,#d8e9e6,#f5f1e4);border:1px solid #42696b30;border-radius:4px 24px 4px 4px}
+.k-weather h4{margin:8px 0;font:24px/1.6 "Yu Mincho",serif;color:#245e64}
+.k-weather-reading{display:flex;gap:20px;align-items:center;color:#245e64;margin:16px 0}
+.k-weather-reading[hidden]{display:none}
+.k-weather-reading strong{font:48px/1.2 system-ui;font-weight:300}
+.k-weather-reading span{font:16px/1.8 system-ui}
+.k-weather [data-weather-refresh]{display:block;margin-top:18px}
+.k-bus-map{margin:28px 0;padding:24px;background:#e0ece8;border:1px solid #45686226;border-radius:4px 24px 4px 4px}
+.k-bus-map figcaption small,.k-bus-map figcaption strong{display:block;color:#245e64}
+.k-bus-map figcaption small{font:10px/1.8 system-ui;letter-spacing:.15em}
+.k-bus-map figcaption strong{font:26px/1.8 "Yu Mincho",serif;margin:8px 0 22px}
+.k-bus-map ol{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;list-style:none;padding:0;counter-reset:bus}
+.k-bus-map li{position:relative;border-top:3px solid #72a49e;padding-top:15px;counter-increment:bus}
+.k-bus-map li:before{content:counter(bus,decimal-leading-zero);font:11px/1.8 system-ui;color:#9b6c39}
+.k-bus-map b,.k-bus-map li span{display:block;font:14px/1.8 system-ui;margin-top:8px}
+.k-bus-map li span{font-size:12px}
+.kamikochi-page .k-check-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:0;list-style:none;counter-reset:check}
+.kamikochi-page .k-check-cards li{display:flex;align-items:flex-start;flex-direction:column;gap:12px;padding:22px;border:1px solid #416d6829;border-radius:4px 22px 4px 4px;background:#e2ece7;counter-increment:check}
+.k-check-cards li:before{content:counter(check,decimal-leading-zero);font:12px/1.6 system-ui;color:#936836;letter-spacing:.12em}
+.k-check-cards a{min-height:44px;display:flex;align-items:center}
+@media(max-width:760px){
+ .k-replay-grid .k-replay-card{flex-basis:86%}
+ .k-replay-controls{justify-content:flex-start;flex-wrap:wrap}
+ .k-bus-map ol{grid-template-columns:1fr}
+ .k-bus-map li{border-top:0;border-left:3px solid #72a49e;padding:0 0 18px 20px}
+ .kamikochi-page .k-check-cards{grid-template-columns:1fr}
+ .k-weather,.k-bus-map{padding:20px}
+}

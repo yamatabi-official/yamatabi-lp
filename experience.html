@@ -16,12 +16,14 @@
   <script src="story-map.js?v=20261019-mood" defer></script>
   <script src="kamikochi-arrival.js?v=20261019-fullscreen" defer></script>
   <script src="kamikochi-mood-data.js?v=20261019" defer></script>
-  <script src="kamikochi-mood.js?v=20261019" defer></script>
+  <script src="kamikochi-mood.js?v=20261019-guide" defer></script>
   <link rel="stylesheet" href="kamikochi-page.css?v=20261019-map-mood">
   <script src="kamikochi-page.js?v=20261019-single-player" defer></script>
   <script src="kamikochi-preview.js?v=20261019" defer></script>
   <link rel="stylesheet" href="kamikochi-motion.css?v=20261019">
   <script src="kamikochi-motion.js?v=20261019" defer></script>
+  <link rel="stylesheet" href="kamikochi-guide.css?v=20261019">
+  <script src="kamikochi-guide.js?v=20261019" defer></script>
 
 <noscript><style>#hero-film[hidden]{display:block!important}.film-hero-image>img,[data-hero-play]{display:none}</style></noscript>
 </head>
@@ -47,53 +49,17 @@
     <section class="trip-section story-map-section k-area-map" id="story-map" aria-labelledby="story-map-title">
       <div class="eyebrow">01 / FIND YOUR PLACE</div>
       <h2 id="story-map-title"><span>上高地は、</span><span>こんな場所。</span></h2>
-      <p class="trip-lead">梓川に架かる河童橋。その周りに、川沿いの園路と小梨平。<br>まずは見取り図で、眺める場所・歩く場所・帰る場所を知る。</p>
+      <p class="trip-lead">大正池から河童橋、岳沢湿原、明神池へ。<br>まずは見取り図で、眺める場所・歩く場所・帰る場所を知る。</p>
       <div class="story-map-legend" aria-label="マップの凡例">
         <span><i class="map-place-key" aria-hidden="true"></i>実在する場所</span>
         <span><i class="map-mood-key" aria-hidden="true"></i>園路と周辺施設</span>
       </div>
       <div class="story-map-layout">
         <div>
-          <div class="story-map-board" role="group" aria-label="河童橋・梓川・小梨平・バスターミナルの関係を描いた見取り図">
-            <svg viewBox="0 0 720 600" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-              <defs>
-                <pattern id="map-paper" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".7" fill="#49666a" opacity=".09"/></pattern>
-                <linearGradient id="map-water" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#90c9c5"/><stop offset="1" stop-color="#c9e5dc"/></linearGradient>
-              </defs>
-              <rect width="720" height="600" fill="#e8f0e8"/>
-              <rect width="720" height="600" fill="url(#map-paper)"/>
-              <g fill="none" stroke="#536570" stroke-width="1.3" opacity=".18">
-                <path d="M-40 210 Q90 110 220 150 T480 135 T760 170"/>
-                <path d="M-40 225 Q90 125 220 165 T480 150 T760 185"/>
-                <path d="M-40 240 Q90 140 220 180 T480 165 T760 200"/>
-              </g>
-              <path d="M100 138 163 65 194 104 241 40 280 96 325 55 383 130 418 84 480 143 530 101 600 155" fill="#a2b1b2" opacity=".48"/>
-              <path d="m140 147 54-43 47-64 39 56 45-41 58 75 35-46 62 59" fill="none" stroke="#566b75" stroke-width="2"/>
-              <path d="m223 64 18-24 17 25-17-8Z M311 73 325 55 344 79 326 69Z" fill="#f4f5ee"/>
-              <path d="M765 240 C570 235 555 320 430 350 S260 375 210 430 S70 510-45 505" fill="none" stroke="#6fa4a4" stroke-width="68" opacity=".2"/>
-              <path d="M765 240 C570 235 555 320 430 350 S260 375 210 430 S70 510-45 505" fill="none" stroke="url(#map-water)" stroke-width="56"/>
-              <path d="M765 240 C570 235 555 320 430 350 S260 375 210 430 S70 510-45 505" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="30 20" opacity=".55"/>
-              <g transform="translate(405 356) rotate(-18)" stroke="#765740" fill="#d6bc91">
-                <rect x="-12" y="-55" width="24" height="110" stroke-width="2"/>
-                <path d="M-12-40H12 M-12-24H12 M-12-8H12 M-12 8H12 M-12 24H12 M-12 40H12" opacity=".6"/>
-                <path d="M-18-61V61 M18-61V61" stroke-width="2"/>
-              </g>
-              <g stroke="#8c6a3e" stroke-width="2" fill="#c89a4f">
-                <path d="M100 300v28 M83 298q17-50 34 0Z M156 252v26 M140 250q16-48 32 0Z M584 422v28 M567 420q17-50 34 0Z M628 380v28 M611 378q17-50 34 0Z"/>
-              </g>
-              <g fill="#a65d39" opacity=".7"><circle cx="78" cy="366" r="4"/><circle cx="618" cy="463" r="4"/><circle cx="552" cy="179" r="4"/></g>
-              <g transform="translate(516 495)" fill="#859394" stroke="#536570" stroke-width="1.5"><rect x="-17" y="-9" width="34" height="22" rx="3"/><rect x="-12" y="-5" width="24" height="9" fill="#edf3ef"/><circle cx="-10" cy="15" r="3"/><circle cx="10" cy="15" r="3"/></g>
-            </svg>
-            <span class="story-map-mountains">穂高連峰のイメージ</span>
-            <a class="story-map-pin map-pin-bridge" href="#map-bridge"><span>01</span><b>河童橋<small>山と川の眺め</small></b></a>
-            <a class="story-map-pin map-pin-river" href="#map-river"><span>02</span><b>梓川<small>川沿いの園路</small></b></a>
-            <a class="story-map-pin map-pin-terminal" href="#map-terminal"><span>03</span><b>バスターミナル<small>行き帰り・トイレ</small></b></a>
-            <a class="story-map-pin map-pin-konashi" href="#map-konashi"><span>04</span><b>小梨平<small>ビジターセンター・トイレ</small></b></a>
-            <span class="story-map-mood map-mood-light">川沿いの園路</span>
-            <span class="story-map-mood map-mood-walk">トイレ・施設は下の案内へ</span>
-            <span class="story-map-signature">YAMATABI / KAMIKOCHI AREA</span>
-          </div>
-          <p class="story-map-caption">周辺の関係をつかむためのオリジナル見取り図です。縮尺・方角・園路の形は正確ではありません。名前をタップすると、その場所と周辺施設が分かります。実際の移動には公式地図・現地案内をご利用ください。</p>
+          <div class="story-map-board k-expanded-map" role="group" aria-label="大正池から明神池までの場所と片道徒歩時間を示す見取り図">
+            <div class="k-map-landscape" aria-hidden="true"><svg viewBox="0 0 700 140"><path d="M0 140 100 50 150 90 240 10 300 80 370 25 450 110 520 60 700 140" fill="#a8bcbc"/><path d="m210 45 30-35 32 40-32-15Z" fill="#f4f5ee"/></svg><span>YAMATABI / AZUSA RIVER</span></div>
+            <p class="k-map-direction">大正池方面から、梓川に沿って上流へ ↓</p><ol class="k-map-stops"><li><a class="story-map-pin map-pin-taisho" href="#map-taisho"><span>01</span><b>大正池<small>水鏡と山の風景</small></b></a><div class="k-map-time">↕ 徒歩約25分 · 1.2km<small>次の地点まで・片道</small></div></li><li><a class="story-map-pin map-pin-tashiro" href="#map-tashiro"><span>02</span><b>田代池・田代湿原<small>森に囲まれた水辺</small></b></a><div class="k-map-time">↕ 徒歩約20分 · 1.0km<small>次の地点まで・片道</small></div></li><li><a class="story-map-pin map-pin-tashirobridge" href="#map-tashirobridge"><span>03</span><b>田代橋・穂高橋<small>ここから左岸をターミナルへ</small></b></a><div class="k-map-time">↕ 徒歩約30分 · 1.5km<small>次の地点まで・片道</small></div></li><li><a class="story-map-pin map-pin-terminal" href="#map-terminal"><span>04</span><b>バスターミナル<small>行き帰り・トイレ</small></b></a><div class="k-map-time">↕ 徒歩約6分 · 300m<small>次の地点まで・片道</small></div></li><li><a class="story-map-pin map-pin-bridge" href="#map-bridge"><span>05</span><b>河童橋<small>山と川の眺め</small></b></a><div class="k-map-branch"><span>左岸へ ↗ 徒歩約10分・500m</span><a class="story-map-pin map-pin-konashi" href="#map-konashi"><span>＋</span><b>小梨平<small>ビジターセンター・トイレ</small></b></a></div><div class="k-map-time">↕ 徒歩約10分 · 500m<small>次の地点まで・片道</small></div></li><li><a class="story-map-pin map-pin-dakesawa" href="#map-dakesawa"><span>06</span><b>岳沢湿原<small>右岸の木道と湿原</small></b></a><div class="k-map-time">↕ 徒歩約40分 · 2.0km<small>次の地点まで・片道</small></div></li><li><a class="story-map-pin map-pin-myojin" href="#map-myojin"><span>07</span><b>明神池<small>森の奥の静かな池</small></b></a></li></ol><a class="story-map-pin k-map-river" href="#map-river"><span>川</span><b>梓川<small>園路から流れを眺める</small></b></a><p class="k-map-note">時間は休憩を含まない公式目安。田代橋〜ターミナルは左岸、河童橋〜明神池は右岸の経路です。</p></div>
+          <p class="story-map-caption">周辺の関係をつかむためのオリジナル見取り図です。上下は経路の順序です。縮尺・方角・園路の形は正確ではありません。名前をタップすると、その場所と周辺施設が分かります。実際の移動には公式地図・現地案内をご利用ください。</p>
         </div>
         <div class="story-map-notes">
           <p class="story-map-notes-title">場所と周辺の施設</p>
@@ -103,7 +69,7 @@
           </details>
           <details class="story-map-detail" id="map-river">
             <summary><span>02 / PLACE</span>梓川</summary>
-            <div><p>上高地を流れる川。開放されている川沿いの園路から流れや木々を眺めます。川の中や河原への立ち入りを案内するピンではありません。</p><a class="source" href="#walk">散策のヒントを読む ↓</a></div>
+            <div><p>上高地を流れる川。開放されている川沿いの園路から流れや木々を眺めます。川の中や河原への立ち入りを案内するピンではありません。</p><a class="source" href="#requirements">散策のヒントを読む ↓</a></div>
           </details>
           <details class="story-map-detail" id="map-terminal">
             <summary><span>03 / PLACE</span>上高地バスターミナル</summary>
@@ -113,7 +79,7 @@
             <summary><span>04 / PLACE</span>小梨平と周辺施設</summary>
             <div><p>河童橋から約500m・徒歩約10分が公式の区間目安。小梨平にはビジターセンターがあり、周辺に公衆トイレの掲載があります。営業・利用可否・道の状態は訪問前に確認してください。</p><a class="source" href="https://www.kamikochi-vc.or.jp/" target="_blank" rel="noopener noreferrer">ビジターセンターの案内 ↗</a><a class="source" href="#replay-trees">木々の風景を見る ↓</a></div>
           </details>
-          <p class="k-source">区間目安・施設の掲載位置：<a href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内</a>・<a href="https://www.kamikochi.or.jp/learn/parkmap/" target="_blank" rel="noopener noreferrer">公式園路マップ</a>・<a href="https://www.kamikochi-vc.or.jp/" target="_blank" rel="noopener noreferrer">ビジターセンター</a>。ページ確認：2026年10月19日。利用日の営業・通行確認は別途必要です。</p>
+<details class="story-map-detail" id="map-taisho"><summary>大正池</summary><div><p>山々を映す水面を眺める場所。田代池・田代湿原までの公式目安は徒歩約25分・約1.2km。</p><a class="source" href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内で確認 ↗</a></div></details><details class="story-map-detail" id="map-tashiro"><summary>田代池・田代湿原</summary><div><p>森林と湿原の風景を楽しむエリア。田代橋・穂高橋までは徒歩約20分・約1.0km。木道を含む園路は、開放状況を確認して利用します。</p><a class="source" href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内で確認 ↗</a></div></details><details class="story-map-detail" id="map-tashirobridge"><summary>田代橋・穂高橋</summary><div><p>大正池方面と河童橋方面をつなぐ目印。この図では左岸からバスターミナルへ進む約30分・約1.5kmの経路を掲載しています。</p><a class="source" href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内で確認 ↗</a></div></details><details class="story-map-detail" id="map-dakesawa"><summary>岳沢湿原</summary><div><p>河童橋から梓川右岸を約10分・約500m。湿原の景色を眺める区間です。岳沢小屋までの登山道とは別です。</p><a class="source" href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内で確認 ↗</a></div></details><details class="story-map-detail" id="map-myojin"><summary>明神池</summary><div><p>岳沢湿原から右岸経由で徒歩約40分・約2.0km。池の拝観条件・料金・受付時間は訪問前に公式案内をご確認ください。</p><a class="source" href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内で確認 ↗</a></div></details>          <p class="k-source">区間目安・施設の掲載位置：<a href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内</a>・<a href="https://www.kamikochi.or.jp/learn/parkmap/" target="_blank" rel="noopener noreferrer">公式園路マップ</a>・<a href="https://www.kamikochi-vc.or.jp/" target="_blank" rel="noopener noreferrer">ビジターセンター</a>。ページ確認：2026年10月19日。利用日の営業・通行確認は別途必要です。</p>
           <a class="link" href="https://www.kamikochi.or.jp/learn/parkmap/" target="_blank" rel="noopener noreferrer">移動には、公式園路マップへ ↗</a>
         </div>
       </div>
@@ -124,7 +90,7 @@
       <h2 id="replay-title">あなたなら、ここでどう過ごす？</h2>
       <p class="trip-lead">橋の上で立ち止まる。流れを眺める。木々に目を向ける。<br>気になる風景をひらいて、自分のペースで。</p>
       <span class="k-anchor" id="places"></span>
-      <div class="k-replay-grid">
+      <div class="k-replay-controls" hidden><button type="button" class="journey-button" data-replay-auto aria-pressed="false">自動送りを停止</button><button type="button" class="journey-button" data-replay-prev aria-label="前の過ごし方">←</button><button type="button" class="journey-button" data-replay-next aria-label="次の過ごし方">→</button></div><div class="k-replay-grid" tabindex="0" aria-label="過ごし方のカード。横にスクロールできます">
         <details class="k-replay-card" id="replay-bridge">
           <summary><img src="kamikochi.webp" width="1152" height="1536" alt="河童橋と梓川、その先に広がる山々" loading="lazy"><span class="k-card-text"><small>01 / 河童橋・写真</small><strong>橋の上で、ひと呼吸。</strong><span>風景をひらく ＋</span></span></summary>
           <div class="k-card-body"><img src="kamikochi.webp" width="1152" height="1536" alt="河童橋と川の風景を大きく眺める" loading="lazy"><p>橋から眺める川と山々を想像して。ここでは写真のまま、ゆっくり過ごせます。</p><p class="k-caption">静止写真・音声なし。現地では通行を妨げず、混雑時は橋を渡った先で景色を楽しみましょう。</p></div>
@@ -159,38 +125,16 @@
       </form>
       <p id="mood-status" role="status" class="k-caption">気分と歩く量に合わせた、編集上の散策提案です。</p>
       <article id="mood-result" class="mood-result" hidden></article>
-      <noscript><p>下の「一日の流れ」では、小梨平までの散策と河童橋で折り返す短縮案をご覧いただけます。</p></noscript>
+      <noscript><p>上のマップと下の準備情報から、歩く範囲をご検討いただけます。</p></noscript>
     </section>
 
-    <section class="trip-section k-day" id="walk" aria-labelledby="day-title">
-      <span class="k-anchor" id="about-kamikochi"></span>
-      <div class="eyebrow">04 / A DAY IN KAMIKOCHI</div><h2 id="day-title">こんな一日を、過ごせます。</h2>
-      <p class="trip-lead">バスターミナルから河童橋、小梨平へ。<br>同じ道を戻る、川沿いの散策案です。</p>
-      <p class="k-important">対象：雪・凍結がなく、道路・路線バス・園路・利用施設が開いている通常期の日中。冬季の入山には対応していません。利用日の開放状況を必ず確認してください。</p>
-      <dl class="k-day-facts"><div><dt>歩く距離</dt><dd>往復 約1.6km</dd></div><div><dt>歩くだけの時間</dt><dd>往復 約32分</dd></div><div><dt>休憩を含む滞在枠</dt><dd>2〜3時間の配分例</dd></div></dl>
-      <p class="k-caption">歩行距離・時間は公式の区間目安（約300m・6分＋約500m・10分）の往復合計。休憩・混雑・寄り道は含みません。滞在枠は食事や休憩をゆっくり取るための編集上の一案で、所要時間の保証ではありません。</p>
-      <p class="k-source">出典：<a href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">上高地公式・散策コース ↗</a> ／ ページ確認：2026年10月19日</p>
-      <ol class="k-timeline">
-        <li><img src="assets/kamikochi-river-intro.webp" width="512" height="910" loading="lazy" alt="到着後に出会う上高地の川の風景"><div><small>01 / 到着</small><h3>帰りの便を確認して、出発。</h3><p>バスターミナルで乗り場・帰りの便とトイレを確認。飲み物や歩く準備を整えます。</p><span>公衆トイレの位置は公式のターミナル案内に掲載。利用可否は当日確認。</span></div></li>
-        <li><img src="kamikochi.webp" width="1152" height="1536" loading="lazy" alt="河童橋と梓川の眺め"><div><small>02 / 河童橋</small><h3>橋から、山と川を眺める。</h3><p>ターミナルから約300m・徒歩約6分。景色を眺める時間と写真の時間を、自分たちのペースで。</p><span>橋は通行の場所でもあります。混雑時は立ち止まらず、空いた場所へ。</span></div></li>
-        <li><img src="assets/kamikochi-river-intro.webp" width="512" height="910" loading="lazy" alt="川沿いの散策を想像するための梓川の風景"><div><small>03 / 川沿いから小梨平へ</small><h3>木々や水の色に、目を向ける。</h3><p>河童橋から小梨平は片道約500m・徒歩約10分。現地の案内に従い、開放されている園路を進みます。</p><span>この写真は周辺の風景イメージです。路面の状態を示す写真ではありません。</span></div></li>
-        <li><img src="assets/kamikochi-river-intro.webp" width="512" height="910" loading="lazy" alt="休憩の時間に眺めたい梓川の水面"><div><small>04 / 食事・休憩</small><h3>予定を詰めず、ひと休み。</h3><p>小梨平方面から同じ道で河童橋周辺へ戻り、営業中の飲食店や休憩できる場所を現地で確認。営業していない場合に備え、飲み物と携行食も。</p><span>店舗の営業時間・席・休憩設備の利用可否は未確認です。帰りの便に合わせて調整します。</span></div></li>
-        <li><img src="kamikochi.webp" width="1152" height="1536" loading="lazy" alt="旅の終わりに振り返る河童橋の風景"><div><small>05 / 帰路</small><h3>余韻を持って、ターミナルへ。</h3><p>河童橋から約300m・徒歩約6分で戻る区間も、混雑や待ち時間を見込んで余裕を持って。</p><span>疲れたときは小梨平へ進まず、河童橋で折り返せます（歩行往復約600m・約12分、休憩を除く）。</span></div></li>
-      </ol>
-      <figure class="k-route-map"><ol class="k-mobile-route" aria-label="散策順序の模式図"><li><strong>上高地バスターミナル</strong><span>次の河童橋まで 約300m・徒歩約6分</span></li><li><strong>河童橋</strong><span>次の小梨平まで 約500m・徒歩約10分</span></li><li><strong>小梨平</strong><span>帰りは同じ道を戻る</span></li></ol><svg viewBox="0 0 720 210" role="img" aria-labelledby="route-map-label"><title id="route-map-label">ターミナルから河童橋、小梨平へ進み同じ道を戻る経路の模式図</title><path d="M50 150Q220 180 350 135T680 155" fill="none" stroke="#91c9c6" stroke-width="20"/><path d="M90 80H630" fill="none" stroke="#805e44" stroke-width="4"/><g fill="#245e64"><circle cx="90" cy="80" r="10"/><circle cx="355" cy="80" r="10"/><circle cx="630" cy="80" r="10"/></g><g fill="#344b55" text-anchor="middle" font-family="sans-serif" font-size="17"><text x="90" y="45">ターミナル</text><text x="355" y="45">河童橋</text><text x="630" y="45">小梨平</text><text x="220" y="112">約300m / 約6分</text><text x="490" y="112">約500m / 約10分</text><text x="355" y="191">同じ道を戻る ／ 梓川沿いの園路</text></g></svg><figcaption>順序を示す模式図です。縮尺・方角・道の形は正確な地図ではありません。移動は公式園路マップ・現地案内に従ってください。</figcaption></figure>
-      <p>公式園路マップにはターミナル周辺、カッパトイレ、小梨平公衆トイレが掲載されています。休憩やトイレの利用可否・営業日は、訪問前と現地で確認してください。</p>
-      <div class="k-route-links"><a class="source" href="https://www.kamikochi.or.jp/learn/parkmap/" target="_blank" rel="noopener noreferrer">公式の園路マップ ↗</a><a class="source" href="https://www.kamikochi.or.jp/access/terminal" target="_blank" rel="noopener noreferrer">ターミナル・トイレの案内 ↗</a></div>
-      <p class="k-source">施設の掲載位置の出典：上記の公式園路マップ・ターミナル案内 ／ ページ確認：2026年10月19日。利用日の営業・利用可否は別途確認してください。</p>
-
-    </section>
-
-    <section class="trip-section k-requirements" id="requirements" aria-labelledby="requirements-title">
-      <div class="eyebrow">05 / BEFORE YOUR DAY</div><h2 id="requirements-title">自分も過ごせるか、確かめる。</h2>
+    <span class="k-anchor" id="walk"></span><span class="k-anchor" id="about-kamikochi"></span><section class="trip-section k-requirements" id="requirements" aria-labelledby="requirements-title">
+      <div class="eyebrow">04 / BEFORE YOUR DAY</div><h2 id="requirements-title">自分も過ごせるか、確かめる。</h2>
       <p class="trip-lead">歩くこと、持っていくもの、行き帰り。<br>四つに分けて、必要なことから。</p>
       <article class="k-requirement" id="terrain"><h3>01 / 体力・道の状態</h3><div class="k-condition-columns"><figure><img src="kamikochi.webp" width="1152" height="1536" loading="lazy" alt="河童橋周辺の景観"><figcaption>河童橋周辺の景観写真。路面・段差の検証用写真は準備中。</figcaption></figure><div><p><strong>往復約1.6km・歩行約32分を目安に、戻る分の体力も残す散策です。</strong>高低差の数値、区間ごとの舗装・砂利・段差の詳細は未確認です。「平坦」「段差なし」とは案内できません。</p><p>雨、ぬかるみ、残雪・凍結、混雑では歩き方や所要時間が変わります。車いす・ベビーカー利用などで道の条件が必要な場合は、事前に公式窓口へ確認してください。</p><details><summary>短く切り上げたい場合</summary><p>河童橋までで折り返すと、歩行往復約600m・約12分が公式目安からの合計です。休憩や写真の時間、当日の通行可否は別に考えます。</p></details><p class="k-source">出典：<a href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内</a>・<a href="https://www.kamikochi-vc.or.jp/" target="_blank" rel="noopener noreferrer">ビジターセンター</a> ／ 確認：2026年10月19日</p></div></div></article>
-      <article class="k-requirement" id="season"><h3>02 / 服装・持ち物</h3><p><strong>歩きやすく滑りにくい靴、脱ぎ着できる防寒着、雨具、飲み物。</strong>街の服装のまま判断せず、訪問時期の気温と天気に合わせます。</p><ul class="k-kit"><li><b>足元</b><span>歩きやすい靴</span></li><li><b>体温</b><span>重ね着・防寒着</span></li><li><b>雨</b><span>雨具</span></li><li><b>休憩</b><span>飲み物・携行食</span></li></ul><details><summary>季節・用途で変わる備え</summary><p>春や秋は朝夕の冷え込みに備え、夏も天候や日陰による変化を考えます。日差しへの備えや雨具の種類、靴の選択は、公式の季節別服装案内と当日の予報で確認しましょう。このページは冬季入山の装備案内ではありません。</p></details><p class="k-source">出典：<a href="https://www.kamikochi.or.jp/learn/season" target="_blank" rel="noopener noreferrer">上高地公式・季節別服装ガイド ↗</a> ／ 確認：2026年10月19日</p></article>
-      <article class="k-requirement" id="access"><h3>03 / 交通・費用</h3><p class="k-important">上高地には通年マイカーで乗り入れできません。車は沢渡・平湯方面の乗り換え地点からシャトルバスやタクシーを利用します。バスの予約条件は路線・便ごとに確認してください。</p><div class="k-access-paths"><div><h4>公共交通の一例</h4><p>出発地 → 松本 → 新島々 → 上高地。直行便など、別の経路もあります。</p></div><div><h4>車の一例</h4><p>出発地 → 沢渡、または平湯あかんだな方面の駐車場 → バス・タクシー → 上高地。</p></div></div><p>松本・新島々方面の便には予約優先制の案内があります。往復の便・乗り継ぎと予約方法を、交通事業者の路線詳細で確かめてください。</p><dl class="k-costs"><div><dt>出発地からの交通</dt><dd>鉄道・高速バス・燃料・高速料金など</dd></div><div><dt>現地の乗り換え</dt><dd>路線／シャトルバス、またはタクシーの往復分</dd></div><div><dt>車の場合</dt><dd>乗り換え地点の駐車料金</dd></div><div><dt>現地で過ごす費用</dt><dd>食事・休憩、必要なら宿泊など</dd></div></dl><p>金額・個人の総額・出発地からの時間は、日程と経路が決まってから確認します。このページでは未確認の運賃や時刻を掲載していません。</p><p class="k-source">出典：<a href="https://www.kamikochi.or.jp/access/restrictions" target="_blank" rel="noopener noreferrer">公式マイカー規制</a>・<a href="https://www.alpico.co.jp/traffic/local/kamikochi/" target="_blank" rel="noopener noreferrer">アルピコ交通・路線一覧</a> ／ 確認：2026年10月19日。各ページ内の年度表記と利用日の条件も確認してください。</p></article>
-      <article class="k-requirement" id="before-you-go"><h3>04 / 訪問前の確認</h3><p><strong>この散策案だけで当日の営業・安全性・通行可否を判断しないでください。</strong>積雪・凍結のある期間や冬季閉鎖中の入山は、この案の対象外です。</p><ul class="k-check-links"><li><span>園路の開放・現地の状況</span><a href="https://www.kamikochi.or.jp/" target="_blank" rel="noopener noreferrer">上高地公式の最新案内 ↗</a></li><li><span>自然・散策の利用相談</span><a href="https://www.kamikochi-vc.or.jp/" target="_blank" rel="noopener noreferrer">ビジターセンター ↗</a></li><li><span>運行・予約・運賃</span><a href="https://www.alpico.co.jp/traffic/local/kamikochi/" target="_blank" rel="noopener noreferrer">交通事業者の案内 ↗</a></li><li><span>利用日の天気・気温</span><a href="https://www.jma.go.jp/bosai/" target="_blank" rel="noopener noreferrer">気象庁の最新情報 ↗</a></li></ul><p class="k-source">上高地公式・ビジターセンター・交通事業者のページ確認：2026年10月19日。利用日当日の天候・営業・運行を確認済みという意味ではありません。天気情報は利用日に別途ご確認ください。</p></article>
+      <article class="k-requirement" id="season"><h3>02 / 服装・持ち物</h3><aside class="k-weather" aria-labelledby="weather-title"><div><p class="eyebrow">KAPPA BRIDGE / WEATHER</p><h4 id="weather-title">河童橋周辺の、いまの空。</h4></div><p data-weather-status role="status">天気を読み込みます。</p><div class="k-weather-reading" hidden><strong data-weather-temp></strong><span data-weather-sky></span></div><p class="k-caption" data-weather-time></p><p class="k-caption">河童橋付近（標高約1,500m）の予報モデル値です。現地の実測値ではありません。山では天候が急変するため、訪問前に警報・予報もご確認ください。</p><a href="https://www.met.no/en/free-meteorological-data" target="_blank" rel="noopener noreferrer" class="source">取得元：MET Norway ↗</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="source">CC BY 4.0</a> · <a href="https://www.jma.go.jp/bosai/" target="_blank" rel="noopener noreferrer" class="source">気象庁の最新情報 ↗</a><button type="button" class="journey-button" data-weather-refresh>天気を更新</button></aside><p><strong>歩きやすく滑りにくい靴、脱ぎ着できる防寒着、雨具、飲み物。</strong>街の服装のまま判断せず、訪問時期の気温と天気に合わせます。</p><ul class="k-kit"><li><b>足元</b><span>歩きやすい靴</span></li><li><b>体温</b><span>重ね着・防寒着</span></li><li><b>雨</b><span>雨具</span></li><li><b>休憩</b><span>飲み物・携行食</span></li></ul><details><summary>季節・用途で変わる備え</summary><p>春や秋は朝夕の冷え込みに備え、夏も天候や日陰による変化を考えます。日差しへの備えや雨具の種類、靴の選択は、公式の季節別服装案内と当日の予報で確認しましょう。このページは冬季入山の装備案内ではありません。</p></details><p class="k-source">出典：<a href="https://www.kamikochi.or.jp/learn/season" target="_blank" rel="noopener noreferrer">上高地公式・季節別服装ガイド ↗</a> ／ 確認：2026年10月19日</p></article>
+      <article class="k-requirement" id="access"><h3>03 / 交通・費用</h3><p class="k-important">上高地には通年マイカーで乗り入れできません。車は沢渡・平湯方面の乗り換え地点からシャトルバスやタクシーを利用します。バスの予約条件は路線・便ごとに確認してください。</p><figure class="k-bus-map"><figcaption><small>SAWANDO → KAMIKOCHI</small><strong>沢渡から、河童橋まで。</strong></figcaption><ol><li><b>沢渡の駐車場</b><span>駐車場の位置に応じたバス停へ</span></li><li><b>さわんど地区の乗り場</b><span>上高地行きのシャトルバスに乗車</span></li><li><b>上高地バスターミナル</b><span>下車して、河童橋へ徒歩約6分・300m</span></li><li><b>河童橋</b><span>梓川と穂高連峰の眺めへ</span></li></ol><p class="k-caption">乗換順序の模式図です。停留所の網羅や道路の形・縮尺を示す地図ではありません。バスの乗車時間・運賃・予約条件・運行日は、利用便の公式案内で確認してください。</p><a class="source" href="https://www.alpico.co.jp/traffic/local/kamikochi/sawando/" target="_blank" rel="noopener noreferrer">沢渡〜上高地のバス案内 ↗</a></figure><div class="k-access-paths"><div><h4>公共交通の一例</h4><p>出発地 → 松本 → 新島々 → 上高地。直行便など、別の経路もあります。</p></div><div><h4>車の一例</h4><p>出発地 → 沢渡、または平湯あかんだな方面の駐車場 → バス・タクシー → 上高地。</p></div></div><p>松本・新島々方面の便には予約優先制の案内があります。往復の便・乗り継ぎと予約方法を、交通事業者の路線詳細で確かめてください。</p><dl class="k-costs"><div><dt>出発地からの交通</dt><dd>鉄道・高速バス・燃料・高速料金など</dd></div><div><dt>現地の乗り換え</dt><dd>路線／シャトルバス、またはタクシーの往復分</dd></div><div><dt>車の場合</dt><dd>乗り換え地点の駐車料金</dd></div><div><dt>現地で過ごす費用</dt><dd>食事・休憩、必要なら宿泊など</dd></div></dl><p>金額・個人の総額・出発地からの時間は、日程と経路が決まってから確認します。このページでは未確認の運賃や時刻を掲載していません。</p><p class="k-source">出典：<a href="https://www.kamikochi.or.jp/access/restrictions" target="_blank" rel="noopener noreferrer">公式マイカー規制</a>・<a href="https://www.alpico.co.jp/traffic/local/kamikochi/" target="_blank" rel="noopener noreferrer">アルピコ交通・路線一覧</a> ／ 確認：2026年10月19日。各ページ内の年度表記と利用日の条件も確認してください。</p></article>
+      <article class="k-requirement" id="before-you-go"><h3>04 / 訪問前の確認</h3><p><strong>出発前に、四つだけ確認を。</strong>積雪・凍結のある期間や冬季閉鎖中の入山は、この案の対象外です。</p><ul class="k-check-links k-check-cards"><li><span>園路の開放・現地の状況</span><a href="https://www.kamikochi.or.jp/" target="_blank" rel="noopener noreferrer">上高地公式の最新案内 ↗</a></li><li><span>自然・散策の利用相談</span><a href="https://www.kamikochi-vc.or.jp/" target="_blank" rel="noopener noreferrer">ビジターセンター ↗</a></li><li><span>運行・予約・運賃</span><a href="https://www.alpico.co.jp/traffic/local/kamikochi/" target="_blank" rel="noopener noreferrer">交通事業者の案内 ↗</a></li><li><span>利用日の天気・気温</span><a href="https://www.jma.go.jp/bosai/" target="_blank" rel="noopener noreferrer">気象庁の最新情報 ↗</a></li></ul><p class="k-source">上高地公式・ビジターセンター・交通事業者のページ確認：2026年10月19日。利用日当日の天候・営業・運行を確認済みという意味ではありません。天気情報は利用日に別途ご確認ください。</p></article>
     </section>
 
         <section id="partner" class="film-partner" aria-labelledby="film-partner-title">
@@ -206,7 +150,7 @@
     </section>
 
 
-    <section class="k-plan-end" id="your-day" aria-labelledby="plan-end-title"><p class="eyebrow">06 / MAKE IT YOUR DAY</p><h2 id="plan-end-title">次は、自分の予定へ。</h2><p>出発地、日程、誰と過ごすか。<br>一つずつ決めて、必要な準備を手元に。</p><a class="journey-primary" data-plan-link href="kamikochi-plan.html">この滞在を、自分の予定にする ↗</a><p class="k-caption">計画画面で条件入力とブラウザ内保存ができます。予約・決済は行いません。</p></section>
+    <section class="k-plan-end" id="your-day" aria-labelledby="plan-end-title"><p class="eyebrow">05 / MAKE IT YOUR DAY</p><h2 id="plan-end-title">次は、自分の予定へ。</h2><p>出発地、日程、誰と過ごすか。<br>一つずつ決めて、必要な準備を手元に。</p><a class="journey-primary" data-plan-link href="kamikochi-plan.html">この滞在を、自分の予定にする ↗</a><p class="k-caption">計画画面で条件入力とブラウザ内保存ができます。予約・決済は行いません。</p></section>
   </main>
   <footer class="footer"><b>YAMATABI</b><a href="index.html">トップに戻る ↗</a></footer>
 </body>
