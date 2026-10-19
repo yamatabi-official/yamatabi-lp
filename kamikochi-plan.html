@@ -5,14 +5,16 @@
   <meta name="theme-color" content="#eff5f3"><meta name="description" content="上高地で過ごす一日を、自分の準備メモに。出発地・日程・同行者を入力して、このブラウザ内に保存できます。">
   <title>上高地の計画をつくる | YAMATABI</title>
   <link rel="stylesheet" href="style.css?v=20261017-kamikochi-guide"><link rel="stylesheet" href="experience.css?v=20261018-your-day"><link rel="stylesheet" href="kamikochi-page.css?v=20261019"><link rel="stylesheet" href="kamikochi-plan.css?v=20261019">
-  <script src="kamikochi-plan.js?v=20261019" defer></script>
+  <script src="kamikochi-mood-data.js?v=20261019" defer></script>
+  <script src="kamikochi-plan.js?v=20261019-mood" defer></script>
 </head>
 <body class="experience-page k-plan-page">
   <header class="nav"><a class="brand" href="index.html">YAMATABI</a><a href="experience.html#requirements">← 上高地の紹介へ</a></header>
   <main class="k-plan-main">
     <p class="eyebrow">MAKE IT YOUR DAY / KAMIKOCHI</p><h1>この滞在を、自分の予定に。</h1>
-    <p class="trip-lead">バスターミナル → 河童橋 → 小梨平 → 河童橋周辺で休憩 → 帰路。<br>この一案を、自分の条件で考える準備メモです。</p>
-    <p class="k-important">無雪・凍結なしの通常期の散策案です。冬季入山には使えません。歩行往復約1.6km・約32分は公式区間目安の合計、滞在2〜3時間は休憩を含む編集上の配分例です。予約・決済・運行確認は行いません。</p>
+    <p class="trip-lead" id="plan-route-intro">バスターミナル → 河童橋 → 小梨平 → 同じ道を戻る。自分の条件で考える準備メモです。</p>
+    <p id="plan-mood-context" class="plan-mood-context" hidden></p>
+    <p class="k-important">無雪・凍結なしの通常期の散策案です。冬季入山には使えません。<span id="plan-route-facts">歩行往復約1.6km・約32分は公式区間目安の合計です。</span> 休憩や滞在時間は、帰りの便と体調に合わせて調整します。予約・決済・運行確認は行いません。</p>
     <p><a class="source" href="experience.html#walk">一日の流れ・対象条件・出典を見る ↗</a></p>
     <form id="trip-plan-form" hidden>
       <fieldset><legend>あなたの条件</legend>
@@ -20,6 +22,7 @@
         <label for="plan-date">訪問日 <span>未定なら空欄で保存できます。</span></label><input id="plan-date" name="date" type="date">
         <label for="plan-company">同行者</label><select id="plan-company" name="company"><option value="unknown">まだ決めていない</option><option value="solo">ひとりで</option><option value="together">大切な人と</option><option value="friends">友達と</option></select>
         <label for="plan-transport">交通手段</label><select id="plan-transport" name="transport"><option value="unknown">まだ決めていない</option><option value="public">公共交通</option><option value="car">車＋現地で乗り換え</option></select>
+        <label for="plan-walk">歩く範囲</label><select id="plan-walk" name="walk"><option value="standard">小梨平まで歩いて戻る</option><option value="short">河童橋周辺で折り返す</option></select>
       </fieldset>
       <fieldset><legend>自分の準備メモ</legend><p>確認できたものにチェック。計画の保存時に一緒に記録します。</p>
         <label class="plan-check"><input type="checkbox" name="check" value="transport">往復の経路・便・予約方法を確認</label>

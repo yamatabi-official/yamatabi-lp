@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#eff5f3">
-  <meta name="description" content="YAMATABIのショートドラマ『秋の上高地』。映像の余韻から、河童橋や梓川の景色、散策のヒント、アクセスと旅の準備へ。次の一歩を見つける作品ページです。">
+  <meta name="description" content="YAMATABIのショートドラマ『秋の上高地』。河童橋周辺の見取り図から、気分に合う散策と旅の準備へ。次の一歩を見つける作品ページです。">
   <title>秋の上高地｜作品と旅のガイド | YAMATABI</title>
   <meta property="og:title" content="秋の上高地｜今度は、あなたの一日に。 | YAMATABI">
   <meta property="og:description" content="物語で出会った景色へ。上高地での過ごし方を選び、散策・交通・準備を考える、次の休日への入口。">
@@ -13,11 +13,13 @@
   <meta property="og:image" content="https://yamatabi-official.github.io/yamatabi-lp/kamikochi.webp">
   <link rel="stylesheet" href="style.css?v=20261017-kamikochi-guide">
   <link rel="stylesheet" href="experience.css?v=20261018-your-day">
-  <link rel="stylesheet" href="quiet-time.css?v=20261019">
-  <script src="quiet-time.js?v=20261019" defer></script>
-  <script src="story-map.js" defer></script>
-  <link rel="stylesheet" href="kamikochi-page.css?v=20261019-inline">
-  <script src="kamikochi-page.js?v=20261019-inline" defer></script>
+  <script src="story-map.js?v=20261019-mood" defer></script>
+  <script src="kamikochi-arrival.js?v=20261019" defer></script>
+  <script src="kamikochi-mood-data.js?v=20261019" defer></script>
+  <script src="kamikochi-mood.js?v=20261019" defer></script>
+  <link rel="stylesheet" href="kamikochi-page.css?v=20261019-map-mood">
+  <script src="kamikochi-page.js?v=20261019-map-mood" defer></script>
+  <script src="kamikochi-preview.js?v=20261019" defer></script>
 
 </head>
 <body class="experience-page kamikochi-page">
@@ -31,71 +33,29 @@
         <a class="journey-primary" href="#ordinary-film" data-hero-play aria-controls="hero-film" aria-expanded="false">ドラマを観る <small>21秒</small></a>
         <a class="k-page-secondary" href="#quiet-time">過ごし方を知る ↓</a>
         <p class="film-edition">YAMATABI ORIGINAL FILM — 001</p>
-        <div class="hero-film-after" hidden><p>物語のあとも、少しここに。</p><button type="button" class="journey-button" data-quiet-open="rest" hidden>川辺の余韻へ</button><a class="k-page-secondary" href="#quiet-time">自分の目線で過ごしてみる ↓</a></div>
       </div>
-      <figure class="film-hero-image"><img src="assets/kamikochi-film-still.webp" width="512" height="910" alt="作品『秋の上高地』で川辺に立つ人物の一場面" fetchpriority="high"><video id="hero-film" controls muted playsinline preload="none" poster="assets/kamikochi-film-still.webp" aria-label="秋の上高地をこのページで観る" aria-describedby="hero-caption-note" hidden><source src="kamikochi-film.mp4" type="video/mp4"><track kind="captions" src="assets/captions/kamikochi-scenes-ja.vtt" srclang="ja" label="日本語・画面の文字と情景"></video>
+      <figure class="film-hero-image"><img src="assets/kamikochi-film-still.webp" width="512" height="910" alt="作品『秋の上高地』で川辺に立つ人物の一場面" fetchpriority="high"><video id="hero-preview" muted autoplay loop playsinline preload="none" poster="assets/kamikochi-film-still.webp" aria-hidden="true" hidden></video><video id="hero-film" controls muted playsinline preload="none" poster="assets/kamikochi-film-still.webp" aria-label="秋の上高地をこのページで観る" aria-describedby="hero-caption-note" hidden><source src="kamikochi-film.mp4" type="video/mp4"><track kind="captions" src="assets/captions/kamikochi-scenes-ja.vtt" srclang="ja" label="日本語・画面の文字と情景"></video>
         <div class="hero-inline-tools" hidden><div><button type="button" data-hero-sound aria-pressed="false">音を聴く</button><button type="button" data-hero-captions aria-pressed="false">説明字幕を表示</button><button type="button" data-hero-close>映像を閉じる ×</button></div><p id="hero-caption-note">字幕は画面の文字と情景の説明です。</p><p class="hero-film-status" role="status"></p></div>
         <figcaption>作品『秋の上高地』より</figcaption></figure>
+      <button type="button" class="hero-preview-toggle" data-preview-toggle hidden>プレビューを再生</button>
     </section>
     <details class="k-ordinary" id="ordinary-film"><summary>このページのプレーヤーで観る</summary>
       <div class="video-frame"><video controls playsinline preload="none" poster="assets/kamikochi-film-still.webp" aria-label="秋の上高地 ショートドラマ"><source src="kamikochi-film.mp4" type="video/mp4"><track kind="captions" src="assets/captions/kamikochi-scenes-ja.vtt" srclang="ja" label="日本語・画面の文字と情景"></video></div>
       <p class="k-caption">字幕は画面の文字と情景の説明です。再生できない場合は<a href="https://www.instagram.com/reel/DecApgPM4Ov/" target="_blank" rel="noopener noreferrer">Instagramで作品を観る ↗</a></p>
-      <p class="quiet-inline-invite" hidden>物語のあとも、少しここに。 <button type="button" class="journey-button" data-quiet-open="rest">川辺の余韻へ</button></p>
     </details>
-    <nav class="trip-menu" aria-label="上高地ページ内"><a href="#quiet-time">過ごし方</a><a href="#walk">一日の流れ</a><a href="#requirements">行く準備</a></nav>
+    <nav class="trip-menu" aria-label="上高地ページ内"><a href="#story-map">周辺マップ</a><a href="#mood-guide">気分から探す</a><a href="#requirements">行く準備</a></nav>
 
-    <section class="trip-section k-replay" id="quiet-time" aria-labelledby="replay-title">
-      <div class="eyebrow">01 / YOUR POINT OF VIEW</div>
-      <h2 id="replay-title">あなたなら、ここでどう過ごす？</h2>
-      <p class="trip-lead">橋の上で立ち止まる。流れを眺める。木々に目を向ける。<br>気になる風景をひらいて、自分のペースで。</p>
-      <p id="quiet-entry-saved" class="k-caption" hidden>手元に残した余韻があります。<button type="button" class="journey-button" data-quiet-open="rest" hidden>余韻に戻る</button></p>
-      <span class="k-anchor" id="places"></span>
-      <div class="k-replay-grid">
-        <details class="k-replay-card" id="replay-bridge">
-          <summary><img src="kamikochi.webp" width="1152" height="1536" alt="河童橋と梓川、その先に広がる山々" loading="lazy"><span class="k-card-text"><small>01 / 河童橋・写真</small><strong>橋の上で、ひと呼吸。</strong><span>風景をひらく ＋</span></span></summary>
-          <div class="k-card-body"><img src="kamikochi.webp" width="1152" height="1536" alt="河童橋と川の風景を大きく眺める" loading="lazy"><p>橋から眺める川と山々を想像して。ここでは写真のまま、ゆっくり過ごせます。</p><p class="k-caption">静止写真・音声なし。現地では通行を妨げず、混雑時は橋を渡った先で景色を楽しみましょう。</p></div>
-        </details>
-        <details class="k-replay-card" id="replay-river">
-          <summary><img src="assets/kamikochi-river-intro.webp" width="512" height="910" alt="梓川の水面と川岸の木々" loading="lazy"><span class="k-card-text"><small>02 / 梓川・無音の映像</small><strong>川のそばで、ひと休み。</strong><span>風景をひらく ＋</span></span></summary>
-          <div class="k-card-body"><video data-replay-video controls muted playsinline loop preload="none" poster="assets/kamikochi-river-intro.webp" aria-label="梓川の流れを眺める無音映像"></video><button type="button" data-river-play class="journey-button" hidden>流れを眺める ▶</button><p>手元に飲み物があれば、ひとくち。操作を続けず、流れに目を預けても。</p><p class="k-caption" data-river-status role="status">提供された梓川の映像。音声はありません。</p><button type="button" class="journey-button" data-quiet-open="rest" hidden>表示を減らして、余韻を過ごす</button></div>
-        </details>
-        <details class="k-replay-card k-trees" id="replay-trees">
-          <summary><img src="assets/kamikochi-river-intro.webp" width="512" height="910" alt="梓川の岸辺に連なる木々" loading="lazy"><span class="k-card-text"><small>03 / 川岸の木々・写真</small><strong>木々の向こうに、目を向ける。</strong><span>風景をひらく ＋</span></span></summary>
-          <div class="k-card-body"><img data-tree-view src="assets/kamikochi-river-intro.webp" width="512" height="910" alt="川岸の木々と光を眺める" loading="lazy"><button type="button" class="journey-button" data-tree-toggle aria-pressed="false" hidden>木々を大きく見る</button><p>枝の重なりや、光の当たる葉を探す。歩き出さず、眺めるだけでも。</p><p class="k-caption">梓川の岸辺の静止写真です。森の道を歩く映像は現在準備中です。音声はありません。</p></div>
-        </details>
-      </div>
-    </section>
-
-    <section class="trip-section k-day" id="walk" aria-labelledby="day-title">
-      <span class="k-anchor" id="about-kamikochi"></span>
-      <div class="eyebrow">02 / A DAY IN KAMIKOCHI</div><h2 id="day-title">こんな一日を、過ごせます。</h2>
-      <p class="trip-lead">バスターミナルから河童橋、小梨平へ。<br>同じ道を戻る、川沿いの散策案です。</p>
-      <p class="k-important">対象：雪・凍結がなく、道路・路線バス・園路・利用施設が開いている通常期の日中。冬季の入山には対応していません。利用日の開放状況を必ず確認してください。</p>
-      <dl class="k-day-facts"><div><dt>歩く距離</dt><dd>往復 約1.6km</dd></div><div><dt>歩くだけの時間</dt><dd>往復 約32分</dd></div><div><dt>休憩を含む滞在枠</dt><dd>2〜3時間の配分例</dd></div></dl>
-      <p class="k-caption">歩行距離・時間は公式の区間目安（約300m・6分＋約500m・10分）の往復合計。休憩・混雑・寄り道は含みません。滞在枠は食事や休憩をゆっくり取るための編集上の一案で、所要時間の保証ではありません。</p>
-      <p class="k-source">出典：<a href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">上高地公式・散策コース ↗</a> ／ ページ確認：2026年10月19日</p>
-      <ol class="k-timeline">
-        <li><img src="assets/kamikochi-river-intro.webp" width="512" height="910" loading="lazy" alt="到着後に出会う上高地の川の風景"><div><small>01 / 到着</small><h3>帰りの便を確認して、出発。</h3><p>バスターミナルで乗り場・帰りの便とトイレを確認。飲み物や歩く準備を整えます。</p><span>公衆トイレの位置は公式のターミナル案内に掲載。利用可否は当日確認。</span></div></li>
-        <li><img src="kamikochi.webp" width="1152" height="1536" loading="lazy" alt="河童橋と梓川の眺め"><div><small>02 / 河童橋</small><h3>橋から、山と川を眺める。</h3><p>ターミナルから約300m・徒歩約6分。景色を眺める時間と写真の時間を、自分たちのペースで。</p><span>橋は通行の場所でもあります。混雑時は立ち止まらず、空いた場所へ。</span></div></li>
-        <li><img src="assets/kamikochi-river-intro.webp" width="512" height="910" loading="lazy" alt="川沿いの散策を想像するための梓川の風景"><div><small>03 / 川沿いから小梨平へ</small><h3>木々や水の色に、目を向ける。</h3><p>河童橋から小梨平は片道約500m・徒歩約10分。現地の案内に従い、開放されている園路を進みます。</p><span>この写真は周辺の風景イメージです。路面の状態を示す写真ではありません。</span></div></li>
-        <li><img src="assets/kamikochi-river-intro.webp" width="512" height="910" loading="lazy" alt="休憩の時間に眺めたい梓川の水面"><div><small>04 / 食事・休憩</small><h3>予定を詰めず、ひと休み。</h3><p>小梨平方面から同じ道で河童橋周辺へ戻り、営業中の飲食店や休憩できる場所を現地で確認。営業していない場合に備え、飲み物と携行食も。</p><span>店舗の営業時間・席・休憩設備の利用可否は未確認です。帰りの便に合わせて調整します。</span></div></li>
-        <li><img src="kamikochi.webp" width="1152" height="1536" loading="lazy" alt="旅の終わりに振り返る河童橋の風景"><div><small>05 / 帰路</small><h3>余韻を持って、ターミナルへ。</h3><p>河童橋から約300m・徒歩約6分で戻る区間も、混雑や待ち時間を見込んで余裕を持って。</p><span>疲れたときは小梨平へ進まず、河童橋で折り返せます（歩行往復約600m・約12分、休憩を除く）。</span></div></li>
-      </ol>
-      <figure class="k-route-map"><ol class="k-mobile-route" aria-label="散策順序の模式図"><li><strong>上高地バスターミナル</strong><span>次の河童橋まで 約300m・徒歩約6分</span></li><li><strong>河童橋</strong><span>次の小梨平まで 約500m・徒歩約10分</span></li><li><strong>小梨平</strong><span>帰りは同じ道を戻る</span></li></ol><svg viewBox="0 0 720 210" role="img" aria-labelledby="route-map-label"><title id="route-map-label">ターミナルから河童橋、小梨平へ進み同じ道を戻る経路の模式図</title><path d="M50 150Q220 180 350 135T680 155" fill="none" stroke="#91c9c6" stroke-width="20"/><path d="M90 80H630" fill="none" stroke="#805e44" stroke-width="4"/><g fill="#245e64"><circle cx="90" cy="80" r="10"/><circle cx="355" cy="80" r="10"/><circle cx="630" cy="80" r="10"/></g><g fill="#344b55" text-anchor="middle" font-family="sans-serif" font-size="17"><text x="90" y="45">ターミナル</text><text x="355" y="45">河童橋</text><text x="630" y="45">小梨平</text><text x="220" y="112">約300m / 約6分</text><text x="490" y="112">約500m / 約10分</text><text x="355" y="191">同じ道を戻る ／ 梓川沿いの園路</text></g></svg><figcaption>順序を示す模式図です。縮尺・方角・道の形は正確な地図ではありません。移動は公式園路マップ・現地案内に従ってください。</figcaption></figure>
-      <p>公式園路マップにはターミナル周辺、カッパトイレ、小梨平公衆トイレが掲載されています。休憩やトイレの利用可否・営業日は、訪問前と現地で確認してください。</p>
-      <div class="k-route-links"><a class="source" href="https://www.kamikochi.or.jp/learn/parkmap/" target="_blank" rel="noopener noreferrer">公式の園路マップ ↗</a><a class="source" href="https://www.kamikochi.or.jp/access/terminal" target="_blank" rel="noopener noreferrer">ターミナル・トイレの案内 ↗</a></div>
-      <p class="k-source">施設の掲載位置の出典：上記の公式園路マップ・ターミナル案内 ／ ページ確認：2026年10月19日。利用日の営業・利用可否は別途確認してください。</p>
-      <details class="k-story-map-extra"><summary>作品の世界を描いた概念マップも見る</summary>    <section class="story-map-section" id="story-map" aria-labelledby="story-map-title">
-      <div class="eyebrow">STORY MAP / KAMIKOCHI</div>
-      <h2 id="story-map-title"><span>物語のそばを、</span><span>歩いてみる。</span></h2>
-      <p class="trip-lead">川の音、橋からの景色、隣を歩く時間。<br>上高地の風景と、作品の余韻を一枚に。</p>
+    <section class="trip-section story-map-section k-area-map" id="story-map" aria-labelledby="story-map-title">
+      <div class="eyebrow">01 / FIND YOUR PLACE</div>
+      <h2 id="story-map-title"><span>上高地は、</span><span>こんな場所。</span></h2>
+      <p class="trip-lead">梓川に架かる河童橋。その周りに、川沿いの園路と小梨平。<br>まずは見取り図で、眺める場所・歩く場所・帰る場所を知る。</p>
       <div class="story-map-legend" aria-label="マップの凡例">
         <span><i class="map-place-key" aria-hidden="true"></i>実在する場所</span>
-        <span><i class="map-mood-key" aria-hidden="true"></i>作品から想像する時間</span>
+        <span><i class="map-mood-key" aria-hidden="true"></i>園路と周辺施設</span>
       </div>
       <div class="story-map-layout">
         <div>
-          <div class="story-map-board" role="group" aria-label="河童橋周辺と作品の世界を描いた概念図">
+          <div class="story-map-board" role="group" aria-label="河童橋・梓川・小梨平・バスターミナルの関係を描いた見取り図">
             <svg viewBox="0 0 720 600" preserveAspectRatio="none" aria-hidden="true" focusable="false">
               <defs>
                 <pattern id="map-paper" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".7" fill="#49666a" opacity=".09"/></pattern>
@@ -126,43 +86,107 @@
               <g transform="translate(516 495)" fill="#859394" stroke="#536570" stroke-width="1.5"><rect x="-17" y="-9" width="34" height="22" rx="3"/><rect x="-12" y="-5" width="24" height="9" fill="#edf3ef"/><circle cx="-10" cy="15" r="3"/><circle cx="10" cy="15" r="3"/></g>
             </svg>
             <span class="story-map-mountains">穂高連峰のイメージ</span>
-            <a class="story-map-pin map-pin-bridge" href="#map-bridge"><span>01</span> 河童橋</a>
-            <a class="story-map-pin map-pin-river" href="#map-river"><span>02</span> 梓川</a>
-            <a class="story-map-pin map-pin-terminal" href="#map-terminal"><span>03</span> バスターミナル</a>
-            <span class="story-map-mood map-mood-light">秋の光</span>
-            <span class="story-map-mood map-mood-walk">隣を歩く時間</span>
-            <span class="story-map-signature">YAMATABI / A STORY LANDSCAPE</span>
+            <a class="story-map-pin map-pin-bridge" href="#map-bridge"><span>01</span><b>河童橋<small>山と川の眺め</small></b></a>
+            <a class="story-map-pin map-pin-river" href="#map-river"><span>02</span><b>梓川<small>川沿いの園路</small></b></a>
+            <a class="story-map-pin map-pin-terminal" href="#map-terminal"><span>03</span><b>バスターミナル<small>行き帰り・トイレ</small></b></a>
+            <a class="story-map-pin map-pin-konashi" href="#map-konashi"><span>04</span><b>小梨平<small>ビジターセンター・トイレ</small></b></a>
+            <span class="story-map-mood map-mood-light">川沿いの園路</span>
+            <span class="story-map-mood map-mood-walk">トイレ・施設は下の案内へ</span>
+            <span class="story-map-signature">YAMATABI / KAMIKOCHI AREA</span>
           </div>
-          <p class="story-map-caption">場所の名前をタップすると紹介が開きます。位置・方角・距離・道のつながりを正確に示す地図ではありません。撮影地点や実際の散策経路を示すものではなく、移動には公式地図・現地の案内をご利用ください。</p>
+          <p class="story-map-caption">周辺の関係をつかむためのオリジナル見取り図です。縮尺・方角・園路の形は正確ではありません。名前をタップすると、その場所と周辺施設が分かります。実際の移動には公式地図・現地案内をご利用ください。</p>
         </div>
         <div class="story-map-notes">
-          <p class="story-map-notes-title">PLACES &amp; LITTLE MOMENTS</p>
+          <p class="story-map-notes-title">場所と周辺の施設</p>
           <details class="story-map-detail" id="map-bridge" open>
             <summary><span>01 / PLACE</span>河童橋</summary>
-            <div><p>梓川と山々を眺める、上高地を代表する場所。まずは景色に目を向けて、立ち止まる時間を。</p><a class="source" href="https://www.google.com/maps/search/?api=1&amp;query=上高地+河童橋" target="_blank" rel="noopener noreferrer">地図アプリで場所を見る ↗</a></div>
+            <div><p>川と穂高連峰を望む吊り橋。ターミナルから約300m・徒歩約6分が公式の目安です。周辺のカッパトイレは公式園路マップに掲載されています。利用可否は訪問日に確認を。</p><a class="source" href="https://www.google.com/maps/search/?api=1&amp;query=上高地+河童橋" target="_blank" rel="noopener noreferrer">地図アプリで場所を見る ↗</a></div>
           </details>
           <details class="story-map-detail" id="map-river">
             <summary><span>02 / PLACE</span>梓川</summary>
-            <div><p>上高地を流れる川。開放されている遊歩道から、水の色や川の音を楽しんでみてください。河川への立ち入りを案内するピンではありません。</p><a class="source" href="#walk">散策のヒントを読む ↓</a></div>
+            <div><p>上高地を流れる川。開放されている川沿いの園路から流れや木々を眺めます。川の中や河原への立ち入りを案内するピンではありません。</p><a class="source" href="#walk">散策のヒントを読む ↓</a></div>
           </details>
           <details class="story-map-detail" id="map-terminal">
             <summary><span>03 / PLACE</span>上高地バスターミナル</summary>
             <div><p>旅のはじまりと帰りの目印に。散策前に帰りの乗り場・便を確認し、余裕を持って戻りましょう。</p><a class="source" href="https://www.google.com/maps/search/?api=1&amp;query=上高地バスターミナル" target="_blank" rel="noopener noreferrer">地図アプリで場所を見る ↗</a></div>
           </details>
-          <details class="story-map-detail story-map-imagination" id="map-moments">
-            <summary><span>STORY / 作品のイメージ</span>隣を歩く時間</summary>
-            <div><img src="assets/kamikochi-film-still.webp" alt="上高地の作品で、川沿いを歩く人物の一場面" width="512" height="910" loading="lazy"><p>秋の光や、誰かと歩く時間。あなたならどんな一日を過ごしたいですか。</p><p class="story-map-caption">作品から旅を想像するための表現です。出来事が起きた地点や、確認済みの撮影地を示しません。</p><a class="source" href="#scene">もう一度、作品を観る ↑</a></div>
+          <details class="story-map-detail" id="map-konashi">
+            <summary><span>04 / PLACE</span>小梨平と周辺施設</summary>
+            <div><p>河童橋から約500m・徒歩約10分が公式の区間目安。小梨平にはビジターセンターがあり、周辺に公衆トイレの掲載があります。営業・利用可否・道の状態は訪問前に確認してください。</p><a class="source" href="https://www.kamikochi-vc.or.jp/" target="_blank" rel="noopener noreferrer">ビジターセンターの案内 ↗</a><a class="source" href="#replay-trees">木々の風景を見る ↓</a></div>
           </details>
-          <a class="link" href="https://www.kamikochi.or.jp/" target="_blank" rel="noopener noreferrer">実際に歩く前に、公式案内へ ↗</a>
+          <p class="k-source">区間目安・施設の掲載位置：<a href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内</a>・<a href="https://www.kamikochi.or.jp/learn/parkmap/" target="_blank" rel="noopener noreferrer">公式園路マップ</a>・<a href="https://www.kamikochi-vc.or.jp/" target="_blank" rel="noopener noreferrer">ビジターセンター</a>。ページ確認：2026年10月19日。利用日の営業・通行確認は別途必要です。</p>
+          <a class="link" href="https://www.kamikochi.or.jp/learn/parkmap/" target="_blank" rel="noopener noreferrer">移動には、公式園路マップへ ↗</a>
         </div>
       </div>
     </section>
 
-</details>
+    <section class="trip-section k-replay" id="quiet-time" aria-labelledby="replay-title">
+      <div class="eyebrow">02 / YOUR POINT OF VIEW</div>
+      <h2 id="replay-title">あなたなら、ここでどう過ごす？</h2>
+      <p class="trip-lead">橋の上で立ち止まる。流れを眺める。木々に目を向ける。<br>気になる風景をひらいて、自分のペースで。</p>
+      <span class="k-anchor" id="places"></span>
+      <div class="k-replay-grid">
+        <details class="k-replay-card" id="replay-bridge">
+          <summary><img src="kamikochi.webp" width="1152" height="1536" alt="河童橋と梓川、その先に広がる山々" loading="lazy"><span class="k-card-text"><small>01 / 河童橋・写真</small><strong>橋の上で、ひと呼吸。</strong><span>風景をひらく ＋</span></span></summary>
+          <div class="k-card-body"><img src="kamikochi.webp" width="1152" height="1536" alt="河童橋と川の風景を大きく眺める" loading="lazy"><p>橋から眺める川と山々を想像して。ここでは写真のまま、ゆっくり過ごせます。</p><p class="k-caption">静止写真・音声なし。現地では通行を妨げず、混雑時は橋を渡った先で景色を楽しみましょう。</p></div>
+        </details>
+        <details class="k-replay-card" id="replay-river">
+          <summary><img src="assets/kamikochi-river-intro.webp" width="512" height="910" alt="梓川の水面と川岸の木々" loading="lazy"><span class="k-card-text"><small>02 / 梓川・無音の映像</small><strong>川のそばで、ひと休み。</strong><span>風景をひらく ＋</span></span></summary>
+          <div class="k-card-body"><video data-replay-video controls muted playsinline loop preload="none" poster="assets/kamikochi-river-intro.webp" aria-label="梓川の流れを眺める無音映像"></video><button type="button" data-river-play class="journey-button" hidden>流れを眺める ▶</button><p>開放されている遊歩道から、水の色や流れを眺める時間を想像して。</p><p class="k-caption" data-river-status role="status">提供された梓川の映像。音声はありません。</p></div>
+        </details>
+        <details class="k-replay-card k-trees" id="replay-trees">
+          <summary><img src="assets/kamikochi-river-intro.webp" width="512" height="910" alt="梓川の岸辺に連なる木々" loading="lazy"><span class="k-card-text"><small>03 / 川岸の木々・写真</small><strong>木々の向こうに、目を向ける。</strong><span>風景をひらく ＋</span></span></summary>
+          <div class="k-card-body"><img data-tree-view src="assets/kamikochi-river-intro.webp" width="512" height="910" alt="川岸の木々と光を眺める" loading="lazy"><button type="button" class="journey-button" data-tree-toggle aria-pressed="false" hidden>木々を大きく見る</button><p>枝の重なりや、光の当たる葉を探す。歩き出さず、眺めるだけでも。</p><p class="k-caption">梓川の岸辺の静止写真です。森の道を歩く映像は現在準備中です。音声はありません。</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="trip-section k-mood-guide" id="mood-guide" aria-labelledby="mood-title">
+      <div class="eyebrow">03 / FOLLOW YOUR FEELING</div><h2 id="mood-title">今の気分から、過ごし方を。</h2>
+      <p class="trip-lead">気になる時間と、歩く量を選ぶと、<br>上高地での立ち寄り方・休み方をご提案します。</p>
+      <form id="mood-form" hidden>
+        <fieldset><legend>今日は、どんな気分？</legend><div class="mood-options">
+          <label><input type="radio" name="mood" value="calm" required><span>ひと息つきたい</span></label>
+          <label><input type="radio" name="mood" value="talk"><span>誰かとゆっくり話したい</span></label>
+          <label><input type="radio" name="mood" value="curious"><span>自然をじっくり見たい</span></label>
+          <label><input type="radio" name="mood" value="refresh"><span>軽く気分転換したい</span></label>
+        </div></fieldset>
+        <fieldset><legend>歩く量は、どのくらいにする？</legend><div class="mood-options">
+          <label><input type="radio" name="pace" value="unknown" checked><span>まだ決めていない</span></label>
+          <label><input type="radio" name="pace" value="short"><span>河童橋の周りを、短めに</span></label>
+          <label><input type="radio" name="pace" value="standard"><span>小梨平まで、ゆっくり歩く</span></label>
+        </div></fieldset>
+        <button type="submit" class="journey-primary">今の自分に合う過ごし方を見る ↗</button>
+      </form>
+      <p id="mood-status" role="status" class="k-caption">気分と歩く量に合わせた、編集上の散策提案です。</p>
+      <article id="mood-result" class="mood-result" hidden></article>
+      <noscript><p>下の「一日の流れ」では、小梨平までの散策と河童橋で折り返す短縮案をご覧いただけます。</p></noscript>
+    </section>
+
+    <section class="trip-section k-day" id="walk" aria-labelledby="day-title">
+      <span class="k-anchor" id="about-kamikochi"></span>
+      <div class="eyebrow">04 / A DAY IN KAMIKOCHI</div><h2 id="day-title">こんな一日を、過ごせます。</h2>
+      <p class="trip-lead">バスターミナルから河童橋、小梨平へ。<br>同じ道を戻る、川沿いの散策案です。</p>
+      <p class="k-important">対象：雪・凍結がなく、道路・路線バス・園路・利用施設が開いている通常期の日中。冬季の入山には対応していません。利用日の開放状況を必ず確認してください。</p>
+      <dl class="k-day-facts"><div><dt>歩く距離</dt><dd>往復 約1.6km</dd></div><div><dt>歩くだけの時間</dt><dd>往復 約32分</dd></div><div><dt>休憩を含む滞在枠</dt><dd>2〜3時間の配分例</dd></div></dl>
+      <p class="k-caption">歩行距離・時間は公式の区間目安（約300m・6分＋約500m・10分）の往復合計。休憩・混雑・寄り道は含みません。滞在枠は食事や休憩をゆっくり取るための編集上の一案で、所要時間の保証ではありません。</p>
+      <p class="k-source">出典：<a href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">上高地公式・散策コース ↗</a> ／ ページ確認：2026年10月19日</p>
+      <ol class="k-timeline">
+        <li><img src="assets/kamikochi-river-intro.webp" width="512" height="910" loading="lazy" alt="到着後に出会う上高地の川の風景"><div><small>01 / 到着</small><h3>帰りの便を確認して、出発。</h3><p>バスターミナルで乗り場・帰りの便とトイレを確認。飲み物や歩く準備を整えます。</p><span>公衆トイレの位置は公式のターミナル案内に掲載。利用可否は当日確認。</span></div></li>
+        <li><img src="kamikochi.webp" width="1152" height="1536" loading="lazy" alt="河童橋と梓川の眺め"><div><small>02 / 河童橋</small><h3>橋から、山と川を眺める。</h3><p>ターミナルから約300m・徒歩約6分。景色を眺める時間と写真の時間を、自分たちのペースで。</p><span>橋は通行の場所でもあります。混雑時は立ち止まらず、空いた場所へ。</span></div></li>
+        <li><img src="assets/kamikochi-river-intro.webp" width="512" height="910" loading="lazy" alt="川沿いの散策を想像するための梓川の風景"><div><small>03 / 川沿いから小梨平へ</small><h3>木々や水の色に、目を向ける。</h3><p>河童橋から小梨平は片道約500m・徒歩約10分。現地の案内に従い、開放されている園路を進みます。</p><span>この写真は周辺の風景イメージです。路面の状態を示す写真ではありません。</span></div></li>
+        <li><img src="assets/kamikochi-river-intro.webp" width="512" height="910" loading="lazy" alt="休憩の時間に眺めたい梓川の水面"><div><small>04 / 食事・休憩</small><h3>予定を詰めず、ひと休み。</h3><p>小梨平方面から同じ道で河童橋周辺へ戻り、営業中の飲食店や休憩できる場所を現地で確認。営業していない場合に備え、飲み物と携行食も。</p><span>店舗の営業時間・席・休憩設備の利用可否は未確認です。帰りの便に合わせて調整します。</span></div></li>
+        <li><img src="kamikochi.webp" width="1152" height="1536" loading="lazy" alt="旅の終わりに振り返る河童橋の風景"><div><small>05 / 帰路</small><h3>余韻を持って、ターミナルへ。</h3><p>河童橋から約300m・徒歩約6分で戻る区間も、混雑や待ち時間を見込んで余裕を持って。</p><span>疲れたときは小梨平へ進まず、河童橋で折り返せます（歩行往復約600m・約12分、休憩を除く）。</span></div></li>
+      </ol>
+      <figure class="k-route-map"><ol class="k-mobile-route" aria-label="散策順序の模式図"><li><strong>上高地バスターミナル</strong><span>次の河童橋まで 約300m・徒歩約6分</span></li><li><strong>河童橋</strong><span>次の小梨平まで 約500m・徒歩約10分</span></li><li><strong>小梨平</strong><span>帰りは同じ道を戻る</span></li></ol><svg viewBox="0 0 720 210" role="img" aria-labelledby="route-map-label"><title id="route-map-label">ターミナルから河童橋、小梨平へ進み同じ道を戻る経路の模式図</title><path d="M50 150Q220 180 350 135T680 155" fill="none" stroke="#91c9c6" stroke-width="20"/><path d="M90 80H630" fill="none" stroke="#805e44" stroke-width="4"/><g fill="#245e64"><circle cx="90" cy="80" r="10"/><circle cx="355" cy="80" r="10"/><circle cx="630" cy="80" r="10"/></g><g fill="#344b55" text-anchor="middle" font-family="sans-serif" font-size="17"><text x="90" y="45">ターミナル</text><text x="355" y="45">河童橋</text><text x="630" y="45">小梨平</text><text x="220" y="112">約300m / 約6分</text><text x="490" y="112">約500m / 約10分</text><text x="355" y="191">同じ道を戻る ／ 梓川沿いの園路</text></g></svg><figcaption>順序を示す模式図です。縮尺・方角・道の形は正確な地図ではありません。移動は公式園路マップ・現地案内に従ってください。</figcaption></figure>
+      <p>公式園路マップにはターミナル周辺、カッパトイレ、小梨平公衆トイレが掲載されています。休憩やトイレの利用可否・営業日は、訪問前と現地で確認してください。</p>
+      <div class="k-route-links"><a class="source" href="https://www.kamikochi.or.jp/learn/parkmap/" target="_blank" rel="noopener noreferrer">公式の園路マップ ↗</a><a class="source" href="https://www.kamikochi.or.jp/access/terminal" target="_blank" rel="noopener noreferrer">ターミナル・トイレの案内 ↗</a></div>
+      <p class="k-source">施設の掲載位置の出典：上記の公式園路マップ・ターミナル案内 ／ ページ確認：2026年10月19日。利用日の営業・利用可否は別途確認してください。</p>
+
     </section>
 
     <section class="trip-section k-requirements" id="requirements" aria-labelledby="requirements-title">
-      <div class="eyebrow">03 / BEFORE YOUR DAY</div><h2 id="requirements-title">自分も過ごせるか、確かめる。</h2>
+      <div class="eyebrow">05 / BEFORE YOUR DAY</div><h2 id="requirements-title">自分も過ごせるか、確かめる。</h2>
       <p class="trip-lead">歩くこと、持っていくもの、行き帰り。<br>四つに分けて、必要なことから。</p>
       <article class="k-requirement" id="terrain"><h3>01 / 体力・道の状態</h3><div class="k-condition-columns"><figure><img src="kamikochi.webp" width="1152" height="1536" loading="lazy" alt="河童橋周辺の景観"><figcaption>河童橋周辺の景観写真。路面・段差の検証用写真は準備中。</figcaption></figure><div><p><strong>往復約1.6km・歩行約32分を目安に、戻る分の体力も残す散策です。</strong>高低差の数値、区間ごとの舗装・砂利・段差の詳細は未確認です。「平坦」「段差なし」とは案内できません。</p><p>雨、ぬかるみ、残雪・凍結、混雑では歩き方や所要時間が変わります。車いす・ベビーカー利用などで道の条件が必要な場合は、事前に公式窓口へ確認してください。</p><details><summary>短く切り上げたい場合</summary><p>河童橋までで折り返すと、歩行往復約600m・約12分が公式目安からの合計です。休憩や写真の時間、当日の通行可否は別に考えます。</p></details><p class="k-source">出典：<a href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内</a>・<a href="https://www.kamikochi-vc.or.jp/" target="_blank" rel="noopener noreferrer">ビジターセンター</a> ／ 確認：2026年10月19日</p></div></div></article>
       <article class="k-requirement" id="season"><h3>02 / 服装・持ち物</h3><p><strong>歩きやすく滑りにくい靴、脱ぎ着できる防寒着、雨具、飲み物。</strong>街の服装のまま判断せず、訪問時期の気温と天気に合わせます。</p><ul class="k-kit"><li><b>足元</b><span>歩きやすい靴</span></li><li><b>体温</b><span>重ね着・防寒着</span></li><li><b>雨</b><span>雨具</span></li><li><b>休憩</b><span>飲み物・携行食</span></li></ul><details><summary>季節・用途で変わる備え</summary><p>春や秋は朝夕の冷え込みに備え、夏も天候や日陰による変化を考えます。日差しへの備えや雨具の種類、靴の選択は、公式の季節別服装案内と当日の予報で確認しましょう。このページは冬季入山の装備案内ではありません。</p></details><p class="k-source">出典：<a href="https://www.kamikochi.or.jp/learn/season" target="_blank" rel="noopener noreferrer">上高地公式・季節別服装ガイド ↗</a> ／ 確認：2026年10月19日</p></article>
@@ -183,58 +207,8 @@
     </section>
 
 
-    <section class="k-plan-end" id="your-day" aria-labelledby="plan-end-title"><p class="eyebrow">04 / MAKE IT YOUR DAY</p><h2 id="plan-end-title">次は、自分の予定へ。</h2><p>出発地、日程、誰と過ごすか。<br>一つずつ決めて、必要な準備を手元に。</p><a class="journey-primary" data-plan-link href="kamikochi-plan.html">この滞在を、自分の予定にする ↗</a><p class="k-caption">計画画面で条件入力とブラウザ内保存ができます。予約・決済は行いません。</p></section>
+    <section class="k-plan-end" id="your-day" aria-labelledby="plan-end-title"><p class="eyebrow">06 / MAKE IT YOUR DAY</p><h2 id="plan-end-title">次は、自分の予定へ。</h2><p>出発地、日程、誰と過ごすか。<br>一つずつ決めて、必要な準備を手元に。</p><a class="journey-primary" data-plan-link href="kamikochi-plan.html">この滞在を、自分の予定にする ↗</a><p class="k-caption">計画画面で条件入力とブラウザ内保存ができます。予約・決済は行いません。</p></section>
   </main>
-  <dialog class="quiet-room" id="quiet-room" aria-labelledby="quiet-room-title">
-    <div class="quiet-backdrop" aria-hidden="true">
-      <img class="quiet-river-still" src="assets/kamikochi-river-intro.webp" alt="" width="512" height="910" loading="lazy">
-      <img class="quiet-sky" src="assets/about-journey.webp" alt="" width="1920" height="1440" loading="lazy" hidden>
-      <video class="quiet-river" muted playsinline loop preload="none" poster="assets/kamikochi-river-intro.webp" hidden></video>
-    </div>
-    <header class="quiet-toolbar">
-      <span class="quiet-wordmark">YAMATABI</span>
-      <div>
-        <button type="button" id="quiet-pause" hidden>映像を止める</button>
-        <button type="button" id="quiet-display" hidden aria-pressed="false">表示を隠す</button>
-        <button type="button" id="quiet-close" aria-label="余韻の体験を閉じる">閉じる ×</button>
-      </div>
-    </header>
-    <h2 class="quiet-sr-only" id="quiet-room-title">秋の上高地 — 物語と余韻</h2>
-    <div class="quiet-ready" id="quiet-ready">
-      <p class="quiet-kicker">AUTUMN IN KAMIKOCHI</p>
-      <h3>少しだけ、<br>物語の中へ。</h3>
-      <p>『秋の上高地』を観たあと、川辺の余韻へ。<br>飲み物は、あってもなくても。</p>
-      <label class="quiet-sound-choice"><input type="checkbox" id="quiet-sound-choice">作品の音を聴く</label>
-      <p class="quiet-small">音なしでも鑑賞できます。字幕は画面の文字と情景の説明です。</p>
-      <div class="quiet-ready-actions">
-        <button type="button" id="quiet-start">物語を観る <small>21秒</small></button>
-        <button type="button" id="quiet-start-rest">余韻から過ごす</button>
-      </div>
-      <p class="quiet-small" id="quiet-return-note" hidden>このブラウザに残した時間へ、おかえりなさい。</p>
-    </div>
-    <div class="quiet-film-stage" id="quiet-film-stage" hidden>
-      <video id="quiet-film" controls playsinline preload="none" poster="assets/kamikochi-film-still.webp" aria-label="秋の上高地の物語">
-        <track kind="captions" src="assets/captions/kamikochi-scenes-ja.vtt" srclang="ja" label="日本語・画面の文字と情景">
-      </video>
-      <div class="quiet-film-tools"><button type="button" id="quiet-captions" aria-pressed="false">説明字幕を表示</button><button type="button" id="quiet-sound" aria-pressed="false">音を聴く</button><button type="button" id="quiet-to-rest">余韻へ進む</button></div>
-    </div>
-    <div class="quiet-rest" id="quiet-rest" hidden>
-      <div class="quiet-invitation" id="quiet-invitation" aria-live="polite" hidden>
-        <p class="quiet-kicker">THE STORY STAYS WITH YOU</p>
-        <h3 id="quiet-invitation-title">あなたも、ひとくち。</h3>
-        <p id="quiet-invitation-copy">手元に飲み物があれば、ご一緒に。<br>なくても、ただ眺めるだけで。</p>
-        <div class="quiet-invitation-actions"><button type="button" id="quiet-settle">この時間を過ごす</button><button type="button" id="quiet-watch">このまま眺める</button></div>
-      </div>
-      <div class="quiet-rest-controls" id="quiet-rest-controls">
-        <fieldset><legend>今、眺めたいもの</legend><label><input type="radio" name="quiet-view" value="river" checked><span>川辺を眺める</span></label><label><input type="radio" name="quiet-view" value="sky"><span>空を見上げる</span></label></fieldset>
-        <p class="quiet-small" id="quiet-scene-note">梓川の風景。音声なしで、ゆっくり。</p>
-        <button type="button" id="quiet-save">手元に残す</button>
-        <p class="quiet-small" id="quiet-save-note" role="status">この時間に、また戻れます。保存先はこのブラウザ内です。</p>
-        <button type="button" class="quiet-text-button" id="quiet-rewatch">物語をもう一度観る</button>
-      </div>
-    </div>
-    <p class="quiet-status" id="quiet-status" role="status"></p>
-  </dialog>
   <footer class="footer"><b>YAMATABI</b><a href="index.html">トップに戻る ↗</a></footer>
 </body>
 </html>

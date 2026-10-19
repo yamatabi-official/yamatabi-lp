@@ -154,3 +154,53 @@
  .kamikochi-page .hero-has-video .k-page-secondary{color:#245e64}
  .kamikochi-page .hero-has-video .detail-copy .journey-primary{background:#245e64;color:#fff;border-color:#245e64}
 }
+/* Map first: four visible place pins and a quiet, optional mood guide. */
+.kamikochi-page .k-area-map{border-top:1px solid #40546126}
+.kamikochi-page .map-pin-konashi{left:75%;top:29%}
+.kamikochi-page .k-area-map .map-mood-walk{display:none}
+.kamikochi-page .k-area-map .story-map-pin.is-recommended{border:2px solid #a76a31;background:#f9e7c5;box-shadow:0 0 0 5px #d8a56933}
+.kamikochi-page .k-mood-guide{background:linear-gradient(135deg,#e0eeea,#eee7da);border-radius:4px 32px 4px 4px;margin-top:24px}
+.k-mood-guide fieldset{border:0;padding:0;margin:28px 0}
+.k-mood-guide legend{font-size:14px;line-height:2;color:#245e64;margin-bottom:14px}
+.mood-options{display:flex;gap:12px;flex-wrap:wrap}
+.mood-options label{position:relative;cursor:pointer}
+.mood-options input{position:absolute;width:1px;height:1px;opacity:0}
+.mood-options span{display:flex;align-items:center;min-height:48px;padding:10px 20px;border:1px solid #507b7e88;border-radius:26px;font:13px/1.9 system-ui,sans-serif;color:#245e64;background:#f8faf5}
+.mood-options input:checked+span{background:#245e64;color:#fff}
+.mood-options input:focus-visible+span{outline:3px solid #a46b39;outline-offset:4px}
+.mood-result{padding:28px;margin-top:24px;background:#f8f8ef;border:1px solid #42696b33;border-radius:4px 26px 4px 4px}
+.mood-result h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(24px,3vw,34px)!important;font-weight:400!important;line-height:1.7!important;text-wrap:balance}
+.mood-route-facts{color:#245e64!important;font-size:14px!important}
+.mood-route{list-style:none;display:flex;gap:10px;flex-wrap:wrap;padding:0;margin:24px 0;font-size:13px;line-height:1.9;color:#405461}
+.mood-route li:not(:last-child):after{content:" →";color:#906239}
+.mood-actions{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:24px}
+.k-river-arrival{position:fixed;inset:0;z-index:1000;pointer-events:auto;background:#123d49 url('assets/kamikochi-river-intro.webp') center 78%/cover no-repeat;transition:opacity .4s ease;opacity:1}
+.k-river-arrival video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 78%}
+.k-river-arrival.is-leaving{opacity:0;pointer-events:none}
+@media(max-width:760px){
+ .kamikochi-page .k-area-map .story-map-board{min-height:430px;aspect-ratio:auto}
+ .kamikochi-page .map-pin-konashi{left:72%;top:29%}
+ .kamikochi-page .k-area-map .map-pin-terminal{left:65%}
+ .kamikochi-page .k-area-map .map-mood-light{left:7%;top:38%;font-size:11px}
+ .kamikochi-page .k-mood-guide{margin:16px 16px 0;padding-left:20px;padding-right:20px}
+ .mood-options{flex-direction:column;gap:10px}
+ .mood-options span{justify-content:center}
+ .mood-result{padding:22px 18px}
+ .mood-route{flex-direction:column;gap:14px}
+ .mood-route li:not(:last-child):after{content:" ↓";display:block}
+ .mood-actions{flex-direction:column;align-items:stretch;gap:16px}
+ .mood-actions .journey-primary{width:100%}
+ .k-river-arrival video{object-position:50% 60%}
+}
+@media(prefers-reduced-motion:reduce){.k-river-arrival{display:none;transition:none}}
+/* Silent preview in the existing composition; the main button opens the full inline film. */
+.kamikochi-page #hero-preview{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;pointer-events:none}
+.hero-preview-toggle{position:absolute;right:18px;top:66px;z-index:3;min-height:44px;padding:9px 15px;border:1px solid #ffffffa6;border-radius:24px;background:#123a46cc;color:#fff;font:12px/1.7 system-ui,sans-serif;cursor:pointer}
+.kamikochi-page .hero-has-video #hero-preview,.kamikochi-page .hero-has-video .hero-preview-toggle{display:none!important}
+@media(max-width:760px){.kamikochi-page #hero-preview{object-position:50% 27%}.hero-preview-toggle{left:18px;right:auto;top:16px}}
+.kamikochi-page .story-map-pin>b{display:block;font-weight:500;white-space:normal;max-width:128px;line-height:1.6}
+.kamikochi-page .story-map-pin small{display:block;font-size:10.5px;line-height:1.5;color:#536b6b;margin-top:3px}
+@media(max-width:760px){.kamikochi-page .story-map-pin>b{max-width:106px}.kamikochi-page .map-pin-konashi{left:67%}.kamikochi-page .k-area-map .map-pin-river{left:27%;top:73%}}
+.kamikochi-page .story-map-pin{width:max-content}
+.kamikochi-page .story-map-pin>b{width:128px;flex-shrink:0}
+@media(max-width:760px){.kamikochi-page .story-map-pin>b{width:106px}.kamikochi-page .k-area-map .map-pin-river{left:29%}.kamikochi-page .k-area-map .map-pin-terminal{top:89%}}

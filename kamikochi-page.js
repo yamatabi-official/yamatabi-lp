@@ -22,7 +22,6 @@
       event.preventDefault();
       document.querySelectorAll('video,audio').forEach(media => { if (media !== heroFilm) media.pause(); });
       hero.classList.add('hero-has-video'); heroPlay.setAttribute('aria-expanded', 'true'); image.hidden = true; heroFilm.hidden = false; tools.hidden = false;
-      hero.querySelector('.hero-film-after').hidden = true;
       status.textContent = '';
       if (heroFilm.ended) heroFilm.currentTime = 0;
       heroFilm.play()?.catch(() => { status.textContent = '再生できない場合は、動画の再生ボタンをお試しください。下の通常プレーヤーからもご覧いただけます。'; });
@@ -44,7 +43,6 @@
       hero.classList.remove('hero-has-video'); heroPlay.setAttribute('aria-expanded', 'false');
       heroPlay.focus({ preventScroll: true }); hero.scrollIntoView({ behavior: 'instant', block: 'start' });
     });
-    heroFilm.addEventListener('ended', () => { hero.querySelector('.hero-film-after').hidden = false; });
     heroFilm.addEventListener('error', () => { status.textContent = '作品を読み込めませんでした。映像を閉じて、下の通常プレーヤーやInstagramからご覧ください。'; });
     document.addEventListener('visibilitychange', () => { if (document.hidden) heroFilm.pause(); });
     window.addEventListener('pagehide', () => heroFilm.pause());
