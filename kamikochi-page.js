@@ -24,7 +24,7 @@
       hero.classList.add('hero-has-video'); heroPlay.setAttribute('aria-expanded', 'true'); image.hidden = true; heroFilm.hidden = false; tools.hidden = false;
       status.textContent = '';
       if (heroFilm.ended) heroFilm.currentTime = 0;
-      heroFilm.play()?.catch(() => { status.textContent = '再生できない場合は、動画の再生ボタンをお試しください。下の通常プレーヤーからもご覧いただけます。'; });
+      heroFilm.play()?.catch(() => { status.textContent = '再生できない場合は、映像内の再生ボタンをお試しください。'; });
       heroFilm.focus({ preventScroll: true });
       if (matchMedia('(max-width:760px)').matches) hero.querySelector('.film-hero-image').scrollIntoView({ behavior: 'instant', block: 'start' });
     });
@@ -43,7 +43,7 @@
       hero.classList.remove('hero-has-video'); heroPlay.setAttribute('aria-expanded', 'false');
       heroPlay.focus({ preventScroll: true }); hero.scrollIntoView({ behavior: 'instant', block: 'start' });
     });
-    heroFilm.addEventListener('error', () => { status.textContent = '作品を読み込めませんでした。映像を閉じて、下の通常プレーヤーやInstagramからご覧ください。'; });
+    heroFilm.addEventListener('error', () => { status.textContent = '作品を読み込めませんでした。接続を確認して、もう一度再生してください。'; });
     document.addEventListener('visibilitychange', () => { if (document.hidden) heroFilm.pause(); });
     window.addEventListener('pagehide', () => heroFilm.pause());
     if ('IntersectionObserver' in window) new IntersectionObserver(entries => { if (!entries[0].isIntersecting) heroFilm.pause(); }).observe(heroFilm);

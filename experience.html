@@ -14,13 +14,14 @@
   <link rel="stylesheet" href="style.css?v=20261017-kamikochi-guide">
   <link rel="stylesheet" href="experience.css?v=20261018-your-day">
   <script src="story-map.js?v=20261019-mood" defer></script>
-  <script src="kamikochi-arrival.js?v=20261019" defer></script>
+  <script src="kamikochi-arrival.js?v=20261019-fullscreen" defer></script>
   <script src="kamikochi-mood-data.js?v=20261019" defer></script>
   <script src="kamikochi-mood.js?v=20261019" defer></script>
   <link rel="stylesheet" href="kamikochi-page.css?v=20261019-map-mood">
-  <script src="kamikochi-page.js?v=20261019-map-mood" defer></script>
+  <script src="kamikochi-page.js?v=20261019-single-player" defer></script>
   <script src="kamikochi-preview.js?v=20261019" defer></script>
 
+<noscript><style>#hero-film[hidden]{display:block!important}.film-hero-image>img,[data-hero-play]{display:none}</style></noscript>
 </head>
 <body class="experience-page kamikochi-page">
   <header class="nav"><a class="brand" href="index.html">YAMATABI</a><a href="index.html#stories">← 作品一覧</a></header>
@@ -30,7 +31,7 @@
         <p class="eyebrow">長野県・上高地 / KAMIKOCHI</p>
         <h1 id="film-title">秋の上高地</h1>
         <p class="subtitle">まだ名前のない、二人の旅。</p>
-        <a class="journey-primary" href="#ordinary-film" data-hero-play aria-controls="hero-film" aria-expanded="false">ドラマを観る <small>21秒</small></a>
+        <button type="button" class="journey-primary" data-hero-play aria-controls="hero-film" aria-expanded="false">ドラマを観る <small>21秒</small></button>
         <a class="k-page-secondary" href="#quiet-time">過ごし方を知る ↓</a>
         <p class="film-edition">YAMATABI ORIGINAL FILM — 001</p>
       </div>
@@ -39,10 +40,6 @@
         <figcaption>作品『秋の上高地』より</figcaption></figure>
       <button type="button" class="hero-preview-toggle" data-preview-toggle hidden>プレビューを再生</button>
     </section>
-    <details class="k-ordinary" id="ordinary-film"><summary>このページのプレーヤーで観る</summary>
-      <div class="video-frame"><video controls playsinline preload="none" poster="assets/kamikochi-film-still.webp" aria-label="秋の上高地 ショートドラマ"><source src="kamikochi-film.mp4" type="video/mp4"><track kind="captions" src="assets/captions/kamikochi-scenes-ja.vtt" srclang="ja" label="日本語・画面の文字と情景"></video></div>
-      <p class="k-caption">字幕は画面の文字と情景の説明です。再生できない場合は<a href="https://www.instagram.com/reel/DecApgPM4Ov/" target="_blank" rel="noopener noreferrer">Instagramで作品を観る ↗</a></p>
-    </details>
     <nav class="trip-menu" aria-label="上高地ページ内"><a href="#story-map">周辺マップ</a><a href="#mood-guide">気分から探す</a><a href="#requirements">行く準備</a></nav>
 
     <section class="trip-section story-map-section k-area-map" id="story-map" aria-labelledby="story-map-title">
