@@ -1,0 +1,29 @@
+.k-plan-page{padding-bottom:0!important}
+.k-plan-main{max-width:820px;padding:64px 24px 80px;margin:auto}
+.k-plan-main h1{font:400 clamp(32px,5vw,50px)/1.6 "Yu Mincho","Hiragino Mincho ProN",serif;text-wrap:balance}
+.k-plan-main h2{font:400 30px/1.7 "Yu Mincho","Hiragino Mincho ProN",serif}
+.k-plan-main h3{font:400 23px/1.7 "Yu Mincho","Hiragino Mincho ProN",serif}
+.k-plan-main p{line-height:2;color:#52636b}
+.k-plan-main fieldset{border:0;border-top:1px solid #40546133;margin:32px 0;padding:28px 0 0}
+.k-plan-main legend{font:400 24px/1.8 "Yu Mincho","Hiragino Mincho ProN",serif;padding-right:20px;color:#245e64}
+.k-plan-main label:not(.plan-check){display:block;margin:20px 0 8px;font-size:14px}
+.k-plan-main label span{display:block;font-size:12px;line-height:1.8;color:#52636b;margin-top:6px}
+.k-plan-main input:not([type="checkbox"]),.k-plan-main select{display:block;box-sizing:border-box;width:100%;min-height:48px;border:1px solid #60858377;border-radius:6px;padding:12px;background:#fffdf8;color:#344b55;font:16px/1.5 system-ui,sans-serif}
+.k-plan-main .plan-check{display:flex;align-items:flex-start;gap:12px;padding:10px 0;min-height:44px;font-size:14px;line-height:1.9}
+.k-plan-main input[type="checkbox"]{width:22px;height:22px;flex-shrink:0;margin:1px 0;accent-color:#245e64}
+.k-plan-main button{cursor:pointer}
+.k-plan-main :focus-visible{outline:3px solid #975f3c;outline-offset:4px}
+.plan-status{padding:16px 0;color:#245e64!important}
+#plan-result{padding:28px clamp(20px,4vw,36px);border:1px solid #40546133;background:linear-gradient(135deg,#e2eeea,#eee8dc);border-radius:4px 28px 4px 4px}
+#plan-summary{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+#plan-summary dt{font-size:12px;color:#52636b}
+#plan-summary dd{margin:10px 0;font-size:17px;overflow-wrap:anywhere;line-height:1.8}
+.plan-official-links{display:grid;gap:8px;margin:24px 0}
+.plan-official-links a{color:#245e64;min-height:44px;line-height:1.9;display:flex;align-items:center}
+.plan-next-steps{padding-left:20px;font-size:14px;line-height:2}
+.plan-next-steps li{margin-bottom:10px}
+.plan-actions{display:flex;gap:12px;flex-wrap:wrap}
+#plan-result details{margin-top:24px;border-top:1px solid #40546133}
+#plan-result summary{padding:16px 0;min-height:44px;cursor:pointer}
+.k-plan-page [hidden]{display:none!important}
+@media(max-width:600px){.k-plan-main{padding-top:36px}#plan-summary{grid-template-columns:1fr}.plan-actions button{width:100%}.k-plan-main button[type="submit"]{width:100%}}

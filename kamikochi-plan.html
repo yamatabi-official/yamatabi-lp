@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#eff5f3"><meta name="description" content="上高地で過ごす一日を、自分の準備メモに。出発地・日程・同行者を入力して、このブラウザ内に保存できます。">
+  <title>上高地の計画をつくる | YAMATABI</title>
+  <link rel="stylesheet" href="style.css?v=20261017-kamikochi-guide"><link rel="stylesheet" href="experience.css?v=20261018-your-day"><link rel="stylesheet" href="kamikochi-page.css?v=20261019"><link rel="stylesheet" href="kamikochi-plan.css?v=20261019">
+  <script src="kamikochi-plan.js?v=20261019" defer></script>
+</head>
+<body class="experience-page k-plan-page">
+  <header class="nav"><a class="brand" href="index.html">YAMATABI</a><a href="experience.html#requirements">← 上高地の紹介へ</a></header>
+  <main class="k-plan-main">
+    <p class="eyebrow">MAKE IT YOUR DAY / KAMIKOCHI</p><h1>この滞在を、自分の予定に。</h1>
+    <p class="trip-lead">バスターミナル → 河童橋 → 小梨平 → 河童橋周辺で休憩 → 帰路。<br>この一案を、自分の条件で考える準備メモです。</p>
+    <p class="k-important">無雪・凍結なしの通常期の散策案です。冬季入山には使えません。歩行往復約1.6km・約32分は公式区間目安の合計、滞在2〜3時間は休憩を含む編集上の配分例です。予約・決済・運行確認は行いません。</p>
+    <p><a class="source" href="experience.html#walk">一日の流れ・対象条件・出典を見る ↗</a></p>
+    <form id="trip-plan-form" hidden>
+      <fieldset><legend>あなたの条件</legend>
+        <label for="plan-origin">出発地 <span>市区町村や駅名。詳しい住所は不要です。</span></label><input id="plan-origin" name="origin" type="text" maxlength="80" required autocomplete="off" placeholder="例：新宿駅、名古屋市">
+        <label for="plan-date">訪問日 <span>未定なら空欄で保存できます。</span></label><input id="plan-date" name="date" type="date">
+        <label for="plan-company">同行者</label><select id="plan-company" name="company"><option value="unknown">まだ決めていない</option><option value="solo">ひとりで</option><option value="together">大切な人と</option><option value="friends">友達と</option></select>
+        <label for="plan-transport">交通手段</label><select id="plan-transport" name="transport"><option value="unknown">まだ決めていない</option><option value="public">公共交通</option><option value="car">車＋現地で乗り換え</option></select>
+      </fieldset>
+      <fieldset><legend>自分の準備メモ</legend><p>確認できたものにチェック。計画の保存時に一緒に記録します。</p>
+        <label class="plan-check"><input type="checkbox" name="check" value="transport">往復の経路・便・予約方法を確認</label>
+        <label class="plan-check"><input type="checkbox" name="check" value="return">帰りの便から、現地で過ごす時間を決める</label>
+        <label class="plan-check"><input type="checkbox" name="check" value="weather">開放状況・天気・道の状態を確認</label>
+        <label class="plan-check"><input type="checkbox" name="check" value="kit">靴・防寒着・雨具・飲み物を準備</label>
+      </fieldset>
+      <p class="k-caption">入力内容は保存ボタンを押すと、このブラウザ内だけに記録します。サーバーへ送信しません。アプリ・ブラウザ・端末を変えると引き継がれない場合があります。</p>
+      <button type="submit" class="journey-primary">このブラウザに計画を保存</button>
+    </form>
+    <noscript><p>計画の入力・保存にはJavaScriptが必要です。紹介ページの一日の流れと公式案内は、そのままご覧いただけます。</p></noscript>
+    <p id="plan-status" role="status" class="plan-status"></p>
+    <section id="plan-result" aria-labelledby="plan-result-title" hidden>
+      <p class="eyebrow">YOUR PREPARATION NOTE</p><h2 id="plan-result-title">手元に残した計画</h2>
+      <dl id="plan-summary"></dl><p id="plan-season-note" class="k-important"></p>
+      <h3>次に、確かめること</h3><p id="plan-transport-note"></p>
+      <ol class="plan-next-steps"><li>出発地から乗り換え地点までの経路と、現地までの往復の便を確認。</li><li>到着・帰りの時間を見て、休憩を含む滞在枠を調整。</li><li>利用日の料金・予約方法・天気・園路の開放を公式案内で確認。</li></ol>
+      <div class="plan-official-links"><a href="https://www.alpico.co.jp/traffic/local/kamikochi/" target="_blank" rel="noopener noreferrer">バスの路線・予約・運賃 ↗</a><a href="https://www.kamikochi.or.jp/access/restrictions" target="_blank" rel="noopener noreferrer">車の規制・乗り換え ↗</a><a href="https://www.kamikochi.or.jp/" target="_blank" rel="noopener noreferrer">上高地の最新案内 ↗</a><a href="https://www.jma.go.jp/bosai/" target="_blank" rel="noopener noreferrer">利用日の天気 ↗</a></div>
+      <p class="k-caption">紹介ページ記載の上高地公式・交通事業者の資料確認：2026年10月19日。入力した日程の運行・予約・費用を確認した結果ではありません。</p>
+      <div class="plan-actions"><button type="button" class="journey-button" id="plan-download">計画と準備リストをダウンロード</button><button type="button" class="journey-button" id="plan-share">滞在案のリンクを共有</button></div>
+      <p class="k-caption">共有するリンクに出発地・日程・チェック内容は含めません。</p>
+      <label id="plan-copy" hidden>リンクをコピーして共有<input type="text" id="plan-copy-url" readonly></label>
+      <details><summary>保存した計画の削除</summary><p>このブラウザに保存した計画を削除します。予約の取消操作ではありません。</p><button type="button" class="journey-button" id="plan-delete">保存した計画を削除</button></details>
+    </section>
+  </main>
+  <footer class="footer"><b>YAMATABI</b><a href="experience.html#walk">一日の流れに戻る ↗</a></footer>
+</body>
+</html>

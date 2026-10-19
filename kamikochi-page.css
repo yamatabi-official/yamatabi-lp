@@ -1,0 +1,133 @@
+/* One vertical narrative, using the existing river / amber / stone palette. */
+.kamikochi-page{padding-bottom:0!important}
+.kamikochi-page .detail-hero{padding-top:48px;padding-bottom:36px;min-height:0}
+.kamikochi-page .detail-copy h1{font-size:clamp(42px,6.3vw,78px)}
+.kamikochi-page .film-hero-image{max-height:640px}
+.kamikochi-page .film-hero-image img{object-fit:cover;object-position:center 35%}
+.kamikochi-page .journey-primary small{margin-left:12px;font-size:10px}
+.k-page-secondary{display:block;width:max-content;min-height:44px;margin-top:14px;font-size:12px;line-height:2.2;color:#315d63}
+.k-ordinary{max-width:720px;margin:0 auto 36px;padding:0 24px}
+.kamikochi-page summary{cursor:pointer;min-height:48px;padding:14px 4px;line-height:1.8;color:#245e64}
+.k-ordinary .video-frame{max-width:360px;margin:24px auto}
+.k-ordinary video{width:100%;display:block}
+.kamikochi-page .trip-menu{position:relative;top:auto;display:flex;justify-content:center;gap:clamp(16px,6vw,64px);overflow:visible;flex-wrap:wrap}
+.kamikochi-page .trip-menu a{min-height:44px}
+.kamikochi-page h2{text-wrap:balance}
+.kamikochi-page .trip-section{padding-top:72px;padding-bottom:72px}
+.k-anchor{display:block;scroll-margin-top:24px}
+.k-replay-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:36px;align-items:start}
+.k-replay-card{overflow:hidden;border:1px solid #40546129;background:#e5efec;border-radius:4px 30px 4px 4px}
+.kamikochi-page .k-replay-card summary{display:block;list-style:none;padding:0}
+.k-replay-card summary::-webkit-details-marker{display:none}
+.k-replay-card summary>img{display:block;width:100%;height:270px;object-fit:cover;object-position:50% 60%}
+.k-replay-card[open]{box-shadow:0 8px 32px #234a4b12}
+.k-card-text{display:grid;gap:12px;padding:24px}
+.k-card-text small{font:10px/1.8 system-ui,sans-serif;letter-spacing:.08em;color:#6c5139}
+.k-card-text strong{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:23px;line-height:1.6;font-weight:400}
+.k-card-text>span{font:12px/2 system-ui,sans-serif;color:#245e64}
+.k-card-body{padding:0 24px 24px}
+.k-card-body>img,.k-card-body>video{display:block;width:100%;max-height:440px;object-fit:cover;background:#17434b;border-radius:3px;margin-bottom:16px}
+.k-card-body>img{aspect-ratio:3/4}
+.k-trees summary>img,.k-trees .k-card-body>img{object-position:95% 40%}
+.k-trees .k-card-body>img.is-close{object-fit:cover;aspect-ratio:3/4;object-position:100% 35%;transform:scale(1.12);clip-path:inset(6%)}
+.k-card-body .journey-button{margin-bottom:8px}
+.kamikochi-page .k-caption,.kamikochi-page .k-source{font:12px/1.9 system-ui,sans-serif;color:#53676a;overflow-wrap:anywhere}
+.kamikochi-page .k-source{padding-top:12px;border-top:1px solid #40546126}
+.k-source a{color:#245e64;text-underline-offset:3px}
+.k-important{border-left:3px solid #a36f40;padding:14px 20px;background:#eee7da;font-size:14px!important;line-height:2}
+.k-day{border-top:1px solid #40546126}
+.k-day-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:32px 0 20px}
+.k-day-facts>div{border-top:1px solid #7b9d9c66;padding-top:20px}
+.k-day-facts dt{font-size:11px;color:#53676a}
+.k-day-facts dd{margin:12px 0;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:23px;line-height:1.6;color:#245e64}
+.k-timeline{list-style:none;padding:0;margin:40px 0;display:grid;gap:28px}
+.k-timeline li{display:grid;grid-template-columns:180px 1fr;gap:28px;padding-bottom:28px;border-bottom:1px solid #40546126}
+.k-timeline img{width:100%;height:200px;object-fit:cover;border-radius:4px 20px 4px 4px;object-position:50% 62%}
+.k-timeline small{font:11px/2 system-ui,sans-serif;letter-spacing:.1em;color:#975a34}
+.k-timeline h3{font:400 clamp(23px,3vw,30px)/1.7 "Yu Mincho","Hiragino Mincho ProN",serif;margin:10px 0}
+.k-timeline span{font:12px/1.9 system-ui,sans-serif;color:#53676a}
+.k-route-map{margin:28px 0;background:#e1eeea;padding:20px;border-radius:4px 28px 4px 4px}
+.k-route-map svg{display:block;width:100%;height:auto}
+.k-route-map figcaption,.k-condition-columns figcaption{font:11px/1.9 system-ui,sans-serif;color:#53676a;margin-top:12px}
+.k-route-links{display:flex;gap:24px;flex-wrap:wrap}
+.k-story-map-extra{margin-top:28px;border-top:1px solid #40546126}
+.k-story-map-extra .story-map-section{padding:24px 0}
+.k-story-map-extra h2{font-size:28px}
+.k-requirements{border-top:1px solid #40546126}
+.k-requirement{padding:36px 0;border-bottom:1px solid #40546126;scroll-margin-top:24px}
+.k-requirement h3{font:400 clamp(22px,3vw,30px)/1.7 "Yu Mincho","Hiragino Mincho ProN",serif;margin:0 0 24px}
+.k-condition-columns{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px}
+.k-condition-columns figure{margin:0}
+.k-condition-columns img{width:100%;max-height:320px;object-fit:cover;object-position:center 60%}
+.k-requirement details{margin:20px 0;border-top:1px solid #40546126}
+.k-kit{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:24px 0}
+.k-kit li{padding:20px;background:#e3eeea;border-radius:4px 18px 4px 4px}
+.k-kit b{display:block;font-size:20px;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-weight:400;color:#245e64;margin-bottom:10px}
+.k-kit span{font-size:12px;line-height:1.9}
+.k-access-paths{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.k-access-paths h4{font-size:15px;line-height:1.8;margin-bottom:12px}
+.k-costs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.k-costs>div{padding:16px 0;border-top:1px solid #40546126}
+.k-costs dt{font-size:13px;font-weight:600}
+.k-costs dd{margin:10px 0;font-size:13px;line-height:1.8;color:#53676a}
+.k-check-links{list-style:none;padding:0;display:grid;gap:16px}
+.k-check-links li{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid #40546126;padding-top:16px;font-size:14px;line-height:1.9}
+.k-check-links a{color:#245e64;min-height:44px;display:inline-flex;align-items:center}
+.k-plan-end{text-align:center;padding:80px 24px 90px;background:linear-gradient(#e1eeea,#ece4d7)}
+.k-plan-end h2{font:400 clamp(32px,5vw,54px)/1.7 "Yu Mincho","Hiragino Mincho ProN",serif}
+.k-plan-end>p{line-height:2}
+.k-plan-end .journey-primary{margin:24px 0}
+.kamikochi-page .source:focus-visible,.kamikochi-page summary:focus-visible,.kamikochi-page a:focus-visible,.kamikochi-page button:focus-visible{outline:3px solid #9b693e;outline-offset:4px}
+.kamikochi-page [id]{scroll-margin-top:24px}
+@media(max-width:760px){
+ .kamikochi-page .detail-hero{padding-top:28px;padding-bottom:24px;gap:24px}
+ .kamikochi-page .film-hero-image{max-height:410px}
+ .kamikochi-page .film-hero-image img{height:410px;width:100%;object-position:50% 26%}
+ .kamikochi-page .trip-section{padding-top:48px;padding-bottom:48px}
+ .k-replay-grid{grid-template-columns:1fr;gap:24px}
+ .k-replay-card summary>img{height:260px}
+ .k-card-body>video{max-height:60vh;object-fit:contain}
+ .k-card-body>img{max-height:440px}
+ .k-day-facts{grid-template-columns:1fr;gap:0}
+ .k-day-facts>div{display:flex;justify-content:space-between;align-items:center;gap:16px}
+ .k-day-facts dd{font-size:21px}
+ .k-timeline li{grid-template-columns:100px 1fr;gap:18px}
+ .k-timeline img{height:150px}
+ .k-timeline h3{font-size:22px}
+ .k-timeline p{font-size:14px!important}
+ .k-route-map{padding:12px;margin-left:-8px;margin-right:-8px}
+ .k-condition-columns,.k-access-paths,.k-costs{grid-template-columns:1fr;gap:18px}
+ .k-kit{grid-template-columns:1fr 1fr;gap:10px}
+ .k-check-links li{align-items:flex-start;flex-direction:column;gap:2px}
+ .k-plan-end{padding-top:60px;padding-bottom:60px}
+ .k-ordinary{margin-bottom:24px}
+}
+@media(prefers-reduced-motion:reduce){.kamikochi-page *{scroll-behavior:auto!important}}
+.experience-page.kamikochi-page .nav,.experience-page.k-plan-page .nav{position:relative;color:#245e64;background:#eff5f3;text-shadow:none;min-height:72px}
+.experience-page.kamikochi-page .nav>a,.experience-page.k-plan-page .nav>a{color:inherit;text-shadow:none;min-height:44px;display:flex;align-items:center}
+.kamikochi-page .detail-copy{padding-top:64px;padding-bottom:48px}
+@media(max-width:760px){
+ .kamikochi-page .detail-hero{padding:0;min-height:calc(100svh - 84px);grid-template-columns:1fr;align-items:end;isolation:isolate;overflow:hidden}
+ .kamikochi-page .film-hero-image{position:absolute;inset:0;height:100%;min-height:0;max-height:none;order:0;z-index:-1}
+ .kamikochi-page .film-hero-image img{height:100%;object-position:50% 27%}
+ .kamikochi-page .film-hero-image:after{background:linear-gradient(180deg,#10232a26 20%,#10232a7d 48%,#10232af5 100%)}
+ .kamikochi-page .film-hero-image figcaption{top:18px;bottom:auto;left:24px;right:24px;text-align:right;letter-spacing:.08em}
+ .kamikochi-page .detail-copy{padding:220px 24px 28px;justify-content:flex-end;background:none}
+ .kamikochi-page .detail-copy h1,.kamikochi-page .detail-copy .subtitle{color:#fff9ed;text-shadow:0 2px 14px #07151c99}
+ .kamikochi-page .detail-copy .eyebrow{color:#f2d3a8}
+ .kamikochi-page .detail-copy .film-edition{color:#dbe5df;margin-bottom:0;border-color:#f2e7d140;padding-top:16px;margin-top:18px}
+ .kamikochi-page .k-page-secondary{color:#f4f3e8}
+ .kamikochi-page .detail-copy .journey-primary{background:#f1e9d8;color:#21484d;border-color:#f1e9d8}
+}
+@media(max-width:760px) and (max-height:650px){.kamikochi-page .detail-copy{padding-top:120px}.kamikochi-page .detail-copy .film-edition{display:none}}
+
+.k-mobile-route{display:none}
+@media(max-width:760px){
+ .k-route-map>svg{display:none}
+ .k-mobile-route{display:block;list-style:none;margin:12px 8px;padding:0 0 0 20px;border-left:3px solid #7bada9}
+ .k-mobile-route li{position:relative;padding:0 0 24px 12px}
+ .k-mobile-route li:last-child{padding-bottom:0}
+ .k-mobile-route li:before{content:"";position:absolute;top:5px;left:-27px;width:11px;height:11px;border-radius:50%;background:#245e64}
+ .k-mobile-route strong{display:block;font-size:16px;font-weight:500;line-height:1.8;color:#245e64}
+ .k-mobile-route span{display:block;font-size:12px;line-height:1.9;margin-top:8px;color:#53676a}
+}

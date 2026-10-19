@@ -220,7 +220,7 @@
   document.addEventListener('visibilitychange', () => { if (document.hidden) stopForBackground(); });
   window.addEventListener('pagehide', () => { if (room.open) { stopForBackground(); closeRoom(); } });
   motion.addEventListener('change', () => { if (room.open && mode === 'rest' && motion.matches) { river.pause(); riverPaused = true; updatePause(); } });
-  const inline = document.querySelector('#scene .video-frame video');
+  const inline = document.querySelector('#ordinary-film .video-frame video, #scene .video-frame video');
   inline?.addEventListener('ended', () => { document.querySelector('.quiet-inline-invite').hidden = false; });
   updateSaved();
 })();
