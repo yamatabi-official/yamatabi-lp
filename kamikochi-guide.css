@@ -53,3 +53,45 @@
  .kamikochi-page .k-check-cards{grid-template-columns:1fr}
  .k-weather,.k-bus-map{padding:20px}
 }
+/* North-up geographic relationships, with original simplified terrain artwork. */
+.kamikochi-page .k-area-map .story-map-layout{display:block}
+.kamikochi-page .k-spatial-map{padding:0;aspect-ratio:4/5!important;min-height:720px!important;max-height:1060px;background:#eaf0e7}
+.k-spatial-map .k-map-terrain{position:absolute;inset:0;width:100%;height:100%}
+.kamikochi-page .k-spatial-map .k-geo-pin{position:absolute;left:var(--map-x);top:var(--map-y);transform:translate(-50%,-50%);max-width:190px;padding:8px 12px;min-height:46px;border-radius:4px 15px 4px 4px;gap:7px;z-index:2}
+.kamikochi-page .k-spatial-map .k-geo-pin>b{font:14px/1.6 system-ui,sans-serif;white-space:nowrap}
+.k-geo-pin>span{font-size:11px!important;min-width:24px!important;width:24px!important;height:24px!important;line-height:24px!important}
+.k-geo-time{position:absolute;left:var(--map-x);top:var(--map-y);transform:translate(-50%,-50%);padding:4px 8px;background:#fffcf1ec;color:#805f35;font:12px/1.7 system-ui,sans-serif;border:1px solid #b1935e40;border-radius:12px;white-space:nowrap;z-index:1}
+.k-map-compass{position:absolute;top:20px;right:22px;display:grid;justify-items:center;font:13px/1.4 system-ui;color:#315d60}
+.k-map-compass span{font-size:32px}
+.k-map-region{position:absolute;font:12px/1.8 system-ui;color:#688274;letter-spacing:.1em}
+.k-map-hotaka{left:9%;top:8%}.k-map-ropp{right:6%;top:78%;writing-mode:vertical-rl}
+.k-map-flow{position:absolute;left:7%;top:78%;font:12px/1.8 system-ui;color:#397579;writing-mode:vertical-rl}
+.k-map-spatial-key{position:absolute;right:16px;bottom:16px;font:11px/1.8 system-ui;color:#526d64}
+.k-map-river-link{position:absolute;left:16px;bottom:18px;font:12px/1.8 system-ui;color:#245e64;min-height:44px;display:flex;align-items:center}
+.k-area-map .story-map-notes{display:grid;grid-template-columns:1fr 1fr;gap:0 30px;margin-top:26px;align-items:start}
+.k-area-map .story-map-notes-title,.k-area-map .story-map-notes>.k-source,.k-area-map .story-map-notes>.link{grid-column:1/-1}
+@media(max-width:760px){
+ .kamikochi-page .k-spatial-map{min-height:770px!important}
+ .kamikochi-page .k-spatial-map .k-geo-pin{padding:6px 7px;gap:4px;max-width:145px}
+ .kamikochi-page .k-spatial-map .k-geo-pin>b{font-size:11px}
+ .k-geo-pin>span{font-size:9px!important;min-width:19px!important;width:19px!important;height:19px!important;line-height:19px!important}
+ .k-geo-time{font-size:10px;padding:3px 5px}
+ .k-spatial-map .map-pin-tashirobridge{transform:translate(-75%,-50%)}
+ .k-spatial-map .map-pin-terminal{transform:translate(-38%,-50%)}
+ .k-spatial-map .time-dakesawa{--map-x:28%!important}
+ .k-map-region{font-size:10px}.k-map-ropp{right:3%}
+ .k-area-map .story-map-notes{grid-template-columns:1fr}
+}
+.k-spatial-map .time-myojin{--map-y:18%!important}
+.k-spatial-map .time-konashi{--map-y:30%!important}
+@media(max-width:760px){
+ .kamikochi-page .k-spatial-map .map-pin-terminal{transform:translate(-10%,-100%)}
+ .k-spatial-map .time-konashi{--map-x:82%!important;--map-y:29%!important}
+}
+@media(max-width:760px){
+ .k-spatial-map .time-taisho{--map-y:82%!important}
+ .k-spatial-map .time-tashiro{--map-y:67%!important}
+ .k-spatial-map .time-bridge{--map-x:82%!important;--map-y:46%!important}
+}
+.kamikochi-page .k-spatial-map .k-map-river-link{position:absolute;left:16px;top:auto;bottom:12px;transform:none;padding:6px 9px;min-height:44px;max-width:140px;z-index:2}
+.kamikochi-page .k-spatial-map .k-map-river-link>b{font-size:12px}

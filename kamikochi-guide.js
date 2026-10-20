@@ -2,22 +2,20 @@
   const rail=document.querySelector('.k-replay-grid'),controls=document.querySelector('.k-replay-controls');
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   if(rail&&controls){
-    const toggle=controls.querySelector('[data-replay-auto]');let paused=reduced.matches,visible=false,hover=false,focused=false,timer;
+    let paused=reduced.matches,visible=false,hover=false,focused=false,timer;
     controls.hidden=false;
-    function sync(){toggle.hidden=reduced.matches;toggle.textContent=paused?'自動送りを再開':'自動送りを停止';toggle.setAttribute('aria-pressed',String(paused));}
     function step(direction=1){const cards=[...rail.children];const current=cards.reduce((best,c,i)=>Math.abs(c.offsetLeft-rail.offsetLeft-rail.scrollLeft)<Math.abs(cards[best].offsetLeft-rail.offsetLeft-rail.scrollLeft)?i:best,0);const next=(current+direction+cards.length)%cards.length;rail.scrollTo({left:cards[next].offsetLeft-rail.offsetLeft,behavior:reduced.matches?'instant':'smooth'});}
-    function schedule(){clearInterval(timer);if(!paused&&!reduced.matches&&!document.hidden&&visible&&!hover&&!focused&&!rail.querySelector('details[open]'))timer=setInterval(()=>step(),4500);}
-    toggle.addEventListener('click',()=>{paused=!paused;sync();schedule();});
-    controls.querySelector('[data-replay-prev]').addEventListener('click',()=>{paused=true;sync();schedule();step(-1);});
-    controls.querySelector('[data-replay-next]').addEventListener('click',()=>{paused=true;sync();schedule();step();});
-    rail.addEventListener('pointerdown',()=>{paused=true;sync();schedule();});
+    function schedule(){clearInterval(timer);if(!paused&&!reduced.matches&&!document.hidden&&visible&&!hover&&!focused&&!rail.querySelector('details[open]'))timer=setInterval(()=>step(),3500);}
+    controls.querySelector('[data-replay-prev]').addEventListener('click',()=>{paused=true;schedule();step(-1);});
+    controls.querySelector('[data-replay-next]').addEventListener('click',()=>{paused=true;schedule();step();});
+    rail.addEventListener('pointerdown',()=>{paused=true;schedule();});
     rail.addEventListener('mouseenter',()=>{hover=true;schedule();});rail.addEventListener('mouseleave',()=>{hover=false;schedule();});
     rail.addEventListener('focusin',()=>{focused=true;schedule();});rail.addEventListener('focusout',()=>setTimeout(()=>{focused=rail.contains(document.activeElement);schedule();},0));
     rail.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',schedule));
     document.addEventListener('visibilitychange',schedule);window.addEventListener('pagehide',()=>clearInterval(timer));window.addEventListener('pageshow',schedule);
-    reduced.addEventListener('change',()=>{if(reduced.matches)paused=true;sync();schedule();});
+    reduced.addEventListener('change',()=>{if(reduced.matches)paused=true;schedule();});
     if('IntersectionObserver'in window)new IntersectionObserver(e=>{visible=e[0].isIntersecting;schedule();},{threshold:.25}).observe(rail);
-    sync();
+
   }
   const weather=document.querySelector('.k-weather');if(!weather)return;
   const status=weather.querySelector('[data-weather-status]'),reading=weather.querySelector('.k-weather-reading'),time=weather.querySelector('[data-weather-time]'),refresh=weather.querySelector('[data-weather-refresh]');

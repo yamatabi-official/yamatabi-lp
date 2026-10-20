@@ -22,8 +22,8 @@
   <script src="kamikochi-preview.js?v=20261019" defer></script>
   <link rel="stylesheet" href="kamikochi-motion.css?v=20261019">
   <script src="kamikochi-motion.js?v=20261019" defer></script>
-  <link rel="stylesheet" href="kamikochi-guide.css?v=20261019">
-  <script src="kamikochi-guide.js?v=20261019" defer></script>
+  <link rel="stylesheet" href="kamikochi-guide.css?v=20261020-map">
+  <script src="kamikochi-guide.js?v=20261020-map" defer></script>
 
 <noscript><style>#hero-film[hidden]{display:block!important}.film-hero-image>img,[data-hero-play]{display:none}</style></noscript>
 </head>
@@ -56,27 +56,65 @@
       </div>
       <div class="story-map-layout">
         <div>
-          <div class="story-map-board k-expanded-map" role="group" aria-label="大正池から明神池までの場所と片道徒歩時間を示す見取り図">
-            <div class="k-map-landscape" aria-hidden="true"><svg viewBox="0 0 700 140"><path d="M0 140 100 50 150 90 240 10 300 80 370 25 450 110 520 60 700 140" fill="#a8bcbc"/><path d="m210 45 30-35 32 40-32-15Z" fill="#f4f5ee"/></svg><span>YAMATABI / AZUSA RIVER</span></div>
-            <p class="k-map-direction">大正池方面から、梓川に沿って上流へ ↓</p><ol class="k-map-stops"><li><a class="story-map-pin map-pin-taisho" href="#map-taisho"><span>01</span><b>大正池<small>水鏡と山の風景</small></b></a><div class="k-map-time">↕ 徒歩約25分 · 1.2km<small>次の地点まで・片道</small></div></li><li><a class="story-map-pin map-pin-tashiro" href="#map-tashiro"><span>02</span><b>田代池・田代湿原<small>森に囲まれた水辺</small></b></a><div class="k-map-time">↕ 徒歩約20分 · 1.0km<small>次の地点まで・片道</small></div></li><li><a class="story-map-pin map-pin-tashirobridge" href="#map-tashirobridge"><span>03</span><b>田代橋・穂高橋<small>ここから左岸をターミナルへ</small></b></a><div class="k-map-time">↕ 徒歩約30分 · 1.5km<small>次の地点まで・片道</small></div></li><li><a class="story-map-pin map-pin-terminal" href="#map-terminal"><span>04</span><b>バスターミナル<small>行き帰り・トイレ</small></b></a><div class="k-map-time">↕ 徒歩約6分 · 300m<small>次の地点まで・片道</small></div></li><li><a class="story-map-pin map-pin-bridge" href="#map-bridge"><span>05</span><b>河童橋<small>山と川の眺め</small></b></a><div class="k-map-branch"><span>左岸へ ↗ 徒歩約10分・500m</span><a class="story-map-pin map-pin-konashi" href="#map-konashi"><span>＋</span><b>小梨平<small>ビジターセンター・トイレ</small></b></a></div><div class="k-map-time">↕ 徒歩約10分 · 500m<small>次の地点まで・片道</small></div></li><li><a class="story-map-pin map-pin-dakesawa" href="#map-dakesawa"><span>06</span><b>岳沢湿原<small>右岸の木道と湿原</small></b></a><div class="k-map-time">↕ 徒歩約40分 · 2.0km<small>次の地点まで・片道</small></div></li><li><a class="story-map-pin map-pin-myojin" href="#map-myojin"><span>07</span><b>明神池<small>森の奥の静かな池</small></b></a></li></ol><a class="story-map-pin k-map-river" href="#map-river"><span>川</span><b>梓川<small>園路から流れを眺める</small></b></a><p class="k-map-note">時間は休憩を含まない公式目安。田代橋〜ターミナルは左岸、河童橋〜明神池は右岸の経路です。</p></div>
-          <p class="story-map-caption">周辺の関係をつかむためのオリジナル見取り図です。上下は経路の順序です。縮尺・方角・園路の形は正確ではありません。名前をタップすると、その場所と周辺施設が分かります。実際の移動には公式地図・現地案内をご利用ください。</p>
+          <div class="story-map-board k-expanded-map k-spatial-map" role="group" aria-label="北を上に、梓川と大正池・田代池・河童橋・岳沢湿原・小梨平・明神池の位置関係を示す簡略マップ">
+            <svg class="k-map-terrain" viewBox="0 0 720 900" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <defs><linearGradient id="valley-water" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#86bcbf"/><stop offset="1" stop-color="#a9d5cd"/></linearGradient></defs>
+              <rect width="720" height="900" fill="#eaf0e7"/>
+              <path d="M0 0H600L535 120 430 170 330 290 345 340 220 420 115 550 135 690 40 830H0Z" fill="#d6e2d4"/>
+              <path d="M720 220 650 310 640 435 535 490 485 640 375 710 330 900H720Z" fill="#dce7d8"/>
+              <g fill="none" stroke="#b5c8b8" opacity=".5"><path d="M0 180 170 110 260 170 190 260 90 340 0 365"/><path d="M0 210 155 145 210 180 170 240 70 320 0 335"/><path d="M720 520 610 570 565 690 500 740 465 900"/><path d="M720 560 640 600 600 710 545 760 505 900"/></g>
+              <path d="M175 920 C200 865 230 825 216 792 S175 720 196 670 S225 590 245 550 S330 470 403 387 S475 340 525 365 S600 400 675 300" fill="none" stroke="#bdd9d5" stroke-width="40"/>
+              <path d="M175 920 C200 865 230 825 216 792 S175 720 196 670 S225 590 245 550 S330 470 403 387 S475 340 525 365 S600 400 675 300" fill="none" stroke="url(#valley-water)" stroke-width="23"/>
+              <ellipse cx="213" cy="794" rx="24" ry="40" fill="#90bfc0" transform="rotate(18 213 794)"/>
+              <ellipse cx="317" cy="657" rx="16" ry="9" fill="#91bdba"/>
+              <ellipse cx="598" cy="204" rx="12" ry="23" fill="#91bdba" transform="rotate(20 598 204)"/>
+              <g fill="none" stroke="#a97c49" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M216 792 270 752 317 657 275 605 223 522 302 550 396 495 403 387"/>
+                <path d="M403 387 340 325 331 261 440 250 535 275 598 207"/>
+                <path d="M403 387 490 324"/>
+              </g>
+              <path d="m230 508 18 19 M392 382 418 394" stroke="#6e6553" stroke-width="7"/>
+              <path d="M331 261 340 288 320 297 324 317" fill="none" stroke="#9d784b" stroke-width="3" stroke-dasharray="4 3"/>
+            </svg>
+            <div class="k-map-compass" aria-label="北が上">N <span>↑</span></div>
+            <span class="k-map-region k-map-hotaka">穂高連峰方面</span><span class="k-map-region k-map-ropp" aria-hidden="true">六百山・霞沢岳方面</span>
+            <span class="k-map-flow">梓川 ↙ 下流へ</span>
+            <a class="story-map-pin k-geo-pin map-pin-taisho" href="#map-taisho" style="--map-x:30%;--map-y:88%"><span>01</span><b>大正池</b></a>
+            <a class="story-map-pin k-geo-pin map-pin-tashiro" href="#map-tashiro" style="--map-x:44%;--map-y:73%"><span>02</span><b>田代池</b></a>
+            <a class="story-map-pin k-geo-pin map-pin-tashirobridge" href="#map-tashirobridge" style="--map-x:31%;--map-y:58%"><span>03</span><b>田代橋・穂高橋</b></a>
+            <a class="story-map-pin k-geo-pin map-pin-terminal" href="#map-terminal" style="--map-x:55%;--map-y:55%"><span>04</span><b>バスターミナル</b></a>
+            <a class="story-map-pin k-geo-pin map-pin-bridge" href="#map-bridge" style="--map-x:56%;--map-y:43%"><span>05</span><b>河童橋</b></a>
+            <a class="story-map-pin k-geo-pin map-pin-dakesawa" href="#map-dakesawa" style="--map-x:46%;--map-y:29%"><span>06</span><b>岳沢湿原</b></a>
+            <a class="story-map-pin k-geo-pin map-pin-myojin" href="#map-myojin" style="--map-x:83%;--map-y:23%"><span>07</span><b>明神池</b></a>
+            <a class="story-map-pin k-geo-pin map-pin-konashi" href="#map-konashi" style="--map-x:68%;--map-y:36%"><span>08</span><b>小梨平</b></a>
+            <span class="k-geo-time time-taisho" style="--map-x:53%;--map-y:84%">徒歩約25分</span>
+            <span class="k-geo-time time-tashiro" style="--map-x:20%;--map-y:69%">徒歩約20分</span>
+            <span class="k-geo-time time-terminal" style="--map-x:60%;--map-y:64%">徒歩約30分</span>
+            <span class="k-geo-time time-bridge" style="--map-x:70%;--map-y:50%">徒歩約6分</span>
+            <span class="k-geo-time time-dakesawa" style="--map-x:38%;--map-y:39%">徒歩約10分</span>
+            <span class="k-geo-time time-myojin" style="--map-x:64%;--map-y:23%">徒歩約40分</span>
+            <span class="k-geo-time time-konashi" style="--map-x:81%;--map-y:34%">徒歩約10分</span>
+            <a class="story-map-pin k-map-river-link" href="#map-river"><b>梓川のこと ↗</b></a><span class="k-map-spatial-key">実線：掲載する散策経路<br>時間は隣り合う地点間・片道</span>
+          </div>
+          <p class="k-caption">河童橋から岳沢湿原・明神池へは右岸、小梨平へは左岸。田代橋からバスターミナルへは左岸の経路を示しています。徒歩時間は休憩を含みません。</p>
+          <p class="story-map-caption">公式園路マップを参照し、北を上に地点と川の位置関係を整理した簡略図です。地形・園路の細部や距離の比率は省略しており、測量図・ナビゲーション用地図ではありません。名前をタップすると、その場所と周辺施設が分かります。実際の移動には公式地図・現地案内をご利用ください。</p>
         </div>
         <div class="story-map-notes">
           <p class="story-map-notes-title">場所と周辺の施設</p>
           <details class="story-map-detail" id="map-bridge" open>
-            <summary><span>01 / PLACE</span>河童橋</summary>
+            <summary><span>05 / PLACE</span>河童橋</summary>
             <div><p>川と穂高連峰を望む吊り橋。ターミナルから約300m・徒歩約6分が公式の目安です。周辺のカッパトイレは公式園路マップに掲載されています。利用可否は訪問日に確認を。</p><a class="source" href="https://www.google.com/maps/search/?api=1&amp;query=上高地+河童橋" target="_blank" rel="noopener noreferrer">地図アプリで場所を見る ↗</a></div>
           </details>
           <details class="story-map-detail" id="map-river">
-            <summary><span>02 / PLACE</span>梓川</summary>
+            <summary><span>RIVER</span>梓川</summary>
             <div><p>上高地を流れる川。開放されている川沿いの園路から流れや木々を眺めます。川の中や河原への立ち入りを案内するピンではありません。</p><a class="source" href="#requirements">散策のヒントを読む ↓</a></div>
           </details>
           <details class="story-map-detail" id="map-terminal">
-            <summary><span>03 / PLACE</span>上高地バスターミナル</summary>
+            <summary><span>04 / PLACE</span>上高地バスターミナル</summary>
             <div><p>旅のはじまりと帰りの目印に。散策前に帰りの乗り場・便を確認し、余裕を持って戻りましょう。</p><a class="source" href="https://www.google.com/maps/search/?api=1&amp;query=上高地バスターミナル" target="_blank" rel="noopener noreferrer">地図アプリで場所を見る ↗</a></div>
           </details>
           <details class="story-map-detail" id="map-konashi">
-            <summary><span>04 / PLACE</span>小梨平と周辺施設</summary>
+            <summary><span>08 / PLACE</span>小梨平と周辺施設</summary>
             <div><p>河童橋から約500m・徒歩約10分が公式の区間目安。小梨平にはビジターセンターがあり、周辺に公衆トイレの掲載があります。営業・利用可否・道の状態は訪問前に確認してください。</p><a class="source" href="https://www.kamikochi-vc.or.jp/" target="_blank" rel="noopener noreferrer">ビジターセンターの案内 ↗</a><a class="source" href="#replay-trees">木々の風景を見る ↓</a></div>
           </details>
 <details class="story-map-detail" id="map-taisho"><summary>大正池</summary><div><p>山々を映す水面を眺める場所。田代池・田代湿原までの公式目安は徒歩約25分・約1.2km。</p><a class="source" href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内で確認 ↗</a></div></details><details class="story-map-detail" id="map-tashiro"><summary>田代池・田代湿原</summary><div><p>森林と湿原の風景を楽しむエリア。田代橋・穂高橋までは徒歩約20分・約1.0km。木道を含む園路は、開放状況を確認して利用します。</p><a class="source" href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内で確認 ↗</a></div></details><details class="story-map-detail" id="map-tashirobridge"><summary>田代橋・穂高橋</summary><div><p>大正池方面と河童橋方面をつなぐ目印。この図では左岸からバスターミナルへ進む約30分・約1.5kmの経路を掲載しています。</p><a class="source" href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内で確認 ↗</a></div></details><details class="story-map-detail" id="map-dakesawa"><summary>岳沢湿原</summary><div><p>河童橋から梓川右岸を約10分・約500m。湿原の景色を眺める区間です。岳沢小屋までの登山道とは別です。</p><a class="source" href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内で確認 ↗</a></div></details><details class="story-map-detail" id="map-myojin"><summary>明神池</summary><div><p>岳沢湿原から右岸経由で徒歩約40分・約2.0km。池の拝観条件・料金・受付時間は訪問前に公式案内をご確認ください。</p><a class="source" href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内で確認 ↗</a></div></details>          <p class="k-source">区間目安・施設の掲載位置：<a href="https://www.kamikochi.or.jp/enjoy/walking/" target="_blank" rel="noopener noreferrer">公式散策案内</a>・<a href="https://www.kamikochi.or.jp/learn/parkmap/" target="_blank" rel="noopener noreferrer">公式園路マップ</a>・<a href="https://www.kamikochi-vc.or.jp/" target="_blank" rel="noopener noreferrer">ビジターセンター</a>。ページ確認：2026年10月19日。利用日の営業・通行確認は別途必要です。</p>
@@ -90,7 +128,7 @@
       <h2 id="replay-title">あなたなら、ここでどう過ごす？</h2>
       <p class="trip-lead">橋の上で立ち止まる。流れを眺める。木々に目を向ける。<br>気になる風景をひらいて、自分のペースで。</p>
       <span class="k-anchor" id="places"></span>
-      <div class="k-replay-controls" hidden><button type="button" class="journey-button" data-replay-auto aria-pressed="false">自動送りを停止</button><button type="button" class="journey-button" data-replay-prev aria-label="前の過ごし方">←</button><button type="button" class="journey-button" data-replay-next aria-label="次の過ごし方">→</button></div><div class="k-replay-grid" tabindex="0" aria-label="過ごし方のカード。横にスクロールできます">
+      <div class="k-replay-controls" hidden><button type="button" class="journey-button" data-replay-prev aria-label="前の過ごし方">←</button><button type="button" class="journey-button" data-replay-next aria-label="次の過ごし方">→</button></div><div class="k-replay-grid" tabindex="0" aria-label="過ごし方のカード。横にスクロールできます">
         <details class="k-replay-card" id="replay-bridge">
           <summary><img src="kamikochi.webp" width="1152" height="1536" alt="河童橋と梓川、その先に広がる山々" loading="lazy"><span class="k-card-text"><small>01 / 河童橋・写真</small><strong>橋の上で、ひと呼吸。</strong><span>風景をひらく ＋</span></span></summary>
           <div class="k-card-body"><img src="kamikochi.webp" width="1152" height="1536" alt="河童橋と川の風景を大きく眺める" loading="lazy"><p>橋から眺める川と山々を想像して。ここでは写真のまま、ゆっくり過ごせます。</p><p class="k-caption">静止写真・音声なし。現地では通行を妨げず、混雑時は橋を渡った先で景色を楽しみましょう。</p></div>
