@@ -95,3 +95,32 @@
 }
 .kamikochi-page .k-spatial-map .k-map-river-link{position:absolute;left:16px;top:auto;bottom:12px;transform:none;padding:6px 9px;min-height:44px;max-width:140px;z-index:2}
 .kamikochi-page .k-spatial-map .k-map-river-link>b{font-size:12px}
+/* Match every map time to two numbered places, then spell out the same pair below. */
+.k-spatial-map .k-geo-time{display:grid;justify-items:center;gap:1px;padding:4px 9px;border-color:#a7854a70;box-shadow:0 2px 6px #76552d0c}
+.k-geo-time small{font:10px/1.3 system-ui;color:#806139;letter-spacing:.04em}
+.k-geo-time strong{font:600 13px/1.6 system-ui;color:#6b4d27}
+.k-spatial-map .time-myojin{--map-y:16%!important}
+.k-walk-times{margin:24px 0;border:1px solid #517a7138;background:#f8f8f0;border-radius:4px 24px 4px 4px;overflow:hidden}
+.k-walk-times-heading{padding:26px 24px 18px;background:#e4ece3}
+.k-walk-times-heading h3{font:400 25px/1.7 "Yu Mincho",serif!important;margin:8px 0;color:#245e64}
+.k-walk-times-heading p:not(.eyebrow){font:12px/1.9 system-ui;color:#496464;margin:10px 0 0}
+.k-walk-time-list{list-style:none;padding:0 24px;margin:0;display:grid;grid-template-columns:1fr 1fr;column-gap:36px}
+.k-walk-time-list li{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px;border-bottom:1px solid #56786a2b;padding:20px 0}
+.k-time-endpoints{display:grid;gap:3px;color:#315c60;font:13px/1.6 system-ui}
+.k-time-endpoints>span:not(.k-time-connector){display:flex;align-items:center;gap:7px}
+.k-time-endpoints i{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:24px;height:24px;border-radius:50%;background:#286b72;color:#fff;font:10px/1 system-ui;font-style:normal}
+.k-time-connector{padding-left:8px;font:13px/1.1 system-ui;color:#a07846}
+.k-time-value{text-align:right;white-space:nowrap}
+.k-time-value>small{display:block;font:10px/1.7 system-ui;color:#61716b}
+.k-time-value>strong{font:400 13px/1.6 system-ui;color:#79562f}
+.k-time-value strong>span{font-size:32px;font-weight:400;margin:0 3px;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.k-walk-times>.k-caption{margin:0;padding:20px 24px}
+@media(max-width:760px){
+ .k-spatial-map .k-geo-time{padding:3px 6px}
+ .k-geo-time small{font-size:9px}.k-geo-time strong{font-size:11px}
+ .k-walk-time-list{grid-template-columns:1fr;padding:0 18px}
+ .k-walk-times-heading{padding:22px 18px 16px}
+ .k-time-endpoints{font-size:12px}
+ .k-time-value>small{font-size:9px}
+ .k-walk-times>.k-caption{padding:18px}
+}
