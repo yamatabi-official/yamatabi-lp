@@ -36,6 +36,10 @@
     finally{clearTimeout(timeout);busy=false;refresh.disabled=false;}
   }
   refresh.addEventListener('click',load);
-  if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{if(entries[0].isIntersecting){observer.disconnect();load();}});observer.observe(weather);}else load();
-  document.addEventListener('visibilitychange',()=>{if(!document.hidden&&last&&Date.now()-last>30*60000)load();});
+  let weatherInView=false,weatherTimer;
+  function refreshVisible(){if(weatherInView&&!document.hidden)load();}
+  function scheduleWeather(){clearInterval(weatherTimer);weatherTimer=setInterval(refreshVisible,15*60000);}
+  if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{weatherInView=entries[0].isIntersecting;if(weatherInView&&(!last||Date.now()-last>15*60000))refreshVisible();});observer.observe(weather);}else{weatherInView=true;load();}
+  scheduleWeather();window.addEventListener('pagehide',()=>clearInterval(weatherTimer));window.addEventListener('pageshow',scheduleWeather);
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden&&last&&Date.now()-last>15*60000)refreshVisible();});
 })();
