@@ -166,3 +166,49 @@
  .k-live-camera{padding:22px 18px}.k-live-links{align-items:flex-start;flex-direction:column}
  .k-tokyo-routes ol{display:block}.k-tokyo-routes section{padding:22px 18px}
 }
+/* Practical choices for a lighter day: carry, buy, store, rest, return. */
+.k-practical-nav{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 38px}
+.k-practical-nav a{display:flex;align-items:center;min-height:44px;padding:8px 16px;border:1px solid #547e6a44;border-radius:24px;font:12px/1.8 system-ui;color:#245e64;text-decoration:none}
+.k-layer-guide{padding:24px;background:#edf0e5;border-left:3px solid #a28148;border-radius:0 20px 0 0;margin:24px 0}
+.k-layer-guide h4,.k-local-subhead,.k-luggage-note h4,.k-nearest-station h4,.k-visit-hours h4,.k-season-guide h4{font:400 25px/1.7 "Yu Mincho",serif;color:#245e64;margin:12px 0 18px}
+.k-layer-guide>p{font-size:13px!important}
+.k-layer-guide ol{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:0;list-style:none;margin:22px 0}
+.k-layer-guide li{border-top:1px solid #6785683d;padding-top:14px;font:12px/1.9 system-ui;color:#49675c}
+.k-layer-guide b,.k-layer-guide li span{display:block}.k-layer-guide b{font-size:14px;color:#315f5d;margin-bottom:10px}
+.k-pack-decisions{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:28px 0 36px}
+.k-pack-decisions section{padding-top:20px;border-top:2px solid #8da897}
+.k-pack-decisions small,.k-local-card>small,.k-season-grid small{font:10px/1.8 system-ui;color:#886b3f;letter-spacing:.09em}
+.k-pack-decisions h4{font:400 21px/1.7 "Yu Mincho",serif;color:#245e64;margin:12px 0}
+.k-pack-decisions p{font-size:13px!important;line-height:1.9!important}
+.k-local-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0 32px}
+.k-local-card{padding:24px;border:1px solid #5d827035;border-radius:4px 24px 4px 4px;background:#e3ece5;min-width:0}
+.k-local-card h4{font:400 21px/1.7 "Yu Mincho",serif;color:#245e64;margin:12px 0 16px;overflow-wrap:anywhere}
+.k-local-card>b{font:500 12px/1.8 system-ui;color:#5f745f}
+.k-local-card>p{font-size:12px!important;line-height:2!important}
+.k-local-card>.source{display:inline-flex;align-items:center;min-height:44px;font-size:12px}
+.k-local-subhead{margin-top:36px}
+.k-luggage-note{padding:24px;background:#f2eddf;border-left:3px solid #a78549;border-radius:0 24px 0 0}
+.k-luggage-note p{font-size:13px!important}.k-luggage-note .source{display:inline-flex;min-height:44px;align-items:center}
+.k-nearest-station{padding:24px;background:#edf0e5;border:1px solid #62867538;border-radius:4px 24px 4px 4px;margin:24px 0 32px}
+.k-nearest-station>p{font-size:13px!important}
+.k-nearest-station dl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}
+.k-nearest-station dl>div{padding-top:16px;border-top:1px solid #63836b45}
+.k-nearest-station dt{font:11px/1.8 system-ui;color:#5a7262}
+.k-nearest-station dd{font:400 21px/1.7 "Yu Mincho",serif;color:#245e64;margin:10px 0 0}
+.k-nearest-station>.source{display:inline-flex;align-items:center;min-height:44px}
+.k-visit-hours{padding:24px;background:#e1ebe4;border-radius:4px 24px 4px 4px;margin:24px 0 36px}
+.k-hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:24px}
+.k-hours-grid b{font:500 15px/1.9 system-ui;color:#315c59}
+.k-hours-grid p{font-size:13px!important;line-height:1.9!important}
+.k-hours-grid .source{display:inline-flex;align-items:center;min-height:44px;font-size:12px}
+.k-season-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+.k-season-grid section{padding:24px;background:#eceee2;border:1px solid #60836729;border-radius:4px 24px 4px 4px}
+.k-season-grid h5{font:400 24px/1.7 "Yu Mincho",serif;color:#245e64;margin:12px 0}
+.k-season-grid p{font-size:13px!important;line-height:1.9!important}
+@media(max-width:900px){.k-local-grid{grid-template-columns:1fr}.k-pack-decisions{grid-template-columns:1fr}.k-local-card{padding:24px}}
+@media(max-width:760px){
+ .k-layer-guide,.k-luggage-note,.k-nearest-station,.k-visit-hours{padding:22px 18px}
+ .k-layer-guide ol,.k-nearest-station dl,.k-hours-grid,.k-season-grid{grid-template-columns:1fr}
+ .k-layer-guide ol{gap:14px}.k-nearest-station dl{gap:14px}
+ .k-practical-nav{gap:8px}.k-practical-nav a{padding:8px 12px}
+}
