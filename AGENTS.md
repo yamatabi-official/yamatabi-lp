@@ -104,3 +104,9 @@ HTTP経由で確認する。`file://` で開くとJSONの取得が動作しな�
 - 2026-10-21：#light-packingに買い足し先3件と荷物預かり、#rest-and-onsenに休憩3件と入浴3件、#accessに新島々駅からの移動、#visit-hours/#season-guideに時間と四季、#seasonに重ね着の説明を追加。出典・更新条件は `docs/kamikochi-practical-guide.md`。2026年終了予定の年を更新するときは宿泊と日帰りの終了を混同しない。小梨の湯は温泉ではない。
 - 2026-10-21：トップHEROのコピー上にあった小さなYAMATABI（data-motion=brand）はユーザー依頼で撤去。ヘッダーロゴとhero.webpは維持。上高地の#story-map導入には既存のkamikochi.webp（河童橋・梓川・穂高連峰）を配置し、現在のライブ映像や橋上の撮影と誤記しない。
 - 2026-10-22：トップHEROの「観る時間を、次の一歩へ。」を削除。マップ導入の説明文は撤去し、見出し直後に既存写真を一枚だけ表示。徒歩時間見出しは「徒歩時間」と片道条件の短い注記に圧縮し、7区間の値と一覧は維持する。
+
+## ブランド検索の表記と設定
+- 検索用とABOUTでは `YAMATABI（ヤマタビ）` を併記し、見た目のロゴはYAMATABIを維持する。ユーザーが削除したHEROの小見出し・コピーをSEO目的で復活させない。
+- index/experienceにはcanonical、OGP、JSON-LD。Organizationの別名はヤマタビ、sameAsは提供済みの公式Instagramのみ。架空の法人/住所/ロゴ/公開日を足さない。
+- `sitemap.xml`はトップと作品紹介の公開canonical URL。計画画面はnoindex,followで除外。サイトマップのlastmodは実際の更新時にだけ変更する。
+- Search Consoleの所有権確認・送信は未実施。登録手順、GitHub Pagesのrobots.txtの配置制約、公開と検索掲載の違いは `docs/brand-search.md` を参照。
