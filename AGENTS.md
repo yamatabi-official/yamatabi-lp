@@ -110,3 +110,5 @@ HTTP経由で確認する。`file://` で開くとJSONの取得が動作しな�
 - index/experienceにはcanonical、OGP、JSON-LD。Organizationの別名はヤマタビ、sameAsは提供済みの公式Instagramのみ。架空の法人/住所/ロゴ/公開日を足さない。
 - `sitemap.xml`はトップと作品紹介の公開canonical URL。計画画面はnoindex,followで除外。サイトマップのlastmodは実際の更新時にだけ変更する。
 - Search Consoleの所有権確認・送信は未実施。登録手順、GitHub Pagesのrobots.txtの配置制約、公開と検索掲載の違いは `docs/brand-search.md` を参照。
+
+- 2026-10-26：ユーザー提供のGoogle所有権確認metaタグをトップのheadへ追加。継続確認に使うため削除しない。Search Consoleの確認ボタン・サイトマップ送信はユーザーアカウント側で未実施。

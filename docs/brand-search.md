@@ -28,3 +28,6 @@ Instagramのプロフィール名・自己紹介にも `YAMATABI（ヤマタビ�
 
 ## 確認
 HTMLからcanonical/metadata/JSON-LDを読み出し、JSON解析・画像参照・XMLサイトマップを検証。ローカルHTTP配信を確認。Chromiumのスマホ/PC幅でブランド表記、元のHERO、作品マップ、計画画面の入力を確認する。Google検索/Google公式ドキュメントへの接続は環境のプロキシで403となり、実際の掲載状況やSearch Consoleの所有権は未確認。
+
+## 所有権確認タグの追加（2026-10-26）
+ユーザー提供のGoogle確認用metaタグをindex.htmlのheadへ追加。所有権確認用の公開タグは削除せず保持する。タグの公開とSearch Consoleでの所有権確認完了は別であり、後者はユーザーのGoogleアカウントから「確認」を押して実施する。サイトマップ送信・URL検査はその後に行う。
